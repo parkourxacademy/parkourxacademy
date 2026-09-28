@@ -1,267 +1,243 @@
-/* =========================
-   PARKOUR X COURSE
-========================= */
+/* =========================================
+   PARKOUR X ACADEMY
+   SCRIPT
+========================================= */
+
+
+/* =========================================
+   COURSE DATA
+========================================= */
 
 const lessons = [
 
+  /* -----------------------------------------
+     LEVEL 1
+  ----------------------------------------- */
+
   {
     level: 1,
-    name: {
+
+    title: {
       en: "BEGINNERS",
       ar: "المبتدئين"
     },
-    videos: [
+
+    moves: [
 
       {
-        title: {
-          en: "Balance",
-          ar: "التوازن"
-        },
-        url: "https://youtube.com/shorts/6aFpoFo23PA"
+        en: "Balance",
+        ar: "Balance",
+        video: "https://youtube.com/shorts/6aFpoFo23PA"
       },
 
       {
-        title: {
-          en: "Roll",
-          ar: "الدحرجة"
-        },
-        url: "https://youtube.com/shorts/M9axAOpLjsc"
+        en: "Roll",
+        ar: "Roll",
+        video: "https://youtube.com/shorts/M9axAOpLjsc"
       },
 
       {
-        title: {
-          en: "Precision",
-          ar: "الدقة"
-        },
-        url: "https://youtube.com/shorts/IOS7qZsFGJ0"
+        en: "Precision",
+        ar: "Precision",
+        video: "https://youtube.com/shorts/IOS7qZsFGJ0"
       },
 
       {
-        title: {
-          en: "Landing",
-          ar: "الهبوط"
-        },
-        url: "https://youtube.com/shorts/8WPiCnvakbs"
+        en: "Landing",
+        ar: "Landing",
+        video: "https://youtube.com/shorts/8WPiCnvakbs"
       },
 
       {
-        title: {
-          en: "Long Jump",
-          ar: "القفزة الطويلة"
-        },
-        url: "https://youtube.com/shorts/mpjLNNi4iUk"
+        en: "Long Jump",
+        ar: "Long Jump",
+        video: "https://youtube.com/shorts/mpjLNNi4iUk"
       }
 
     ]
   },
 
+
+  /* -----------------------------------------
+     LEVEL 2
+  ----------------------------------------- */
 
   {
     level: 2,
-    name: {
+
+    title: {
       en: "BASIC MOVES",
       ar: "الحركات الأساسية"
     },
-    videos: [
+
+    moves: [
 
       {
-        title: {
-          en: "Crane",
-          ar: "كرين"
-        },
-        url: "https://youtube.com/shorts/lhR_rudTPE4"
+        en: "Crane",
+        ar: "Crane",
+        video: "https://youtube.com/shorts/lhR_rudTPE4"
       },
 
       {
-        title: {
-          en: "Safety Vault",
-          ar: "Safety Vault"
-        },
-        url: "https://youtube.com/shorts/v9V71PVYjJ0"
+        en: "Safety Vault",
+        ar: "Safety Vault",
+        video: "https://youtube.com/shorts/v9V71PVYjJ0"
       },
 
       {
-        title: {
-          en: "Reverse Safety",
-          ar: "Reverse Safety"
-        },
-        url: "https://youtube.com/shorts/abQOOWzJSVc"
+        en: "Reverse Safety",
+        ar: "Reverse Safety",
+        video: "https://youtube.com/shorts/abQOOWzJSVc"
       },
 
       {
-        title: {
-          en: "Speed Vault",
-          ar: "Speed Vault"
-        },
-        url: "https://youtube.com/shorts/_IATk3dpSfU"
+        en: "Speed Vault",
+        ar: "Speed Vault",
+        video: "https://youtube.com/shorts/_IATk3dpSfU"
       },
 
       {
-        title: {
-          en: "Lazy Vault",
-          ar: "Lazy Vault"
-        },
-        url: "https://youtube.com/shorts/JLbuT9FU6lI"
+        en: "Lazy Vault",
+        ar: "Lazy Vault",
+        video: "https://youtube.com/shorts/JLbuT9FU6lI"
       },
 
       {
-        title: {
-          en: "Thief Vault",
-          ar: "Thief Vault"
-        },
-        url: "https://youtube.com/shorts/1ND7el_msvM"
+        en: "Thief Vault",
+        ar: "Thief Vault",
+        video: "https://youtube.com/shorts/1ND7el_msvM"
       },
 
       {
-        title: {
-          en: "Monkey Vault",
-          ar: "Monkey Vault"
-        },
-        url: "https://youtube.com/shorts/ktSlnQzloLU"
+        en: "Monkey Vault",
+        ar: "Monkey Vault",
+        video: "https://youtube.com/shorts/ktSlnQzloLU"
       },
 
       {
-        title: {
-          en: "360 Vault",
-          ar: "360 Vault"
-        },
-        url: "https://youtube.com/shorts/Tu14vq5gmTA"
+        en: "360 Vault",
+        ar: "360 Vault",
+        video: "https://youtube.com/shorts/Tu14vq5gmTA"
       },
 
       {
-        title: {
-          en: "Dash Vault",
-          ar: "Dash Vault"
-        },
-        url: "https://youtube.com/shorts/PeDeqIttPho"
+        en: "Dash Vault",
+        ar: "Dash Vault",
+        video: "https://youtube.com/shorts/PeDeqIttPho"
       },
 
       {
-        title: {
-          en: "Cat Leap",
-          ar: "Cat Leap"
-        },
-        url: "https://youtube.com/shorts/y-Ins4dcNDk"
+        en: "Cat Leap",
+        ar: "Cat Leap",
+        video: "https://youtube.com/shorts/y-Ins4dcNDk"
       }
 
     ]
   },
 
+
+  /* -----------------------------------------
+     LEVEL 3
+  ----------------------------------------- */
 
   {
     level: 3,
-    name: {
+
+    title: {
       en: "ADVANCED MOVES",
       ar: "الحركات المتقدمة"
     },
-    videos: [
+
+    moves: [
 
       {
-        title: {
-          en: "Tic Tac",
-          ar: "Tic Tac"
-        },
-        url: "https://youtube.com/shorts/tX37Ugu_L_o"
+        en: "Tic Tac",
+        ar: "Tic Tac",
+        video: "https://youtube.com/shorts/tX37Ugu_L_o"
       },
 
       {
-        title: {
-          en: "Wall Run",
-          ar: "Wall Run"
-        },
-        url: "https://youtube.com/shorts/XjoqFhTUO74"
+        en: "Wall Run",
+        ar: "Wall Run",
+        video: "https://youtube.com/shorts/XjoqFhTUO74"
       },
 
       {
-        title: {
-          en: "Underbar",
-          ar: "Underbar"
-        },
-        url: "https://youtube.com/shorts/0SejUtKqTdU"
+        en: "Underbar",
+        ar: "Underbar",
+        video: "https://youtube.com/shorts/0SejUtKqTdU"
       },
 
       {
-        title: {
-          en: "Turn Vault",
-          ar: "Turn Vault"
-        },
-        url: "https://youtube.com/shorts/Tc7WZpXNCTo"
+        en: "Turn Vault",
+        ar: "Turn Vault",
+        video: "https://youtube.com/shorts/Tc7WZpXNCTo"
       },
 
       {
-        title: {
-          en: "Kong to Dive Roll",
-          ar: "Kong to Dive Roll"
-        },
-        url: "https://youtube.com/shorts/6ZE5YEDIEaU"
+        en: "Kong to Dive Roll",
+        ar: "Kong to Dive Roll",
+        video: "https://youtube.com/shorts/6ZE5YEDIEaU"
       },
 
       {
-        title: {
-          en: "Kong Precision",
-          ar: "Kong Precision"
-        },
-        url: "https://youtube.com/shorts/VWRBXT8dXYc"
+        en: "Kong Precision",
+        ar: "Kong Precision",
+        video: "https://youtube.com/shorts/VWRBXT8dXYc"
       },
 
       {
-        title: {
-          en: "Double Kong",
-          ar: "Double Kong"
-        },
-        url: "https://youtube.com/shorts/c15g05If_-w"
+        en: "Double Kong",
+        ar: "Double Kong",
+        video: "https://youtube.com/shorts/c15g05If_-w"
       },
 
       {
-        title: {
-          en: "Palm Spin",
-          ar: "Palm Spin"
-        },
-        url: "https://youtube.com/shorts/B38mbEB0kq4"
+        en: "Palm Spin",
+        ar: "Palm Spin",
+        video: "https://youtube.com/shorts/B38mbEB0kq4"
       },
 
       {
-        title: {
-          en: "Wall Spin",
-          ar: "Wall Spin"
-        },
-        url: "https://youtube.com/shorts/JOrAPBj1iL0"
+        en: "Wall Spin",
+        ar: "Wall Spin",
+        video: "https://youtube.com/shorts/JOrAPBj1iL0"
       }
 
     ]
   },
 
 
+  /* -----------------------------------------
+     LEVEL 4
+  ----------------------------------------- */
+
   {
     level: 4,
-    name: {
+
+    title: {
       en: "AERIAL MOVES",
       ar: "الحركات الهوائية"
     },
-    videos: [
+
+    moves: [
 
       {
-        title: {
-          en: "Backflip",
-          ar: "Backflip"
-        },
-        url: "https://youtube.com/shorts/UanAXX9JgDg"
+        en: "Backflip",
+        ar: "Backflip",
+        video: "https://youtube.com/shorts/UanAXX9JgDg"
       },
 
       {
-        title: {
-          en: "Frontflip",
-          ar: "Frontflip"
-        },
-        url: "https://youtube.com/shorts/jW_Y_8zKnBA"
+        en: "Frontflip",
+        ar: "Frontflip",
+        video: "https://youtube.com/shorts/jW_Y_8zKnBA"
       },
 
       {
-        title: {
-          en: "Side Flip",
-          ar: "Side Flip"
-        },
-        url: "https://youtube.com/shorts/G0BJmVJPfDg"
+        en: "Side Flip",
+        ar: "Side Flip",
+        video: "https://youtube.com/shorts/G0BJmVJPfDg"
       }
 
     ]
@@ -270,45 +246,41 @@ const lessons = [
 ];
 
 
-/* =========================
-   LANGUAGE
-========================= */
+/* =========================================
+   CURRENT LANGUAGE
+========================================= */
 
 let currentLanguage =
   localStorage.getItem("parkourXLanguage") || "en";
 
 
-/* =========================
+/* =========================================
    YOUTUBE ID
-========================= */
+========================================= */
 
 function getYouTubeId(url) {
 
-  const match = url.match(
-    /(?:shorts\/|youtu\.be\/|v=)([^?&/]+)/i
-  );
+  const match =
+    url.match(/shorts\/([^?&]+)/i);
 
   return match ? match[1] : "";
-
 }
 
 
-/* =========================
-   LANGUAGE TEXT
-========================= */
+/* =========================================
+   GET TEXT
+========================================= */
 
-function getText(obj) {
+function getText(textObject) {
 
-  if (!obj) return "";
-
-  return obj[currentLanguage] || obj.en || "";
-
+  return textObject[currentLanguage] ||
+         textObject.en;
 }
 
 
-/* =========================
-   RENDER LESSONS
-========================= */
+/* =========================================
+   RENDER COURSE
+========================================= */
 
 function renderLessons() {
 
@@ -322,166 +294,171 @@ function renderLessons() {
 
   lessons.forEach(level => {
 
-    const levelBlock =
+    const levelSection =
       document.createElement("div");
 
-    levelBlock.className = "level-block";
+    levelSection.className =
+      `course-level level-${level.level}`;
 
 
-    const heading =
-      document.createElement("div");
+    levelSection.innerHTML = `
 
-    heading.className = "level-heading";
+      <div class="level-heading">
 
+        <span class="level-number">
 
-    const number =
-      document.createElement("span");
+          ${
+            currentLanguage === "ar"
+              ? `المستوى ${level.level}`
+              : `LEVEL ${level.level}`
+          }
 
-    number.className = "level-number";
+        </span>
 
-    number.textContent =
-      String(level.level).padStart(2, "0");
+        <h3>
+          ${getText(level.title)}
+        </h3>
 
+      </div>
 
-    const title =
-      document.createElement("h3");
+      <div class="lessons-grid"></div>
 
-    title.textContent =
-      getText(level.name);
-
-
-    heading.appendChild(number);
-    heading.appendChild(title);
+    `;
 
 
     const grid =
-      document.createElement("div");
-
-    grid.className = "lesson-grid";
+      levelSection.querySelector(".lessons-grid");
 
 
-    level.videos.forEach(video => {
+    level.moves.forEach((move, index) => {
 
       const videoId =
-        getYouTubeId(video.url);
+        getYouTubeId(move.video);
 
-      if (!videoId) return;
-
+      const title =
+        getText(move);
 
       const card =
-        document.createElement("article");
-
-      card.className = "lesson-card";
-
-
-      const name =
         document.createElement("div");
 
-      name.className = "lesson-name";
+      card.className =
+        "lesson-card";
 
 
-      const strong =
-        document.createElement("strong");
+      card.innerHTML = `
 
-      strong.textContent =
-        getText(video.title);
+        <div class="lesson-name">
 
+          <span>
+            ${String(index + 1).padStart(2, "0")}
+          </span>
 
-      name.appendChild(strong);
+          <strong>
+            ${title}
+          </strong>
 
-
-      const thumbnail =
-        document.createElement("div");
-
-      thumbnail.className =
-        "lesson-thumbnail";
+        </div>
 
 
-      const img =
-        document.createElement("img");
+        <button
+          class="lesson-thumb"
+          type="button"
+          data-video-id="${videoId}"
+          data-title-en="${move.en}"
+          data-title-ar="${move.ar}"
+          aria-label="${move.en}"
+        >
 
-      img.src =
-        `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
+          <img
+            src="https://i.ytimg.com/vi/${videoId}/hqdefault.jpg"
+            alt="${title}"
+            loading="lazy"
+          >
 
-      img.alt =
-        getText(video.title);
+          <span class="video-play">
+            ▶
+          </span>
 
-      img.loading = "lazy";
-
-
-      const play =
-        document.createElement("span");
-
-      play.className =
-        "lesson-play";
-
-      play.textContent = "▶";
-
-
-      thumbnail.appendChild(img);
-      thumbnail.appendChild(play);
+        </button>
 
 
-      thumbnail.addEventListener(
-        "click",
-        () => {
-          openVideo(
-            videoId,
-            getText(video.title)
-          );
-        }
-      );
+        <button
+          class="watch-button"
+          type="button"
+          data-video-id="${videoId}"
+          data-title-en="${move.en}"
+          data-title-ar="${move.ar}"
+        >
 
+          ${
+            currentLanguage === "ar"
+              ? "شاهد الفيديو"
+              : "WATCH VIDEO"
+          }
 
-      const watch =
-        document.createElement("button");
+        </button>
 
-      watch.type = "button";
+      `;
 
-      watch.className =
-        "lesson-watch";
-
-      watch.textContent =
-        currentLanguage === "ar"
-          ? "شاهد الفيديو"
-          : "WATCH VIDEO";
-
-
-      watch.addEventListener(
-        "click",
-        () => {
-          openVideo(
-            videoId,
-            getText(video.title)
-          );
-        }
-      );
-
-
-      card.appendChild(name);
-      card.appendChild(thumbnail);
-      card.appendChild(watch);
 
       grid.appendChild(card);
 
     });
 
 
-    levelBlock.appendChild(heading);
-    levelBlock.appendChild(grid);
+    container.appendChild(levelSection);
 
-    container.appendChild(levelBlock);
+  });
+
+
+  addVideoListeners();
+}
+
+
+/* =========================================
+   VIDEO BUTTONS
+========================================= */
+
+function addVideoListeners() {
+
+  const buttons =
+    document.querySelectorAll(
+      ".lesson-thumb, .watch-button"
+    );
+
+
+  buttons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+      const videoId =
+        button.dataset.videoId;
+
+      const title =
+        currentLanguage === "ar"
+          ? button.dataset.titleAr
+          : button.dataset.titleEn;
+
+      openVideo(
+        videoId,
+        title
+      );
+
+    });
 
   });
 
 }
 
 
-/* =========================
-   VIDEO MODAL
-========================= */
+/* =========================================
+   OPEN VIDEO
+========================================= */
 
-function openVideo(videoId, title) {
+function openVideo(
+  videoId,
+  title
+) {
 
   const modal =
     document.getElementById("videoModal");
@@ -496,13 +473,12 @@ function openVideo(videoId, title) {
   if (!modal || !frame) return;
 
 
+  modalTitle.textContent =
+    title;
+
+
   frame.src =
     `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`;
-
-
-  if (modalTitle) {
-    modalTitle.textContent = title;
-  }
 
 
   modal.classList.add("active");
@@ -512,15 +488,16 @@ function openVideo(videoId, title) {
     "false"
   );
 
-
-  document.body.style.overflow = "hidden";
+  document.body.classList.add(
+    "modal-open"
+  );
 
 }
 
 
-/* =========================
+/* =========================================
    CLOSE VIDEO
-========================= */
+========================================= */
 
 function closeVideo() {
 
@@ -531,51 +508,61 @@ function closeVideo() {
     document.getElementById("videoFrame");
 
 
-  if (frame) {
-    frame.src = "";
-  }
+  if (!modal || !frame) return;
 
 
-  if (modal) {
+  modal.classList.remove("active");
 
-    modal.classList.remove("active");
-
-    modal.setAttribute(
-      "aria-hidden",
-      "true"
-    );
-
-  }
+  modal.setAttribute(
+    "aria-hidden",
+    "true"
+  );
 
 
-  document.body.style.overflow = "";
+  document.body.classList.remove(
+    "modal-open"
+  );
 
+
+  frame.src = "";
 }
 
 
-/* =========================
-   LANGUAGE UPDATE
-========================= */
+/* =========================================
+   LANGUAGE
+========================================= */
 
 function updateLanguage() {
+
+  const isArabic =
+    currentLanguage === "ar";
+
 
   document.documentElement.lang =
     currentLanguage;
 
   document.documentElement.dir =
-    currentLanguage === "ar"
+    isArabic
       ? "rtl"
       : "ltr";
 
 
   document
-    .querySelectorAll("[data-en][data-ar]")
+    .querySelectorAll("[data-en]")
     .forEach(element => {
 
-      element.textContent =
-        currentLanguage === "ar"
+      const text =
+        isArabic
           ? element.dataset.ar
           : element.dataset.en;
+
+
+      if (text !== undefined) {
+
+        element.textContent =
+          text;
+
+      }
 
     });
 
@@ -589,7 +576,7 @@ function updateLanguage() {
   if (languageButton) {
 
     languageButton.textContent =
-      currentLanguage === "ar"
+      isArabic
         ? "EN"
         : "AR";
 
@@ -607,22 +594,22 @@ function updateLanguage() {
 }
 
 
-/* =========================
+/* =========================================
    LANGUAGE BUTTON
-========================= */
+========================================= */
 
 function initLanguage() {
 
-  const button =
+  const languageButton =
     document.getElementById(
       "languageToggle"
     );
 
 
-  if (!button) return;
+  if (!languageButton) return;
 
 
-  button.addEventListener(
+  languageButton.addEventListener(
     "click",
     () => {
 
@@ -631,37 +618,31 @@ function initLanguage() {
           ? "ar"
           : "en";
 
+
       updateLanguage();
 
     }
   );
 
-
-  updateLanguage();
-
 }
 
 
-/* =========================
-   VIDEO MODAL EVENTS
-========================= */
+/* =========================================
+   CLOSE MODAL
+========================================= */
 
 function initVideoModal() {
 
-  const close =
-    document.getElementById(
-      "videoClose"
-    );
-
   const modal =
-    document.getElementById(
-      "videoModal"
-    );
+    document.getElementById("videoModal");
+
+  const closeButton =
+    document.getElementById("videoClose");
 
 
-  if (close) {
+  if (closeButton) {
 
-    close.addEventListener(
+    closeButton.addEventListener(
       "click",
       closeVideo
     );
@@ -678,7 +659,9 @@ function initVideoModal() {
         if (
           event.target === modal
         ) {
+
           closeVideo();
+
         }
 
       }
@@ -694,7 +677,9 @@ function initVideoModal() {
       if (
         event.key === "Escape"
       ) {
+
         closeVideo();
+
       }
 
     }
@@ -703,9 +688,9 @@ function initVideoModal() {
 }
 
 
-/* =========================
-   FOOTER YEAR
-========================= */
+/* =========================================
+   CURRENT YEAR
+========================================= */
 
 function updateYear() {
 
@@ -722,9 +707,9 @@ function updateYear() {
 }
 
 
-/* =========================
-   INIT
-========================= */
+/* =========================================
+   START
+========================================= */
 
 document.addEventListener(
   "DOMContentLoaded",
@@ -735,6 +720,8 @@ document.addEventListener(
     initVideoModal();
 
     updateYear();
+
+    updateLanguage();
 
   }
 );
