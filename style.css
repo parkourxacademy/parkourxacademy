@@ -1,22 +1,21 @@
 :root {
 
-  --black: #080808;
-  --black-2: #101010;
-  --dark: #141414;
+  --black: #070707;
+  --black-2: #111111;
+  --dark: #161616;
 
-  --egypt-red: #ce1126;
-  --egypt-red-light: #ed3348;
+  --egypt-red: #d71920;
+  --red-light: #ff3038;
+  --red-dark: #9e1017;
 
-  --egypt-gold: #d4a72c;
-  --egypt-gold-light: #f0ca55;
+  --yellow: #f4c430;
+  --yellow-light: #ffd95a;
+  --gold: #dcae22;
 
-  --egypt-green: #007a3d;
-  --egypt-green-light: #13a65b;
+  --white: #fffaf0;
+  --muted: #b7b1a4;
+  --gray: #77736b;
 
-  --white: #f4f1e8;
-
-  --muted: #a8a8a8;
-  --gray: #707070;
 }
 
 
@@ -34,16 +33,20 @@ body {
 
   margin: 0;
 
-  background: var(--black);
+  background:
+    var(--black);
 
-  color: var(--white);
+  color:
+    var(--white);
 
   font-family:
     Montserrat,
     Cairo,
     sans-serif;
 
-  line-height: 1.65;
+  line-height:
+    1.65;
+
 }
 
 
@@ -59,9 +62,11 @@ body.rtl {
 
 a {
 
-  text-decoration: none;
+  text-decoration:
+    none;
 
-  color: inherit;
+  color:
+    inherit;
 
 }
 
@@ -72,50 +77,68 @@ a {
 
 .site-header {
 
-  position: fixed;
+  position:
+    fixed;
 
-  z-index: 50;
+  z-index:
+    50;
 
-  top: 0;
-  left: 0;
-  right: 0;
+  top:
+    0;
 
-  height: 74px;
+  left:
+    0;
 
-  display: flex;
+  right:
+    0;
 
-  align-items: center;
+  height:
+    74px;
 
-  justify-content: space-between;
+  display:
+    flex;
 
-  padding: 0 5vw;
+  align-items:
+    center;
+
+  justify-content:
+    space-between;
+
+  padding:
+    0 5vw;
 
   background:
-    rgba(5,5,5,.90);
+    rgba(5,5,5,.92);
 
   backdrop-filter:
-    blur(14px);
+    blur(15px);
 
   border-bottom:
-    1px solid
-    rgba(212,167,44,.20);
+    2px solid
+    rgba(215,25,32,.55);
 
 }
 
 
 .brand {
 
-  font-weight: 900;
+  font-weight:
+    900;
 
-  letter-spacing: 1px;
+  letter-spacing:
+    1px;
 
-  font-size: 18px;
+  font-size:
+    18px;
 
-  display: flex;
+  display:
+    flex;
 
-  gap: 5px;
+  gap:
+    5px;
 
-  align-items: center;
+  align-items:
+    center;
 
 }
 
@@ -125,7 +148,8 @@ a {
   color:
     var(--egypt-red);
 
-  font-size: 24px;
+  font-size:
+    26px;
 
 }
 
@@ -133,20 +157,32 @@ a {
 .brand b {
 
   color:
-    var(--egypt-gold);
+    var(--yellow);
 
 }
 
 
 nav {
 
-  display: flex;
+  display:
+    flex;
 
-  gap: 22px;
+  gap:
+    22px;
 
-  font-size: 13px;
+  font-size:
+    13px;
 
-  font-weight: 700;
+  font-weight:
+    800;
+
+}
+
+
+nav a {
+
+  transition:
+    .2s;
 
 }
 
@@ -154,7 +190,7 @@ nav {
 nav a:hover {
 
   color:
-    var(--egypt-gold);
+    var(--yellow);
 
 }
 
@@ -162,23 +198,23 @@ nav a:hover {
 .lang-btn {
 
   border:
-    1px solid
-    var(--egypt-gold);
+    2px solid
+    var(--yellow);
 
   background:
     transparent;
 
   color:
-    #fff;
+    white;
 
   padding:
-    8px 13px;
+    7px 13px;
 
   border-radius:
     20px;
 
   font-weight:
-    700;
+    800;
 
   cursor:
     pointer;
@@ -192,59 +228,90 @@ nav a:hover {
 
 .hero {
 
-  min-height: 92vh;
+  min-height:
+    92vh;
 
-  position: relative;
+  position:
+    relative;
 
-  display: flex;
+  display:
+    flex;
 
-  align-items: center;
+  align-items:
+    center;
 
   padding:
     130px 8vw 80px;
 
-  background-image:
-
-    url(
-      "https://commons.wikimedia.org/wiki/Special:FilePath/Pyramids%20of%20Giza%20Egypt.png"
-    );
-
-  background-size:
-    cover;
-
-  background-position:
-    center;
-
-  background-repeat:
-    no-repeat;
-
   overflow:
     hidden;
+
+  background:
+
+    radial-gradient(
+      circle at 85% 25%,
+      rgba(215,25,32,.38),
+      transparent 30%
+    ),
+
+    radial-gradient(
+      circle at 70% 80%,
+      rgba(244,196,48,.18),
+      transparent 35%
+    ),
+
+    linear-gradient(
+      135deg,
+      #050505,
+      #180708 55%,
+      #080808
+    );
 
 }
 
 
 .hero-overlay {
 
-  position: absolute;
+  position:
+    absolute;
 
-  inset: 0;
+  inset:
+    0;
 
   background:
 
     linear-gradient(
       90deg,
-      rgba(5,5,5,.97) 0%,
-      rgba(5,5,5,.82) 38%,
-      rgba(5,5,5,.45) 70%,
-      rgba(5,5,5,.20) 100%
-    ),
+      rgba(5,5,5,.96),
+      rgba(5,5,5,.72),
+      rgba(5,5,5,.25)
+    );
+
+}
+
+
+.hero-pattern {
+
+  position:
+    absolute;
+
+  inset:
+    0;
+
+  opacity:
+    .18;
+
+  background-image:
 
     linear-gradient(
-      180deg,
-      rgba(206,17,38,.12),
-      rgba(0,0,0,.20)
+      45deg,
+      transparent 48%,
+      rgba(244,196,48,.12) 49%,
+      transparent 51%
     );
+
+  background-size:
+    45px 45px;
 
 }
 
@@ -258,10 +325,10 @@ nav a:hover {
     absolute;
 
   right:
-    4vw;
+    3vw;
 
   bottom:
-    -12vw;
+    -13vw;
 
   font-size:
     48vw;
@@ -273,7 +340,7 @@ nav a:hover {
     900;
 
   color:
-    rgba(206,17,38,.08);
+    rgba(215,25,32,.08);
 
   pointer-events:
     none;
@@ -299,7 +366,7 @@ nav a:hover {
 .section-kicker {
 
   color:
-    var(--egypt-gold);
+    var(--yellow);
 
   font-weight:
     900;
@@ -339,7 +406,7 @@ nav a:hover {
     18px;
 
   color:
-    #d0cbc0;
+    #ddd5c7;
 
   max-width:
     680px;
@@ -387,7 +454,7 @@ nav a:hover {
     8px;
 
   font-weight:
-    800;
+    900;
 
   font-size:
     13px;
@@ -395,6 +462,17 @@ nav a:hover {
   border:
     1px solid
     rgba(255,255,255,.18);
+
+  transition:
+    .2s;
+
+}
+
+
+.btn:hover {
+
+  transform:
+    translateY(-2px);
 
 }
 
@@ -408,7 +486,11 @@ nav a:hover {
     var(--egypt-red);
 
   color:
-    #fff;
+    white;
+
+  box-shadow:
+    0 8px 25px
+    rgba(215,25,32,.25);
 
 }
 
@@ -416,7 +498,7 @@ nav a:hover {
 .primary:hover {
 
   background:
-    var(--egypt-red-light);
+    var(--red-light);
 
 }
 
@@ -429,13 +511,21 @@ nav a:hover {
 }
 
 
+.ghost:hover {
+
+  border-color:
+    var(--yellow);
+
+}
+
+
 .whatsapp {
 
   background:
-    var(--egypt-green);
+    #168c50;
 
   border-color:
-    var(--egypt-green);
+    #168c50;
 
 }
 
@@ -511,9 +601,6 @@ nav a:hover {
   display:
     grid;
 
-  grid-template-columns:
-    1fr;
-
   gap:
     2px;
 
@@ -522,17 +609,22 @@ nav a:hover {
 
   border:
     1px solid
-    rgba(212,167,44,.25);
+    rgba(244,196,48,.25);
 
   background:
+
     linear-gradient(
       145deg,
-      #161616,
+      #181818,
       #090909
     );
 
   border-radius:
     18px;
+
+  box-shadow:
+    0 20px 50px
+    rgba(0,0,0,.25);
 
 }
 
@@ -543,7 +635,7 @@ nav a:hover {
     28px;
 
   color:
-    #fff;
+    var(--yellow);
 
   margin-top:
     12px;
@@ -558,199 +650,6 @@ nav a:hover {
 
   font-size:
     13px;
-
-}
-
-
-/* =========================
-   EGYPT GALLERY
-========================= */
-
-.egypt-gallery {
-
-  padding:
-    100px 8vw;
-
-  background:
-
-    linear-gradient(
-      145deg,
-      #0b0b0b,
-      #17110d
-    );
-
-}
-
-
-.gallery-header {
-
-  margin-bottom:
-    40px;
-
-}
-
-
-.gallery-header h2 {
-
-  font-size:
-    clamp(45px,7vw,90px);
-
-  line-height:
-    .9;
-
-  margin:
-    10px 0 20px;
-
-  font-weight:
-    900;
-
-}
-
-
-.gallery-grid {
-
-  display:
-    grid;
-
-  grid-template-columns:
-    1.5fr 1fr;
-
-  grid-template-rows:
-    280px 280px;
-
-  gap:
-    16px;
-
-}
-
-
-.gallery-item {
-
-  position:
-    relative;
-
-  overflow:
-    hidden;
-
-  border-radius:
-    18px;
-
-  background:
-    #111;
-
-  border:
-    1px solid
-    rgba(212,167,44,.25);
-
-}
-
-
-.gallery-item.large {
-
-  grid-row:
-    span 2;
-
-}
-
-
-.gallery-item img {
-
-  width:
-    100%;
-
-  height:
-    100%;
-
-  object-fit:
-    cover;
-
-  object-position:
-    center;
-
-  display:
-    block;
-
-  transition:
-    transform .6s ease;
-
-}
-
-
-.gallery-item:hover img {
-
-  transform:
-    scale(1.06);
-
-}
-
-
-.gallery-item:after {
-
-  content:
-    "";
-
-  position:
-    absolute;
-
-  inset:
-    0;
-
-  background:
-
-    linear-gradient(
-      180deg,
-      transparent 45%,
-      rgba(0,0,0,.70)
-    );
-
-  pointer-events:
-    none;
-
-}
-
-
-.image-label {
-
-  position:
-    absolute;
-
-  z-index:
-    2;
-
-  bottom:
-    18px;
-
-  left:
-    20px;
-
-  font-size:
-    12px;
-
-  font-weight:
-    900;
-
-  letter-spacing:
-    2px;
-
-  color:
-    #fff;
-
-}
-
-
-.photo-credit {
-
-  margin-top:
-    16px;
-
-  font-size:
-    10px;
-
-  color:
-    #666;
-
-  text-align:
-    right;
 
 }
 
@@ -785,7 +684,7 @@ nav a:hover {
 
   border:
     1px solid
-    rgba(255,255,255,.1);
+    rgba(255,255,255,.09);
 
   padding:
     28px;
@@ -797,7 +696,7 @@ nav a:hover {
     #101010;
 
   transition:
-    transform .2s ease;
+    .25s;
 
 }
 
@@ -805,7 +704,11 @@ nav a:hover {
 .card:hover {
 
   transform:
-    translateY(-5px);
+    translateY(-6px);
+
+  box-shadow:
+    0 15px 40px
+    rgba(0,0,0,.3);
 
 }
 
@@ -821,7 +724,7 @@ nav a:hover {
 .red-card {
 
   border-top:
-    3px solid
+    4px solid
     var(--egypt-red);
 
 }
@@ -830,7 +733,7 @@ nav a:hover {
 .red-card > span {
 
   color:
-    var(--egypt-red-light);
+    var(--red-light);
 
 }
 
@@ -838,8 +741,8 @@ nav a:hover {
 .gold-card {
 
   border-top:
-    3px solid
-    var(--egypt-gold);
+    4px solid
+    var(--yellow);
 
 }
 
@@ -847,24 +750,24 @@ nav a:hover {
 .gold-card > span {
 
   color:
-    var(--egypt-gold-light);
+    var(--yellow-light);
 
 }
 
 
-.green-card {
+.black-card {
 
   border-top:
-    3px solid
-    var(--egypt-green);
+    4px solid
+    #444;
 
 }
 
 
-.green-card > span {
+.black-card > span {
 
   color:
-    var(--egypt-green-light);
+    #aaa;
 
 }
 
@@ -884,7 +787,11 @@ nav a:hover {
 .course {
 
   background:
-    #090909;
+    linear-gradient(
+      180deg,
+      #090909,
+      #11100d
+    );
 
 }
 
@@ -930,27 +837,49 @@ nav a:hover {
 
     linear-gradient(
       100deg,
-      #16110d,
-      #0d0d0d
+      #1a0c0d,
+      #11100c
     );
 
   border:
     1px solid
-    rgba(212,167,44,.35);
+    rgba(244,196,48,.35);
 
 }
 
 
-.promo-number {
+.promo-icon {
 
-  font-size:
-    42px;
+  width:
+    55px;
 
-  font-weight:
-    900;
+  height:
+    55px;
+
+  min-width:
+    55px;
+
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  border-radius:
+    50%;
+
+  background:
+    var(--egypt-red);
 
   color:
-    var(--egypt-gold);
+    white;
+
+  font-size:
+    20px;
+
+  box-shadow:
+    0 8px 25px
+    rgba(215,25,32,.25);
 
 }
 
@@ -992,7 +921,13 @@ nav a:hover {
     center;
 
   background:
-    var(--egypt-red);
+    var(--yellow);
+
+  color:
+    #111;
+
+  font-weight:
+    900;
 
 }
 
@@ -1034,6 +969,10 @@ nav a:hover {
   border-radius:
     50%;
 
+  box-shadow:
+    0 0 15px
+    currentColor;
+
 }
 
 
@@ -1042,13 +981,19 @@ nav a:hover {
   background:
     var(--egypt-red);
 
+  color:
+    var(--egypt-red);
+
 }
 
 
 .gold .level-dot {
 
   background:
-    var(--egypt-gold);
+    var(--yellow);
+
+  color:
+    var(--yellow);
 
 }
 
@@ -1056,7 +1001,10 @@ nav a:hover {
 .green .level-dot {
 
   background:
-    var(--egypt-green);
+    #168c50;
+
+  color:
+    #168c50;
 
 }
 
@@ -1064,7 +1012,10 @@ nav a:hover {
 .white .level-dot {
 
   background:
-    var(--white);
+    white;
+
+  color:
+    white;
 
 }
 
@@ -1097,6 +1048,10 @@ nav a:hover {
 }
 
 
+/* =========================
+   VIDEO LESSON CARDS
+========================= */
+
 .lesson-grid {
 
   display:
@@ -1106,7 +1061,7 @@ nav a:hover {
     repeat(3,1fr);
 
   gap:
-    14px;
+    16px;
 
   margin-top:
     22px;
@@ -1116,24 +1071,21 @@ nav a:hover {
 
 .lesson {
 
-  position:
-    relative;
-
-  padding:
-    22px;
+  overflow:
+    hidden;
 
   border-radius:
-    14px;
+    15px;
 
   border:
     1px solid
-    rgba(255,255,255,.09);
+    rgba(255,255,255,.08);
 
   background:
     #101010;
 
   transition:
-    .2s;
+    .25s;
 
 }
 
@@ -1141,10 +1093,115 @@ nav a:hover {
 .lesson:hover {
 
   transform:
-    translateY(-3px);
+    translateY(-5px);
 
   border-color:
-    var(--egypt-gold);
+    var(--yellow);
+
+  box-shadow:
+    0 15px 35px
+    rgba(0,0,0,.35);
+
+}
+
+
+.lesson-thumb {
+
+  position:
+    relative;
+
+  width:
+    100%;
+
+  aspect-ratio:
+    16 / 9;
+
+  overflow:
+    hidden;
+
+  background:
+    #050505;
+
+}
+
+
+.lesson-thumb img {
+
+  width:
+    100%;
+
+  height:
+    100%;
+
+  object-fit:
+    cover;
+
+  display:
+    block;
+
+  transition:
+    transform .5s;
+
+}
+
+
+.lesson:hover .lesson-thumb img {
+
+  transform:
+    scale(1.06);
+
+}
+
+
+.video-play {
+
+  position:
+    absolute;
+
+  left:
+    50%;
+
+  top:
+    50%;
+
+  transform:
+    translate(-50%,-50%);
+
+  width:
+    52px;
+
+  height:
+    52px;
+
+  border-radius:
+    50%;
+
+  display:
+    grid;
+
+  place-items:
+    center;
+
+  background:
+    var(--egypt-red);
+
+  color:
+    white;
+
+  font-size:
+    18px;
+
+  box-shadow:
+    0 8px 25px
+    rgba(0,0,0,.5);
+
+}
+
+
+.lesson-info {
+
+  padding:
+    18px;
 
 }
 
@@ -1152,7 +1209,7 @@ nav a:hover {
 .lesson .num {
 
   font-size:
-    12px;
+    11px;
 
   font-weight:
     900;
@@ -1166,7 +1223,7 @@ nav a:hover {
 .lesson h4 {
 
   margin:
-    7px 0 14px;
+    5px 0 14px;
 
   font-size:
     18px;
@@ -1174,13 +1231,19 @@ nav a:hover {
 }
 
 
-.lesson a {
+.lesson-watch {
 
   display:
-    inline-block;
+    inline-flex;
+
+  align-items:
+    center;
+
+  gap:
+    6px;
 
   font-size:
-    12px;
+    11px;
 
   font-weight:
     900;
@@ -1188,34 +1251,34 @@ nav a:hover {
 }
 
 
-.red .lesson a {
+.red .lesson-watch {
 
   color:
-    var(--egypt-red-light);
+    var(--red-light);
 
 }
 
 
-.gold .lesson a {
+.gold .lesson-watch {
 
   color:
-    var(--egypt-gold-light);
+    var(--yellow-light);
 
 }
 
 
-.green .lesson a {
+.green .lesson-watch {
 
   color:
-    var(--egypt-green-light);
+    #36c878;
 
 }
 
 
-.white .lesson a {
+.white .lesson-watch {
 
   color:
-    var(--white);
+    white;
 
 }
 
@@ -1268,7 +1331,7 @@ nav a:hover {
 
   border:
     1px solid
-    rgba(212,167,44,.25);
+    rgba(244,196,48,.25);
 
   font-size:
     50px;
@@ -1299,7 +1362,7 @@ nav a:hover {
 
     radial-gradient(
       circle,
-      #7a101d,
+      #9e1017,
       #0b0b0b 65%
     );
 
@@ -1319,8 +1382,8 @@ nav a:hover {
 
     linear-gradient(
       145deg,
-      #170b0d,
-      #070707
+      #170708,
+      #080808
     );
 
 }
@@ -1337,10 +1400,232 @@ nav a:hover {
 }
 
 
-.contact-actions {
+/* PHONE */
+
+.contact-phone {
+
+  display:
+    flex;
 
   justify-content:
     center;
+
+  flex-wrap:
+    wrap;
+
+  gap:
+    12px;
+
+  margin:
+    35px auto 30px;
+
+}
+
+
+.contact-phone a {
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  gap:
+    10px;
+
+  padding:
+    14px 22px;
+
+  border:
+    1px solid
+    rgba(255,255,255,.12);
+
+  border-radius:
+    10px;
+
+  background:
+    rgba(255,255,255,.04);
+
+  font-weight:
+    800;
+
+}
+
+
+.phone-icon {
+
+  color:
+    var(--yellow);
+
+  font-size:
+    20px;
+
+}
+
+
+.whatsapp-icon {
+
+  color:
+    #25d366;
+
+  font-size:
+    20px;
+
+}
+
+
+/* SOCIAL GRID */
+
+.social-grid {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap:
+    14px;
+
+  max-width:
+    900px;
+
+  margin:
+    25px auto 0;
+
+}
+
+
+.social {
+
+  min-height:
+    110px;
+
+  padding:
+    18px;
+
+  border-radius:
+    15px;
+
+  border:
+    1px solid
+    rgba(255,255,255,.09);
+
+  background:
+    #101010;
+
+  display:
+    flex;
+
+  flex-direction:
+    column;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  gap:
+    4px;
+
+  transition:
+    .25s;
+
+}
+
+
+.social:hover {
+
+  transform:
+    translateY(-5px);
+
+  border-color:
+    var(--yellow);
+
+}
+
+
+.social-logo {
+
+  font-size:
+    25px;
+
+  font-weight:
+    900;
+
+  line-height:
+    1;
+
+}
+
+
+.social > span:not(.social-logo) {
+
+  font-size:
+    13px;
+
+  font-weight:
+    900;
+
+}
+
+
+.social small {
+
+  font-size:
+    10px;
+
+  color:
+    var(--gray);
+
+}
+
+
+.instagram .social-logo {
+
+  color:
+    #e1306c;
+
+}
+
+
+.youtube .social-logo {
+
+  color:
+    #ff0000;
+
+}
+
+
+.tiktok .social-logo {
+
+  color:
+    #fff;
+
+}
+
+
+.facebook .social-logo {
+
+  color:
+    #1877f2;
+
+}
+
+
+.x-social .social-logo {
+
+  color:
+    #fff;
+
+}
+
+
+.linkedin .social-logo {
+
+  color:
+    #0a66c2;
 
 }
 
@@ -1351,7 +1636,7 @@ nav a:hover {
     20px !important;
 
   color:
-    var(--egypt-gold) !important;
+    var(--yellow) !important;
 
   font-weight:
     900;
@@ -1398,7 +1683,7 @@ footer {
 footer strong {
 
   color:
-    #fff;
+    var(--yellow);
 
 }
 
@@ -1441,8 +1726,7 @@ body.rtl .section {
 }
 
 
-body.rtl .hero-actions,
-body.rtl .contact-actions {
+body.rtl .hero-actions {
 
   justify-content:
     flex-start;
@@ -1457,14 +1741,6 @@ body.rtl .watch {
 
   margin-right:
     auto;
-
-}
-
-
-body.rtl .photo-credit {
-
-  text-align:
-    left;
 
 }
 
@@ -1490,8 +1766,23 @@ body.rtl .photo-credit {
   }
 
 
-  .cards.three,
+  .cards.three {
+
+    grid-template-columns:
+      1fr 1fr;
+
+  }
+
+
   .lesson-grid {
+
+    grid-template-columns:
+      1fr 1fr;
+
+  }
+
+
+  .social-grid {
 
     grid-template-columns:
       1fr 1fr;
@@ -1502,7 +1793,7 @@ body.rtl .photo-credit {
   .course-head {
 
     align-items:
-      start;
+      flex-start;
 
     flex-direction:
       column;
@@ -1531,24 +1822,24 @@ body.rtl .photo-credit {
 
   }
 
-
-  .egypt-gallery {
-
-    padding:
-      75px 6vw;
-
-  }
-
 }
 
 
 @media(max-width:600px) {
 
-  .lesson-grid,
-  .cards.three {
+  .cards.three,
+  .lesson-grid {
 
     grid-template-columns:
       1fr;
+
+  }
+
+
+  .social-grid {
+
+    grid-template-columns:
+      1fr 1fr;
 
   }
 
@@ -1577,10 +1868,16 @@ body.rtl .photo-credit {
   }
 
 
-  .promo-number {
+  .promo-icon {
 
-    font-size:
-      32px;
+    width:
+      45px;
+
+    height:
+      45px;
+
+    min-width:
+      45px;
 
   }
 
@@ -1608,24 +1905,15 @@ body.rtl .photo-credit {
 
   }
 
+}
 
-  .gallery-grid {
+
+@media(max-width:420px) {
+
+  .social-grid {
 
     grid-template-columns:
       1fr;
-
-    grid-template-rows:
-      280px
-      220px
-      220px;
-
-  }
-
-
-  .gallery-item.large {
-
-    grid-row:
-      auto;
 
   }
 
