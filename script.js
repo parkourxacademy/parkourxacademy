@@ -93,7 +93,7 @@ const lessons = [
       {
         en: "Speed Vault",
         ar: "Speed Vault",
-        video: "https://youtube.com/shorts/_IATk3dpSfU"
+        video: "https://youtube.com/shorts/1ND7el_msvM"
       },
 
       {
@@ -105,31 +105,31 @@ const lessons = [
       {
         en: "Thief Vault",
         ar: "Thief Vault",
-        video: "https://youtube.com/shorts/1ND7el_msvM"
+        video: "https://youtube.com/shorts/Tu14vq5gmTA"
       },
 
       {
         en: "Monkey Vault",
         ar: "Monkey Vault",
-        video: "https://youtube.com/shorts/ktSlnQzloLU"
+        video: "https://youtube.com/shorts/tX37Ugu_L_o"
       },
 
       {
         en: "360 Vault",
         ar: "360 Vault",
-        video: "https://youtube.com/shorts/Tu14vq5gmTA"
+        video: "https://youtube.com/shorts/ktSlnQzloLU"
       },
 
       {
         en: "Dash Vault",
         ar: "Dash Vault",
-        video: "https://youtube.com/shorts/PeDeqIttPho"
+        video: "https://youtube.com/shorts/_IATk3dpSfU"
       },
 
       {
         en: "Cat Leap",
         ar: "Cat Leap",
-        video: "https://youtube.com/shorts/y-Ins4dcNDk"
+        video: "https://youtube.com/shorts/PeDeqIttPho"
       }
 
     ]
@@ -153,7 +153,7 @@ const lessons = [
       {
         en: "Tic Tac",
         ar: "Tic Tac",
-        video: "https://youtube.com/shorts/tX37Ugu_L_o"
+        video: "https://youtube.com/shorts/y-Ins4dcNDk"
       },
 
       {
@@ -165,13 +165,13 @@ const lessons = [
       {
         en: "Underbar",
         ar: "Underbar",
-        video: "https://youtube.com/shorts/0SejUtKqTdU"
+        video: "https://youtube.com/shorts/Tc7WZpXNCTo"
       },
 
       {
         en: "Turn Vault",
         ar: "Turn Vault",
-        video: "https://youtube.com/shorts/Tc7WZpXNCTo"
+        video: "https://youtube.com/shorts/0SejUtKqTdU"
       },
 
       {
@@ -195,13 +195,13 @@ const lessons = [
       {
         en: "Palm Spin",
         ar: "Palm Spin",
-        video: "https://youtube.com/shorts/B38mbEB0kq4"
+        video: "https://youtube.com/shorts/JOrAPBj1iL0"
       },
 
       {
         en: "Wall Spin",
         ar: "Wall Spin",
-        video: "https://youtube.com/shorts/JOrAPBj1iL0"
+        video: "https://youtube.com/shorts/UanAXX9JgDg"
       }
 
     ]
@@ -225,7 +225,7 @@ const lessons = [
       {
         en: "Backflip",
         ar: "Backflip",
-        video: "https://youtube.com/shorts/UanAXX9JgDg"
+        video: "https://youtube.com/shorts/B38mbEB0kq4"
       },
 
       {
