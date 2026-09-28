@@ -1,210 +1,244 @@
+/* =========================================
+   PARKOUR X ACADEMY
+   SCRIPT
+========================================= */
+
+
+/* =========================================
+   COURSE DATA
+========================================= */
+
 const lessons = [
+
+  /* -----------------------------------------
+     LEVEL 1
+  ----------------------------------------- */
 
   {
     level: 1,
-    name: "BEGINNERS",
-    color: "red",
-    sub: "Build Your Foundation",
 
-    items: [
+    title: {
+      en: "BEGINNERS",
+      ar: "المبتدئين"
+    },
 
-      [
-        "01",
-        "Balance",
-        "https://youtube.com/shorts/6aFpoFo23PA"
-      ],
+    moves: [
 
-      [
-        "02",
-        "Roll",
-        "https://youtube.com/shorts/M9axAOpLjsc"
-      ],
+      {
+        en: "Balance",
+        ar: "التوازن",
+        video: "https://youtube.com/shorts/6aFpoFo23PA"
+      },
 
-      [
-        "03",
-        "Precision",
-        "https://youtube.com/shorts/IOS7qZsFGJ0"
-      ],
+      {
+        en: "Roll",
+        ar: "الدحرجة",
+        video: "https://youtube.com/shorts/M9axAOpLjsc"
+      },
 
-      [
-        "04",
-        "Landing",
-        "https://youtube.com/shorts/8WPiCnvakbs"
-      ],
+      {
+        en: "Precision",
+        ar: "الدقة",
+        video: "https://youtube.com/shorts/IOS7qZsFGJ0"
+      },
 
-      [
-        "05",
-        "Long Jump",
-        "https://youtube.com/shorts/mpjLNNi4iUk"
-      ]
+      {
+        en: "Landing",
+        ar: "الهبوط",
+        video: "https://youtube.com/shorts/8WPiCnvakbs"
+      },
+
+      {
+        en: "Long Jump",
+        ar: "القفزة الطويلة",
+        video: "https://youtube.com/shorts/mpjLNNi4iUk"
+      }
 
     ]
   },
 
+
+  /* -----------------------------------------
+     LEVEL 2
+  ----------------------------------------- */
 
   {
     level: 2,
-    name: "BASIC MOVES",
-    color: "gold",
-    sub: "Master the Fundamentals",
 
-    items: [
+    title: {
+      en: "BASIC MOVES",
+      ar: "الحركات الأساسية"
+    },
 
-      [
-        "06",
-        "Crane",
-        "https://youtube.com/shorts/lhR_rudTPE4"
-      ],
+    moves: [
 
-      [
-        "07",
-        "Safety Vault",
-        "https://youtube.com/shorts/v9V71PVYjJ0"
-      ],
+      {
+        en: "Crane",
+        ar: "كرين",
+        video: "https://youtube.com/shorts/lhR_rudTPE4"
+      },
 
-      [
-        "08",
-        "Reverse Safety",
-        "https://youtube.com/shorts/abQOOWzJSVc"
-      ],
+      {
+        en: "Safety Vault",
+        ar: "Safety Vault",
+        video: "https://youtube.com/shorts/v9V71PVYjJ0"
+      },
 
-      [
-        "09",
-        "Speed Vault",
-        "https://youtube.com/shorts/_IATk3dpSfU"
-      ],
+      {
+        en: "Reverse Safety",
+        ar: "Reverse Safety",
+        video: "https://youtube.com/shorts/abQOOWzJSVc"
+      },
 
-      [
-        "10",
-        "Lazy Vault",
-        "https://youtube.com/shorts/JLbuT9FU6lI"
-      ],
+      {
+        en: "Speed Vault",
+        ar: "Speed Vault",
+        video: "https://youtube.com/shorts/_IATk3dpSfU"
+      },
 
-      [
-        "11",
-        "Thief Vault",
-        "https://youtube.com/shorts/1ND7el_msvM"
-      ],
+      {
+        en: "Lazy Vault",
+        ar: "Lazy Vault",
+        video: "https://youtube.com/shorts/JLbuT9FU6lI"
+      },
 
-      [
-        "12",
-        "Monkey Vault",
-        "https://youtube.com/shorts/ktSlnQzloLU"
-      ],
+      {
+        en: "Thief Vault",
+        ar: "Thief Vault",
+        video: "https://youtube.com/shorts/1ND7el_msvM"
+      },
 
-      [
-        "13",
-        "360 Vault",
-        "https://youtube.com/shorts/Tu14vq5gmTA"
-      ],
+      {
+        en: "Monkey Vault",
+        ar: "Monkey Vault",
+        video: "https://youtube.com/shorts/ktSlnQzloLU"
+      },
 
-      [
-        "14",
-        "Dash Vault",
-        "https://youtube.com/shorts/PeDeqIttPho"
-      ],
+      {
+        en: "360 Vault",
+        ar: "360 Vault",
+        video: "https://youtube.com/shorts/Tu14vq5gmTA"
+      },
 
-      [
-        "15",
-        "Cat Leap",
-        "https://youtube.com/shorts/y-Ins4dcNDk"
-      ]
+      {
+        en: "Dash Vault",
+        ar: "Dash Vault",
+        video: "https://youtube.com/shorts/PeDeqIttPho"
+      },
+
+      {
+        en: "Cat Leap",
+        ar: "Cat Leap",
+        video: "https://youtube.com/shorts/y-Ins4dcNDk"
+      }
 
     ]
   },
 
+
+  /* -----------------------------------------
+     LEVEL 3
+  ----------------------------------------- */
 
   {
     level: 3,
-    name: "ADVANCED MOVES",
-    color: "green",
-    sub: "Build Flow & Control",
 
-    items: [
+    title: {
+      en: "ADVANCED MOVES",
+      ar: "الحركات المتقدمة"
+    },
 
-      [
-        "16",
-        "Tic Tac",
-        "https://youtube.com/shorts/tX37Ugu_L_o"
-      ],
+    moves: [
 
-      [
-        "17",
-        "Wall Run",
-        "https://youtube.com/shorts/XjoqFhTUO74"
-      ],
+      {
+        en: "Tic Tac",
+        ar: "Tic Tac",
+        video: "https://youtube.com/shorts/tX37Ugu_L_o"
+      },
 
-      [
-        "18",
-        "Underbar",
-        "https://youtube.com/shorts/0SejUtKqTdU"
-      ],
+      {
+        en: "Wall Run",
+        ar: "Wall Run",
+        video: "https://youtube.com/shorts/XjoqFhTUO74"
+      },
 
-      [
-        "19",
-        "Turn Vault",
-        "https://youtube.com/shorts/Tc7WZpXNCTo"
-      ],
+      {
+        en: "Underbar",
+        ar: "Underbar",
+        video: "https://youtube.com/shorts/0SejUtKqTdU"
+      },
 
-      [
-        "20",
-        "Kong to Dive Roll",
-        "https://youtube.com/shorts/6ZE5YEDIEaU"
-      ],
+      {
+        en: "Turn Vault",
+        ar: "Turn Vault",
+        video: "https://youtube.com/shorts/Tc7WZpXNCTo"
+      },
 
-      [
-        "21",
-        "Kong Precision",
-        "https://youtube.com/shorts/VWRBXT8dXYc"
-      ],
+      {
+        en: "Kong to Dive Roll",
+        ar: "Kong to Dive Roll",
+        video: "https://youtube.com/shorts/6ZE5YEDIEaU"
+      },
 
-      [
-        "22",
-        "Double Kong",
-        "https://youtube.com/shorts/c15g05If_-w"
-      ],
+      {
+        en: "Kong Precision",
+        ar: "Kong Precision",
+        video: "https://youtube.com/shorts/VWRBXT8dXYc"
+      },
 
-      [
-        "23",
-        "Palm Spin",
-        "https://youtube.com/shorts/B38mbEB0kq4"
-      ],
+      {
+        en: "Double Kong",
+        ar: "Double Kong",
+        video: "https://youtube.com/shorts/c15g05If_-w"
+      },
 
-      [
-        "24",
-        "Wall Spin",
-        "https://youtube.com/shorts/JOrAPBj1iL0"
-      ]
+      {
+        en: "Palm Spin",
+        ar: "Palm Spin",
+        video: "https://youtube.com/shorts/B38mbEB0kq4"
+      },
+
+      {
+        en: "Wall Spin",
+        ar: "Wall Spin",
+        video: "https://youtube.com/shorts/JOrAPBj1iL0"
+      }
 
     ]
   },
 
 
+  /* -----------------------------------------
+     LEVEL 4
+  ----------------------------------------- */
+
   {
     level: 4,
-    name: "AERIAL MOVES",
-    color: "white",
-    sub: "Aerial Control",
 
-    items: [
+    title: {
+      en: "AERIAL MOVES",
+      ar: "الحركات الهوائية"
+    },
 
-      [
-        "25",
-        "Backflip",
-        "https://youtube.com/shorts/UanAXX9JgDg"
-      ],
+    moves: [
 
-      [
-        "26",
-        "Frontflip",
-        "https://youtube.com/shorts/jW_Y_8zKnBA"
-      ],
+      {
+        en: "Backflip",
+        ar: "Backflip",
+        video: "https://youtube.com/shorts/UanAXX9JgDg"
+      },
 
-      [
-        "27",
-        "Side Flip",
-        "https://youtube.com/shorts/G0BJmVJPfDg"
-      ]
+      {
+        en: "Frontflip",
+        ar: "Frontflip",
+        video: "https://youtube.com/shorts/jW_Y_8zKnBA"
+      },
+
+      {
+        en: "Side Flip",
+        ar: "Side Flip",
+        video: "https://youtube.com/shorts/G0BJmVJPfDg"
+      }
 
     ]
   }
@@ -212,450 +246,509 @@ const lessons = [
 ];
 
 
+/* =========================================
+   CURRENT LANGUAGE
+========================================= */
 
-/* =========================
-   GET YOUTUBE VIDEO ID
-========================= */
+let currentLanguage =
+  localStorage.getItem("parkourXLanguage") || "en";
+
+
+/* =========================================
+   YOUTUBE ID
+========================================= */
 
 function getYouTubeId(url) {
 
   const match =
-    url.match(
-      /shorts\/([^?&]+)/i
-    );
+    url.match(/shorts\/([^?&]+)/i);
 
-  if (match) {
-
-    return match[1];
-
-  }
-
-  return "";
-
+  return match ? match[1] : "";
 }
 
 
+/* =========================================
+   GET TEXT
+========================================= */
 
-/* =========================
-   RENDER LESSONS
-========================= */
+function getText(textObject) {
+
+  return textObject[currentLanguage] ||
+         textObject.en;
+}
+
+
+/* =========================================
+   RENDER COURSE
+========================================= */
 
 function renderLessons() {
 
-  const root =
-    document.getElementById("levels");
+  const container =
+    document.getElementById("lessonsContainer");
+
+  if (!container) return;
+
+  container.innerHTML = "";
 
 
-  root.innerHTML =
-    lessons.map(level => `
+  lessons.forEach(level => {
 
-      <div class="level ${level.color}">
+    const levelSection =
+      document.createElement("div");
 
-        <div class="level-title">
-
-          <span class="level-dot"></span>
-
-          <div>
-
-            <h3>
-              LEVEL ${level.level}
-              — ${level.name}
-            </h3>
-
-            <div class="level-sub">
-              ${level.sub}
-            </div>
-
-          </div>
-
-        </div>
+    levelSection.className =
+      `course-level level-${level.level}`;
 
 
-        <div class="lesson-grid">
+    levelSection.innerHTML = `
 
-          ${level.items.map(item => {
+      <div class="level-heading">
 
-            const videoId =
-              getYouTubeId(item[2]);
+        <span class="level-number">
+          ${
+            currentLanguage === "ar"
+              ? `المستوى ${level.level}`
+              : `LEVEL ${level.level}`
+          }
+        </span>
 
-
-            const thumbnail =
-              `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
-
-
-            return `
-
-              <article class="lesson">
-
-                <a
-                  href="${item[2]}"
-                  target="_blank"
-                  rel="noopener"
-                  class="lesson-thumb"
-                >
-
-                  <img
-                    src="${thumbnail}"
-                    alt="${item[1]} Parkour tutorial"
-                    loading="lazy"
-                  >
-
-                  <span class="video-play">
-                    ▶
-                  </span>
-
-                </a>
-
-
-                <div class="lesson-info">
-
-                  <div class="num">
-                    ${item[0]}
-                  </div>
-
-
-                  <h4>
-                    ${item[1]}
-                  </h4>
-
-
-                  <a
-                    href="${item[2]}"
-                    target="_blank"
-                    rel="noopener"
-                    class="lesson-watch"
-                  >
-
-                    ▶ WATCH VIDEO
-
-                  </a>
-
-                </div>
-
-              </article>
-
-            `;
-
-          }).join("")}
-
-        </div>
+        <h3>
+          ${getText(level.title)}
+        </h3>
 
       </div>
 
-    `).join("");
+      <div class="lessons-grid"></div>
+
+    `;
+
+
+    const grid =
+      levelSection.querySelector(".lessons-grid");
+
+
+    level.moves.forEach((move, index) => {
+
+      const videoId =
+        getYouTubeId(move.video);
+
+      const title =
+        getText(move);
+
+      const card =
+        document.createElement("div");
+
+      card.className =
+        "lesson-card";
+
+
+      card.innerHTML = `
+
+        <div class="lesson-name">
+
+          <span>
+            ${String(index + 1).padStart(2, "0")}
+          </span>
+
+          <strong>
+            ${title}
+          </strong>
+
+        </div>
+
+
+        <button
+          class="lesson-thumb"
+          type="button"
+          data-video-id="${videoId}"
+          data-title-en="${move.en}"
+          data-title-ar="${move.ar}"
+          aria-label="${move.en}"
+        >
+
+          <img
+            src="https://i.ytimg.com/vi/${videoId}/hqdefault.jpg"
+            alt="${title}"
+            loading="lazy"
+          >
+
+          <span class="video-play">
+            ▶
+          </span>
+
+        </button>
+
+
+        <button
+          class="watch-button"
+          type="button"
+          data-video-id="${videoId}"
+          data-title-en="${move.en}"
+          data-title-ar="${move.ar}"
+        >
+          ${
+            currentLanguage === "ar"
+              ? "شاهد الفيديو"
+              : "WATCH VIDEO"
+          }
+        </button>
+
+      `;
+
+
+      grid.appendChild(card);
+
+    });
+
+
+    container.appendChild(levelSection);
+
+  });
+
+
+  addVideoListeners();
+}
+
+
+/* =========================================
+   VIDEO BUTTONS
+========================================= */
+
+function addVideoListeners() {
+
+  const buttons =
+    document.querySelectorAll(
+      ".lesson-thumb, .watch-button"
+    );
+
+
+  buttons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+      const videoId =
+        button.dataset.videoId;
+
+      const title =
+        currentLanguage === "ar"
+          ? button.dataset.titleAr
+          : button.dataset.titleEn;
+
+      openVideo(
+        videoId,
+        title
+      );
+
+    });
+
+  });
 
 }
 
 
+/* =========================================
+   OPEN VIDEO
+========================================= */
 
-/* =========================
-   TRANSLATIONS
-========================= */
+function openVideo(
+  videoId,
+  title
+) {
 
-const translations = {
+  const modal =
+    document.getElementById("videoModal");
 
-  en: {
+  const frame =
+    document.getElementById("videoFrame");
 
-    "nav.about":
-      "About",
+  const modalTitle =
+    document.getElementById("videoModalTitle");
 
-    "nav.training":
-      "Training",
 
-    "nav.course":
-      "Online Course",
+  if (!modal || !frame) return;
 
-    "nav.book":
-      "Book",
 
-    "nav.wear":
-      "Sportswear",
+  modalTitle.textContent =
+    title;
 
-    "nav.contact":
-      "Contact",
 
+  frame.src =
+    `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`;
 
-    "hero.title":
-      "TRAIN. MOVE. EXPLORE. REPEAT.",
 
-    "hero.text":
-      "Professional parkour training, education and a complete learning path from beginner to advanced.",
+  modal.classList.add("active");
 
-    "hero.cta":
-      "START TRAINING",
+  modal.setAttribute(
+    "aria-hidden",
+    "false"
+  );
 
-    "hero.about":
-      "MEET AMR SAMY",
+  document.body.classList.add(
+    "modal-open"
+  );
 
+}
 
-    "about.title":
-      "Amr Samy",
 
-    "about.text":
-      "Amr Samy is a professional parkour athlete and one of the early contributors to the development of parkour in Egypt. He started training in 2005 and officially joined the first Egyptian team on 31/03/2008.",
+/* =========================================
+   CLOSE VIDEO
+========================================= */
 
-    "about.text2":
-      "Today, Parkour X brings together training, education, courses for athletes and coaches, a parkour book, and sportswear for the parkour community.",
+function closeVideo() {
 
-    "about.stat1":
-      "Training Started",
+  const modal =
+    document.getElementById("videoModal");
 
-    "about.stat2":
-      "First Team — Official Start",
+  const frame =
+    document.getElementById("videoFrame");
 
-    "about.stat3":
-      "Academy & Community",
 
+  if (!modal || !frame) return;
 
-    "training.title":
-      "Build Real Parkour Skills",
 
-    "training.c1":
-      "Professional Training",
+  modal.classList.remove("active");
 
-    "training.p1":
-      "Structured parkour training for athletes who want to develop movement, control and confidence.",
-
-    "training.c2":
-      "Athlete & Coach Courses",
-
-    "training.p2":
-      "Online and in-person educational courses designed for athletes and coaches.",
-
-    "training.c3":
-      "Parkour Community",
-
-    "training.p3":
-      "A platform connecting training, knowledge, media and parkour culture.",
-
-
-    "course.title":
-      "From Beginner to Advanced",
-
-    "course.text":
-      "A free video series that builds your foundation step by step and progresses through basic, advanced and aerial movements.",
-
-    "course.promo":
-      "WATCH PROMO",
-
-    "course.promoTitle":
-      "Official Course Promo",
-
-    "course.promoText":
-      "Start here and discover the Parkour X training journey.",
-
-
-    "book.title":
-      "Parkour X Book",
-
-    "book.text":
-      "A dedicated parkour book project created to document knowledge and help grow parkour education in Egypt and the Arab world.",
-
-
-    "wear.title":
-      "Parkour X Sportswear",
-
-    "wear.text":
-      "Sportswear created with parkour athletes and movement in mind. The collection will be presented here as it launches.",
-
-
-    "contact.title":
-      "Train With Parkour X",
-
-    "contact.text":
-      "For training, courses, collaborations and bookings, get in touch.",
-
-    "contact.call":
-      "Call"
-
-  },
-
-
-  ar: {
-
-    "nav.about":
-      "عن الأكاديمية",
-
-    "nav.training":
-      "التدريب",
-
-    "nav.course":
-      "الكورس الأونلاين",
-
-    "nav.book":
-      "الكتاب",
-
-    "nav.wear":
-      "الملابس",
-
-    "nav.contact":
-      "تواصل معنا",
-
-
-    "hero.title":
-      "اتدرّب • اتحرك • استكشف • كرر",
-
-    "hero.text":
-      "تدريب باركور احترافي، تعليم وكورس متكامل يبدأ من المبتدئين ويتدرج حتى المستوى المتقدم.",
-
-    "hero.cta":
-      "ابدأ التدريب",
-
-    "hero.about":
-      "تعرف على عمرو سامي",
-
-
-    "about.title":
-      "عمرو سامي",
-
-    "about.text":
-      "عمرو سامي لاعب باركور محترف ومن أوائل المساهمين في تطوير رياضة الباركور في مصر. بدأ التدريب عام 2005 وانضم رسميًا إلى أول فريق مصري في 31/03/2008.",
-
-    "about.text2":
-      "اليوم تجمع Parkour X بين التدريب، التعليم، الكورسات للاعبين والمدربين، كتاب للباركور، وبراند ملابس رياضية لمجتمع الباركور.",
-
-    "about.stat1":
-      "بداية التدريب",
-
-    "about.stat2":
-      "أول فريق — البداية الرسمية",
-
-    "about.stat3":
-      "أكاديمية ومجتمع",
-
-
-    "training.title":
-      "ابني مهارات باركور حقيقية",
-
-    "training.c1":
-      "تدريب باركور احترافي",
-
-    "training.p1":
-      "تدريب منظم للاعبين الراغبين في تطوير الحركة والتحكم والثقة.",
-
-    "training.c2":
-      "كورسات للاعبين والمدربين",
-
-    "training.p2":
-      "كورسات تعليمية أونلاين وعلى أرض الواقع للاعبين والمدربين.",
-
-    "training.c3":
-      "مجتمع الباركور",
-
-    "training.p3":
-      "منصة تجمع التدريب والمعرفة والمحتوى وثقافة الباركور.",
-
-
-    "course.title":
-      "من المبتدئ إلى المتقدم",
-
-    "course.text":
-      "سلسلة فيديوهات مجانية تبني الأساس خطوة بخطوة ثم تنتقل إلى الحركات الأساسية والمتقدمة والهوائية.",
-
-    "course.promo":
-      "شاهد البرومو",
-
-    "course.promoTitle":
-      "برومو الكورس",
-
-    "course.promoText":
-      "ابدأ من هنا واكتشف رحلة التدريب مع Parkour X.",
-
-
-    "book.title":
-      "كتاب Parkour X",
-
-    "book.text":
-      "مشروع كتاب متخصص في الباركور لتوثيق المعرفة والمساهمة في تطوير تعليم الباركور في مصر والوطن العربي.",
-
-
-    "wear.title":
-      "ملابس Parkour X الرياضية",
-
-    "wear.text":
-      "ملابس رياضية مصممة مع وضع لاعبي الباركور والحركة في الاعتبار. سيتم عرض المجموعة هنا عند إطلاقها.",
-
-
-    "contact.title":
-      "اتدرّب مع Parkour X",
-
-    "contact.text":
-      "للتدريب والكورسات والتعاون والحجوزات، تواصل معنا.",
-
-    "contact.call":
-      "اتصال"
-
-  }
-
-};
-
-
-
-/* =========================
-   LANGUAGE
-========================= */
-
-let lang = "en";
-
-
-function setLanguage() {
-
-  document.documentElement.lang =
-    lang;
-
-
-  document.body.classList.toggle(
-    "rtl",
-    lang === "ar"
+  modal.setAttribute(
+    "aria-hidden",
+    "true"
   );
 
 
-  document.getElementById(
-    "langBtn"
-  ).textContent =
-    lang === "en"
-      ? "العربية"
-      : "English";
+  document.body.classList.remove(
+    "modal-open"
+  );
 
+
+  // Stop video
+  frame.src = "";
+}
+
+
+/* =========================================
+   LANGUAGE
+========================================= */
+
+function updateLanguage() {
+
+  const isArabic =
+    currentLanguage === "ar";
+
+
+  /*
+    Change HTML direction
+  */
+
+  document.documentElement.lang =
+    currentLanguage;
+
+  document.documentElement.dir =
+    isArabic
+      ? "rtl"
+      : "ltr";
+
+
+  /*
+    Update every element
+    that has data-en / data-ar
+  */
 
   document
-    .querySelectorAll("[data-i18n]")
+    .querySelectorAll("[data-en]")
     .forEach(element => {
 
-      const key =
-        element.dataset.i18n;
+      const text =
+        isArabic
+          ? element.dataset.ar
+          : element.dataset.en;
 
 
-      if (
-        translations[lang][key]
-      ) {
+      if (text !== undefined) {
 
         element.textContent =
-          translations[lang][key];
+          text;
 
       }
 
     });
 
+
+  /*
+    Update language button
+  */
+
+  const languageButton =
+    document.getElementById(
+      "languageToggle"
+    );
+
+
+  if (languageButton) {
+
+    languageButton.textContent =
+      isArabic
+        ? "EN"
+        : "AR";
+
+  }
+
+
+  /*
+    Render course again
+    because lesson names also change
+  */
+
+  renderLessons();
+
+
+  /*
+    Save language
+  */
+
+  localStorage.setItem(
+    "parkourXLanguage",
+    currentLanguage
+  );
+
 }
 
 
+/* =========================================
+   LANGUAGE BUTTON
+========================================= */
 
-/* =========================
-   YEAR
-========================= */
+function initLanguage() {
 
-document.getElementById(
-  "year"
-).textContent =
-  new Date().getFullYear();
+  const languageButton =
+    document.getElementById(
+      "languageToggle"
+    );
 
 
+  if (!languageButton) return;
 
-/* =========================
+
+  languageButton.addEventListener(
+    "click",
+    () => {
+
+      currentLanguage =
+        currentLanguage === "en"
+          ? "ar"
+          : "en";
+
+
+      updateLanguage();
+
+    }
+  );
+
+}
+
+
+/* =========================================
+   CLOSE MODAL
+========================================= */
+
+function initVideoModal() {
+
+  const modal =
+    document.getElementById("videoModal");
+
+  const closeButton =
+    document.getElementById("videoClose");
+
+
+  if (closeButton) {
+
+    closeButton.addEventListener(
+      "click",
+      closeVideo
+    );
+
+  }
+
+
+  /*
+    Click outside video
+  */
+
+  if (modal) {
+
+    modal.addEventListener(
+      "click",
+      event => {
+
+        if (
+          event.target === modal
+        ) {
+
+          closeVideo();
+
+        }
+
+      }
+    );
+
+  }
+
+
+  /*
+    ESC key
+  */
+
+  document.addEventListener(
+    "keydown",
+    event => {
+
+      if (
+        event.key === "Escape"
+      ) {
+
+        closeVideo();
+
+      }
+
+    }
+  );
+
+}
+
+
+/* =========================================
+   CURRENT YEAR
+========================================= */
+
+function updateYear() {
+
+  const year =
+    document.getElementById("year");
+
+  if (year) {
+
+    year.textContent =
+      new Date().getFullYear();
+
+  }
+
+}
+
+
+/* =========================================
    START
-========================= */
+========================================= */
 
-renderLessons();
+document.addEventListener(
+  "DOMContentLoaded",
+  () => {
 
-setLanguage();
+    initLanguage();
+
+    initVideoModal();
+
+    updateYear();
+
+    updateLanguage();
+
+  }
+);
