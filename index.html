@@ -11,7 +11,7 @@
     content="Parkour X Academy — Professional parkour training, education, courses, athletes and coaches."
   >
 
-  <title>Parkour X Academy | Egypt</title>
+  <title>Parkour X Academy</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
 
@@ -34,11 +34,7 @@
 
 <header class="site-header">
 
-  <a
-    class="brand"
-    href="#home"
-    aria-label="Parkour X Academy"
-  >
+  <a class="brand" href="#home">
     <span class="brand-x">X</span>
     <span>PARKOUR</span>
     <b>X</b>
@@ -92,6 +88,8 @@
 <section id="home" class="hero">
 
   <div class="hero-overlay"></div>
+
+  <div class="hero-pattern"></div>
 
   <div class="hero-content">
 
@@ -196,102 +194,6 @@
 
 
 <!-- =========================
-     EGYPT + PARKOUR GALLERY
-========================= -->
-
-<section class="egypt-gallery">
-
-  <div class="gallery-header">
-
-    <p class="section-kicker">
-      PARKOUR X — EGYPT
-    </p>
-
-
-    <h2>
-      PARKOUR<br>
-      IN EGYPT
-    </h2>
-
-
-    <p data-i18n="gallery.text">
-      Movement, freedom and Egyptian streets.
-    </p>
-
-  </div>
-
-
-  <div class="gallery-grid">
-
-
-    <!-- PARKOUR -->
-
-    <div class="gallery-item large">
-
-      <img
-        src="https://commons.wikimedia.org/wiki/Special:FilePath/Le%20Parkour%20Precision%20jump.jpg"
-        alt="Parkour athlete performing a precision jump"
-        loading="lazy"
-      >
-
-      <div class="image-label">
-        PARKOUR
-      </div>
-
-    </div>
-
-
-
-    <!-- PYRAMIDS -->
-
-    <div class="gallery-item">
-
-      <img
-        src="https://commons.wikimedia.org/wiki/Special:FilePath/Pyramids%20of%20Giza%20Egypt.png"
-        alt="Pyramids of Giza in Egypt"
-        loading="lazy"
-      >
-
-      <div class="image-label">
-        GIZA • EGYPT
-      </div>
-
-    </div>
-
-
-
-    <!-- CAIRO -->
-
-    <div class="gallery-item">
-
-      <img
-        src="https://commons.wikimedia.org/wiki/Special:FilePath/Skyline%2C%20al-Q%C4%81hirah%2C%20CG%2C%20EGY%20%2847859442352%29.jpg"
-        alt="Cairo skyline Egypt"
-        loading="lazy"
-      >
-
-      <div class="image-label">
-        CAIRO
-      </div>
-
-    </div>
-
-  </div>
-
-
-  <div class="photo-credit">
-
-    Photos:
-    Wikimedia Commons —
-    Parkour / Giza / Cairo
-
-  </div>
-
-</section>
-
-
-
-<!-- =========================
      TRAINING
 ========================= -->
 
@@ -342,7 +244,7 @@
 
 
 
-    <article class="card green-card">
+    <article class="card black-card">
 
       <span>03</span>
 
@@ -403,10 +305,12 @@
 
 
 
+  <!-- PROMO -->
+
   <div class="promo-card">
 
-    <div class="promo-number">
-      00
+    <div class="promo-icon">
+      ▶
     </div>
 
 
@@ -440,6 +344,8 @@
 
   </div>
 
+
+  <!-- LESSONS -->
 
   <div id="levels"></div>
 
@@ -550,47 +456,201 @@
   </p>
 
 
-  <div class="contact-actions">
 
+  <!-- PHONE -->
 
-    <a
-      class="btn primary"
-      href="tel:+201115552621"
-    >
-      📞
-      <span data-i18n="contact.call">
-        Call
+  <div class="contact-phone">
+
+    <a href="tel:+201115552621">
+
+      <span class="phone-icon">
+        ☎
       </span>
+
+      <span>
+        01115552621
+      </span>
+
     </a>
 
 
     <a
-      class="btn whatsapp"
       href="https://wa.me/201115552621"
       target="_blank"
       rel="noopener"
     >
-      💬 WhatsApp
+
+      <span class="whatsapp-icon">
+        ◉
+      </span>
+
+      <span>
+        WhatsApp
+      </span>
+
     </a>
 
+  </div>
+
+
+
+  <!-- SOCIAL MEDIA -->
+
+  <div class="social-grid">
+
+
+    <!-- Instagram -->
 
     <a
-      class="btn ghost"
-      href="https://www.youtube.com/@parkourxacademy"
-      target="_blank"
-      rel="noopener"
-    >
-      ▶ YouTube
-    </a>
-
-
-    <a
-      class="btn ghost"
+      class="social instagram"
       href="https://www.instagram.com/parkourxacademy/"
       target="_blank"
       rel="noopener"
+      aria-label="Instagram"
     >
-      ◎ Instagram
+
+      <span class="social-logo">
+        ◎
+      </span>
+
+      <span>
+        Instagram
+      </span>
+
+      <small>
+        @parkourxacademy
+      </small>
+
+    </a>
+
+
+
+    <!-- YouTube -->
+
+    <a
+      class="social youtube"
+      href="https://www.youtube.com/@parkourxacademy"
+      target="_blank"
+      rel="noopener"
+      aria-label="YouTube"
+    >
+
+      <span class="social-logo">
+        ▶
+      </span>
+
+      <span>
+        YouTube
+      </span>
+
+      <small>
+        @parkourxacademy
+      </small>
+
+    </a>
+
+
+
+    <!-- TikTok -->
+
+    <a
+      class="social tiktok"
+      href="https://www.tiktok.com/@parkourxacademy"
+      target="_blank"
+      rel="noopener"
+      aria-label="TikTok"
+    >
+
+      <span class="social-logo">
+        ♪
+      </span>
+
+      <span>
+        TikTok
+      </span>
+
+      <small>
+        @parkourxacademy
+      </small>
+
+    </a>
+
+
+
+    <!-- Facebook -->
+
+    <a
+      class="social facebook"
+      href="https://www.facebook.com/parkourxacademy"
+      target="_blank"
+      rel="noopener"
+      aria-label="Facebook"
+    >
+
+      <span class="social-logo">
+        f
+      </span>
+
+      <span>
+        Facebook
+      </span>
+
+      <small>
+        /parkourxacademy
+      </small>
+
+    </a>
+
+
+
+    <!-- X -->
+
+    <a
+      class="social x-social"
+      href="https://x.com/parkourxacademy"
+      target="_blank"
+      rel="noopener"
+      aria-label="X"
+    >
+
+      <span class="social-logo">
+        X
+      </span>
+
+      <span>
+        X
+      </span>
+
+      <small>
+        @parkourxacademy
+      </small>
+
+    </a>
+
+
+
+    <!-- LinkedIn -->
+
+    <a
+      class="social linkedin"
+      href="https://www.linkedin.com/company/parkourxacademy/"
+      target="_blank"
+      rel="noopener"
+      aria-label="LinkedIn"
+    >
+
+      <span class="social-logo">
+        in
+      </span>
+
+      <span>
+        LinkedIn
+      </span>
+
+      <small>
+        Parkour X Academy
+      </small>
+
     </a>
 
   </div>
