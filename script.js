@@ -39,13 +39,13 @@ const lessons = [
       {
         en: "Precision",
         ar: "Precision",
-        video: "https://youtube.com/shorts/IOS7qZsFGJ0"
+        video: "https://youtube.com/shorts/8WPiCnvakbs"
       },
 
       {
         en: "Landing",
         ar: "Landing",
-        video: "https://youtube.com/shorts/8WPiCnvakbs"
+        video: "https://youtube.com/shorts/IOS7qZsFGJ0"
       },
 
       {
