@@ -7,37 +7,11 @@ const lessons = [
     sub: "Build Your Foundation",
 
     items: [
-
-      [
-        "01",
-        "Balance",
-        "https://youtube.com/shorts/6aFpoFo23PA"
-      ],
-
-      [
-        "02",
-        "Roll",
-        "https://youtube.com/shorts/M9axAOpLjsc"
-      ],
-
-      [
-        "03",
-        "Precision",
-        "https://youtube.com/shorts/IOS7qZsFGJ0"
-      ],
-
-      [
-        "04",
-        "Landing",
-        "https://youtube.com/shorts/8WPiCnvakbs"
-      ],
-
-      [
-        "05",
-        "Long Jump",
-        "https://youtube.com/shorts/mpjLNNi4iUk"
-      ]
-
+      ["01", "Balance", "https://youtube.com/shorts/6aFpoFo23PA"],
+      ["02", "Roll", "https://youtube.com/shorts/M9axAOpLjsc"],
+      ["03", "Precision", "https://youtube.com/shorts/IOS7qZsFGJ0"],
+      ["04", "Landing", "https://youtube.com/shorts/8WPiCnvakbs"],
+      ["05", "Long Jump", "https://youtube.com/shorts/mpjLNNi4iUk"]
     ]
   },
 
@@ -49,67 +23,16 @@ const lessons = [
     sub: "Master the Fundamentals",
 
     items: [
-
-      [
-        "06",
-        "Crane",
-        "https://youtube.com/shorts/lhR_rudTPE4"
-      ],
-
-      [
-        "07",
-        "Safety Vault",
-        "https://youtube.com/shorts/v9V71PVYjJ0"
-      ],
-
-      [
-        "08",
-        "Reverse Safety",
-        "https://youtube.com/shorts/abQOOWzJSVc"
-      ],
-
-      [
-        "09",
-        "Speed Vault",
-        "https://youtube.com/shorts/_IATk3dpSfU"
-      ],
-
-      [
-        "10",
-        "Lazy Vault",
-        "https://youtube.com/shorts/JLbuT9FU6lI"
-      ],
-
-      [
-        "11",
-        "Thief Vault",
-        "https://youtube.com/shorts/1ND7el_msvM"
-      ],
-
-      [
-        "12",
-        "Monkey Vault",
-        "https://youtube.com/shorts/ktSlnQzloLU"
-      ],
-
-      [
-        "13",
-        "360 Vault",
-        "https://youtube.com/shorts/Tu14vq5gmTA"
-      ],
-
-      [
-        "14",
-        "Dash Vault",
-        "https://youtube.com/shorts/PeDeqIttPho"
-      ],
-
-      [
-        "15",
-        "Cat Leap",
-        "https://youtube.com/shorts/y-Ins4dcNDk"
-      ]
-
+      ["06", "Crane", "https://youtube.com/shorts/lhR_rudTPE4"],
+      ["07", "Safety Vault", "https://youtube.com/shorts/v9V71PVYjJ0"],
+      ["08", "Reverse Safety", "https://youtube.com/shorts/abQOOWzJSVc"],
+      ["09", "Speed Vault", "https://youtube.com/shorts/_IATk3dpSfU"],
+      ["10", "Lazy Vault", "https://youtube.com/shorts/JLbuT9FU6lI"],
+      ["11", "Thief Vault", "https://youtube.com/shorts/1ND7el_msvM"],
+      ["12", "Monkey Vault", "https://youtube.com/shorts/ktSlnQzloLU"],
+      ["13", "360 Vault", "https://youtube.com/shorts/Tu14vq5gmTA"],
+      ["14", "Dash Vault", "https://youtube.com/shorts/PeDeqIttPho"],
+      ["15", "Cat Leap", "https://youtube.com/shorts/y-Ins4dcNDk"]
     ]
   },
 
@@ -121,61 +44,15 @@ const lessons = [
     sub: "Build Flow & Control",
 
     items: [
-
-      [
-        "16",
-        "Tic Tac",
-        "https://youtube.com/shorts/tX37Ugu_L_o"
-      ],
-
-      [
-        "17",
-        "Wall Run",
-        "https://youtube.com/shorts/XjoqFhTUO74"
-      ],
-
-      [
-        "18",
-        "Underbar",
-        "https://youtube.com/shorts/0SejUtKqTdU"
-      ],
-
-      [
-        "19",
-        "Turn Vault",
-        "https://youtube.com/shorts/Tc7WZpXNCTo"
-      ],
-
-      [
-        "20",
-        "Kong to Dive Roll",
-        "https://youtube.com/shorts/6ZE5YEDIEaU"
-      ],
-
-      [
-        "21",
-        "Kong Precision",
-        "https://youtube.com/shorts/VWRBXT8dXYc"
-      ],
-
-      [
-        "22",
-        "Double Kong",
-        "https://youtube.com/shorts/c15g05If_-w"
-      ],
-
-      [
-        "23",
-        "Palm Spin",
-        "https://youtube.com/shorts/B38mbEB0kq4"
-      ],
-
-      [
-        "24",
-        "Wall Spin",
-        "https://youtube.com/shorts/JOrAPBj1iL0"
-      ]
-
+      ["16", "Tic Tac", "https://youtube.com/shorts/tX37Ugu_L_o"],
+      ["17", "Wall Run", "https://youtube.com/shorts/XjoqFhTUO74"],
+      ["18", "Underbar", "https://youtube.com/shorts/0SejUtKqTdU"],
+      ["19", "Turn Vault", "https://youtube.com/shorts/Tc7WZpXNCTo"],
+      ["20", "Kong to Dive Roll", "https://youtube.com/shorts/6ZE5YEDIEaU"],
+      ["21", "Kong Precision", "https://youtube.com/shorts/VWRBXT8dXYc"],
+      ["22", "Double Kong", "https://youtube.com/shorts/c15g05If_-w"],
+      ["23", "Palm Spin", "https://youtube.com/shorts/B38mbEB0kq4"],
+      ["24", "Wall Spin", "https://youtube.com/shorts/JOrAPBj1iL0"]
     ]
   },
 
@@ -187,25 +64,9 @@ const lessons = [
     sub: "Aerial Control",
 
     items: [
-
-      [
-        "25",
-        "Backflip",
-        "https://youtube.com/shorts/UanAXX9JgDg"
-      ],
-
-      [
-        "26",
-        "Frontflip",
-        "https://youtube.com/shorts/jW_Y_8zKnBA"
-      ],
-
-      [
-        "27",
-        "Side Flip",
-        "https://youtube.com/shorts/G0BJmVJPfDg"
-      ]
-
+      ["25", "Backflip", "https://youtube.com/shorts/UanAXX9JgDg"],
+      ["26", "Frontflip", "https://youtube.com/shorts/jW_Y_8zKnBA"],
+      ["27", "Side Flip", "https://youtube.com/shorts/G0BJmVJPfDg"]
     ]
   }
 
@@ -253,19 +114,16 @@ function renderLessons() {
               ${item[0]}
             </div>
 
-
             <h4>
               ${item[1]}
             </h4>
 
-
             <a
               href="${item[2]}"
               target="_blank"
-              rel="noopener">
-
+              rel="noopener"
+            >
               ▶ WATCH ON YOUTUBE
-
             </a>
 
           </article>
@@ -281,10 +139,6 @@ function renderLessons() {
 }
 
 
-
-/* =========================
-   TRANSLATIONS
-========================= */
 
 const translations = {
 
@@ -339,6 +193,10 @@ const translations = {
 
     "about.stat3":
       "Academy & Community",
+
+
+    "gallery.text":
+      "Movement, freedom and Egyptian streets.",
 
 
     "training.title":
@@ -458,6 +316,10 @@ const translations = {
       "أكاديمية ومجتمع",
 
 
+    "gallery.text":
+      "الحركة والحرية وشوارع مصر.",
+
+
     "training.title":
       "ابني مهارات باركور حقيقية",
 
@@ -525,10 +387,6 @@ const translations = {
 
 
 
-/* =========================
-   LANGUAGE
-========================= */
-
 let lang = "en";
 
 
@@ -536,6 +394,7 @@ function setLanguage() {
 
   document.documentElement.lang =
     lang;
+
 
   document.body.classList.toggle(
     "rtl",
@@ -573,6 +432,7 @@ function setLanguage() {
 }
 
 
+
 document
   .getElementById("langBtn")
   .addEventListener(
@@ -591,20 +451,11 @@ document
 
 
 
-/* =========================
-   YEAR
-========================= */
-
 document.getElementById(
   "year"
 ).textContent =
   new Date().getFullYear();
 
-
-
-/* =========================
-   INIT
-========================= */
 
 renderLessons();
 
