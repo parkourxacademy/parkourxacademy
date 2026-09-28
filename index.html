@@ -1,690 +1,942 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-
 <head>
   <meta charset="UTF-8">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Parkour X Academy | Egypt</title>
 
   <meta
     name="description"
-    content="Parkour X Academy — Professional parkour training, education, courses, athletes and coaches."
-  >
-
-  <title>Parkour X Academy</title>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-
-  <link
-    rel="preconnect"
-    href="https://fonts.gstatic.com"
-    crossorigin
-  >
-
-  <link
-    href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Montserrat:wght@400;600;700;800;900&display=swap"
-    rel="stylesheet"
+    content="Parkour X Academy Egypt — Parkour training, online courses, events and community."
   >
 
   <link rel="stylesheet" href="style.css">
 </head>
 
-
 <body>
 
-<header class="site-header">
+  <!-- =========================================
+       HEADER
+  ========================================== -->
 
-  <a class="brand" href="#home">
-    <span class="brand-x">X</span>
-    <span>PARKOUR</span>
-    <b>X</b>
-  </a>
+  <header class="site-header">
 
+    <div class="header-inner">
 
-  <nav>
-
-    <a href="#about" data-i18n="nav.about">
-      About
-    </a>
-
-    <a href="#training" data-i18n="nav.training">
-      Training
-    </a>
-
-    <a href="#course" data-i18n="nav.course">
-      Online Course
-    </a>
-
-    <a href="#book" data-i18n="nav.book">
-      Book
-    </a>
-
-    <a href="#wear" data-i18n="nav.wear">
-      Sportswear
-    </a>
-
-    <a href="#contact" data-i18n="nav.contact">
-      Contact
-    </a>
-
-  </nav>
-
-
-  <button id="langBtn" class="lang-btn">
-    العربية
-  </button>
-
-</header>
-
-
-
-<main>
-
-
-<!-- =========================
-     HERO
-========================= -->
-
-<section id="home" class="hero">
-
-  <div class="hero-overlay"></div>
-
-  <div class="hero-pattern"></div>
-
-  <div class="hero-content">
-
-    <p class="eyebrow">
-      PARKOUR X ACADEMY • EGYPT
-    </p>
-
-
-    <h1 data-i18n="hero.title">
-      TRAIN. MOVE. EXPLORE. REPEAT.
-    </h1>
-
-
-    <p data-i18n="hero.text">
-      Professional parkour training, education and a complete learning path from beginner to advanced.
-    </p>
-
-
-    <div class="hero-actions">
-
-      <a
-        class="btn primary"
-        href="#course"
-        data-i18n="hero.cta"
-      >
-        START TRAINING
+      <a href="#home" class="logo">
+        <span class="logo-x">X</span>
+        <span class="logo-text">
+          PARKOUR
+          <small>ACADEMY</small>
+        </span>
       </a>
 
+      <nav class="main-nav">
 
-      <a
-        class="btn ghost"
-        href="#about"
-        data-i18n="hero.about"
+        <a
+          href="#home"
+          data-en="Home"
+          data-ar="الرئيسية"
+        >
+          Home
+        </a>
+
+        <a
+          href="#about"
+          data-en="About"
+          data-ar="عن الأكاديمية"
+        >
+          About
+        </a>
+
+        <a
+          href="#training"
+          data-en="Training"
+          data-ar="التدريب"
+        >
+          Training
+        </a>
+
+        <a
+          href="#course"
+          data-en="Online Course"
+          data-ar="الكورس أونلاين"
+        >
+          Online Course
+        </a>
+
+        <a
+          href="#book"
+          data-en="Book"
+          data-ar="الكتاب"
+        >
+          Book
+        </a>
+
+        <a
+          href="#sportswear"
+          data-en="Sportswear"
+          data-ar="ملابس رياضية"
+        >
+          Sportswear
+        </a>
+
+        <a
+          href="#contact"
+          data-en="Contact"
+          data-ar="تواصل معنا"
+        >
+          Contact
+        </a>
+
+      </nav>
+
+      <button
+        id="languageToggle"
+        class="language-toggle"
+        type="button"
       >
-        MEET AMR SAMY
-      </a>
+        AR
+      </button>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================================
+       HERO
+  ========================================== -->
+
+  <main>
+
+    <section id="home" class="hero">
+
+      <div class="hero-pattern"></div>
+
+      <div class="hero-x">X</div>
+
+      <div class="hero-content">
+
+        <div
+          class="eyebrow"
+          data-en="PARKOUR X ACADEMY • EGYPT"
+          data-ar="PARKOUR X ACADEMY • مصر"
+        >
+          PARKOUR X ACADEMY • EGYPT
+        </div>
+
+        <h1>
+          TRAIN.
+          <span>MOVE.</span>
+          EXPLORE.
+          <strong>REPEAT.</strong>
+        </h1>
+
+        <p
+          data-en="Move your body. Challenge yourself. Master the movement."
+          data-ar="حرّك جسمك. تحدى نفسك. وأتقن فن الحركة."
+        >
+          Move your body. Challenge yourself. Master the movement.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a
+            href="#course"
+            class="btn btn-red"
+            data-en="START TRAINING"
+            data-ar="ابدأ التدريب"
+          >
+            START TRAINING
+          </a>
+
+          <a
+            href="#about"
+            class="btn btn-outline"
+            data-en="DISCOVER PARKOUR X"
+            data-ar="اكتشف PARKOUR X"
+          >
+            DISCOVER PARKOUR X
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================
+         ABOUT
+    ========================================== -->
+
+    <section id="about" class="section about-section">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span
+            class="section-number"
+            data-en="01"
+            data-ar="٠١"
+          >
+            01
+          </span>
+
+          <div>
+
+            <span
+              class="section-label"
+              data-en="THE STORY"
+              data-ar="القصة"
+            >
+              THE STORY
+            </span>
+
+            <h2
+              data-en="ABOUT PARKOUR X"
+              data-ar="عن PARKOUR X"
+            >
+              ABOUT PARKOUR X
+            </h2>
+
+          </div>
+
+        </div>
+
+
+        <div class="about-grid">
+
+          <div class="about-main">
+
+            <p class="big-text">
+
+              <span
+                data-en="Amr Samy"
+                data-ar="عمرو سامي"
+              >
+                Amr Samy
+              </span>
+
+              <span
+                data-en="started his Parkour journey in 2005."
+                data-ar="بدأ رحلته مع رياضة الباركور سنة 2005."
+              >
+                started his Parkour journey in 2005.
+              </span>
+
+            </p>
+
+            <p
+              data-en="He became part of the first official Parkour team in Egypt on 31/03/2008. Today, Parkour X brings together training, movement, performance and the Parkour community."
+              data-ar="أصبح أحد أعضاء أول فريق باركور رسمي في مصر بتاريخ 31/03/2008. واليوم تجمع Parkour X بين التدريب والحركة والعروض ومجتمع الباركور."
+            >
+              He became part of the first official Parkour team in Egypt on 31/03/2008. Today, Parkour X brings together training, movement, performance and the Parkour community.
+            </p>
+
+            <p
+              data-en="Our goal is simple: make Parkour accessible, exciting and safe for everyone who wants to move."
+              data-ar="هدفنا بسيط: نخلي رياضة الباركور متاحة وممتعة وآمنة لكل شخص حابب يتحرك ويتطور."
+            >
+              Our goal is simple: make Parkour accessible, exciting and safe for everyone who wants to move.
+            </p>
+
+          </div>
+
+
+          <div class="about-stats">
+
+            <div class="stat-box">
+
+              <strong>2005</strong>
+
+              <span
+                data-en="Started Parkour"
+                data-ar="بداية ممارسة الباركور"
+              >
+                Started Parkour
+              </span>
+
+            </div>
+
+            <div class="stat-box">
+
+              <strong>2008</strong>
+
+              <span
+                data-en="First Official Team"
+                data-ar="أول فريق رسمي"
+              >
+                First Official Team
+              </span>
+
+            </div>
+
+            <div class="stat-box">
+
+              <strong>X</strong>
+
+              <span
+                data-en="Parkour X"
+                data-ar="Parkour X"
+              >
+                Parkour X
+              </span>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================
+         TRAINING
+    ========================================== -->
+
+    <section id="training" class="section training-section">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="section-number">02</span>
+
+          <div>
+
+            <span
+              class="section-label"
+              data-en="WHAT WE DO"
+              data-ar="ماذا نقدم"
+            >
+              WHAT WE DO
+            </span>
+
+            <h2
+              data-en="TRAINING"
+              data-ar="التدريب"
+            >
+              TRAINING
+            </h2>
+
+          </div>
+
+        </div>
+
+
+        <div class="training-grid">
+
+          <article class="training-card">
+
+            <div class="card-icon">01</div>
+
+            <h3
+              data-en="Parkour Training"
+              data-ar="تدريب باركور"
+            >
+              Parkour Training
+            </h3>
+
+            <p
+              data-en="Learn movement fundamentals, vaults, jumps, balance and advanced skills."
+              data-ar="تعلم أساسيات الحركة، القفز، الـVaults، التوازن والمهارات المتقدمة."
+            >
+              Learn movement fundamentals, vaults, jumps, balance and advanced skills.
+            </p>
+
+          </article>
+
+
+          <article class="training-card">
+
+            <div class="card-icon">02</div>
+
+            <h3
+              data-en="Kids & Beginners"
+              data-ar="الأطفال والمبتدئين"
+            >
+              Kids & Beginners
+            </h3>
+
+            <p
+              data-en="Build confidence, coordination, balance and body control in a fun environment."
+              data-ar="ابنِ الثقة والتناسق والتوازن والتحكم في الجسم في بيئة ممتعة."
+            >
+              Build confidence, coordination, balance and body control in a fun environment.
+            </p>
+
+          </article>
+
+
+          <article class="training-card">
+
+            <div class="card-icon">03</div>
+
+            <h3
+              data-en="Performance"
+              data-ar="العروض"
+            >
+              Performance
+            </h3>
+
+            <p
+              data-en="Parkour performances, shows, events and action movement."
+              data-ar="عروض باركور، فعاليات، Shows وحركات أكشن."
+            >
+              Parkour performances, shows, events and action movement.
+            </p>
+
+          </article>
+
+
+          <article class="training-card">
+
+            <div class="card-icon">04</div>
+
+            <h3
+              data-en="Online Academy"
+              data-ar="الأكاديمية أونلاين"
+            >
+              Online Academy
+            </h3>
+
+            <p
+              data-en="Train anywhere with our step-by-step Parkour video lessons."
+              data-ar="اتدرب في أي مكان من خلال دروس الباركور المصورة خطوة بخطوة."
+            >
+              Train anywhere with our step-by-step Parkour video lessons.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================
+         ONLINE COURSE
+    ========================================== -->
+
+    <section id="course" class="section course-section">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="section-number">03</span>
+
+          <div>
+
+            <span
+              class="section-label"
+              data-en="ONLINE ACADEMY"
+              data-ar="الأكاديمية أونلاين"
+            >
+              ONLINE ACADEMY
+            </span>
+
+            <h2
+              data-en="PARKOUR X COURSE"
+              data-ar="كورس PARKOUR X"
+            >
+              PARKOUR X COURSE
+            </h2>
+
+          </div>
+
+        </div>
+
+
+        <div class="course-promo">
+
+          <div class="promo-icon">▶</div>
+
+          <div>
+
+            <h3
+              data-en="LEARN. PRACTICE. MASTER."
+              data-ar="اتعلم. اتدرب. أتقن."
+            >
+              LEARN. PRACTICE. MASTER.
+            </h3>
+
+            <p
+              data-en="Follow the lessons step by step and build your Parkour skills."
+              data-ar="اتبع الدروس خطوة بخطوة وابنِ مهاراتك في الباركور."
+            >
+              Follow the lessons step by step and build your Parkour skills.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- LESSONS ARE GENERATED BY JAVASCRIPT -->
+
+        <div id="lessonsContainer"></div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================
+         BOOK
+    ========================================== -->
+
+    <section id="book" class="section book-section">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="section-number">04</span>
+
+          <div>
+
+            <span
+              class="section-label"
+              data-en="KNOWLEDGE"
+              data-ar="المعرفة"
+            >
+              KNOWLEDGE
+            </span>
+
+            <h2
+              data-en="THE PARKOUR BOOK"
+              data-ar="كتاب الباركور"
+            >
+              THE PARKOUR BOOK
+            </h2>
+
+          </div>
+
+        </div>
+
+
+        <div class="book-box">
+
+          <div class="book-placeholder">
+            X
+          </div>
+
+          <div>
+
+            <h3
+              data-en="PARKOUR X BOOK"
+              data-ar="كتاب PARKOUR X"
+            >
+              PARKOUR X BOOK
+            </h3>
+
+            <p
+              data-en="A future Parkour X resource for athletes, beginners and movement enthusiasts."
+              data-ar="مصدر تعليمي قادم من Parkour X للاعبين والمبتدئين وكل محبي الحركة."
+            >
+              A future Parkour X resource for athletes, beginners and movement enthusiasts.
+            </p>
+
+            <span
+              class="coming-soon"
+              data-en="COMING SOON"
+              data-ar="قريبًا"
+            >
+              COMING SOON
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================
+         SPORTSWEAR
+    ========================================== -->
+
+    <section id="sportswear" class="section sportswear-section">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="section-number">05</span>
+
+          <div>
+
+            <span
+              class="section-label"
+              data-en="PARKOUR X GEAR"
+              data-ar="معدات PARKOUR X"
+            >
+              PARKOUR X GEAR
+            </span>
+
+            <h2
+              data-en="SPORTSWEAR"
+              data-ar="ملابس رياضية"
+            >
+              SPORTSWEAR
+            </h2>
+
+          </div>
+
+        </div>
+
+
+        <div class="sportswear-box">
+
+          <div class="gear-x">X</div>
+
+          <div>
+
+            <h3
+              data-en="PARKOUR X SPORTSWEAR"
+              data-ar="ملابس PARKOUR X الرياضية"
+            >
+              PARKOUR X SPORTSWEAR
+            </h3>
+
+            <p
+              data-en="Training gear and Parkour X apparel are coming soon."
+              data-ar="ملابس ومعدات تدريب Parkour X قريبًا."
+            >
+              Training gear and Parkour X apparel are coming soon.
+            </p>
+
+            <span
+              class="coming-soon"
+              data-en="COMING SOON"
+              data-ar="قريبًا"
+            >
+              COMING SOON
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================
+         CONTACT
+    ========================================== -->
+
+    <section id="contact" class="section contact-section">
+
+      <div class="container">
+
+        <div class="section-heading">
+
+          <span class="section-number">06</span>
+
+          <div>
+
+            <span
+              class="section-label"
+              data-en="GET IN TOUCH"
+              data-ar="تواصل معنا"
+            >
+              GET IN TOUCH
+            </span>
+
+            <h2
+              data-en="CONTACT"
+              data-ar="تواصل معنا"
+            >
+              CONTACT
+            </h2>
+
+          </div>
+
+        </div>
+
+
+        <div class="contact-grid">
+
+
+          <!-- PHONE -->
+
+          <a
+            href="tel:01115552621"
+            class="contact-card"
+          >
+
+            <div class="contact-icon">☎</div>
+
+            <div>
+
+              <span
+                data-en="PHONE"
+                data-ar="التليفون"
+              >
+                PHONE
+              </span>
+
+              <strong>01115552621</strong>
+
+            </div>
+
+          </a>
+
+
+          <!-- WHATSAPP -->
+
+          <a
+            href="https://wa.me/201115552621"
+            target="_blank"
+            rel="noopener"
+            class="contact-card"
+          >
+
+            <div class="contact-icon">WA</div>
+
+            <div>
+
+              <span>WHATSAPP</span>
+
+              <strong>01115552621</strong>
+
+            </div>
+
+          </a>
+
+
+          <!-- INSTAGRAM -->
+
+          <a
+            href="https://www.instagram.com/parkourxacademy/"
+            target="_blank"
+            rel="noopener"
+            class="contact-card"
+          >
+
+            <div class="contact-icon">◎</div>
+
+            <div>
+
+              <span>INSTAGRAM</span>
+
+              <strong>@parkourxacademy</strong>
+
+            </div>
+
+          </a>
+
+
+          <!-- YOUTUBE -->
+
+          <a
+            href="https://www.youtube.com/@parkourxacademy"
+            target="_blank"
+            rel="noopener"
+            class="contact-card"
+          >
+
+            <div class="contact-icon">▶</div>
+
+            <div>
+
+              <span>YOUTUBE</span>
+
+              <strong>@parkourxacademy</strong>
+
+            </div>
+
+          </a>
+
+
+          <!-- TIKTOK -->
+
+          <a
+            href="https://www.tiktok.com/@parkourxacademy"
+            target="_blank"
+            rel="noopener"
+            class="contact-card"
+          >
+
+            <div class="contact-icon">♪</div>
+
+            <div>
+
+              <span>TIKTOK</span>
+
+              <strong>@parkourxacademy</strong>
+
+            </div>
+
+          </a>
+
+
+          <!-- FACEBOOK -->
+
+          <a
+            href="https://www.facebook.com/parkourxacademy"
+            target="_blank"
+            rel="noopener"
+            class="contact-card"
+          >
+
+            <div class="contact-icon">f</div>
+
+            <div>
+
+              <span>FACEBOOK</span>
+
+              <strong>@parkourxacademy</strong>
+
+            </div>
+
+          </a>
+
+
+          <!-- X -->
+
+          <a
+            href="https://x.com/parkourxacademy"
+            target="_blank"
+            rel="noopener"
+            class="contact-card"
+          >
+
+            <div class="contact-icon">X</div>
+
+            <div>
+
+              <span>X</span>
+
+              <strong>@parkourxacademy</strong>
+
+            </div>
+
+          </a>
+
+
+          <!-- LINKEDIN -->
+
+          <a
+            href="https://www.linkedin.com/company/parkourxacademy/"
+            target="_blank"
+            rel="noopener"
+            class="contact-card"
+          >
+
+            <div class="contact-icon">in</div>
+
+            <div>
+
+              <span>LINKEDIN</span>
+
+              <strong>Parkour X Academy</strong>
+
+            </div>
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================================
+       VIDEO MODAL
+  ========================================== -->
+
+  <div
+    id="videoModal"
+    class="video-modal"
+    aria-hidden="true"
+  >
+
+    <div class="video-modal-content">
+
+      <button
+        class="video-close"
+        id="videoClose"
+        type="button"
+        aria-label="Close video"
+      >
+        ×
+      </button>
+
+      <div
+        id="videoModalTitle"
+        class="video-modal-title"
+      >
+        Parkour X
+      </div>
+
+      <div class="video-frame-wrapper">
+
+        <iframe
+          id="videoFrame"
+          src=""
+          title="Parkour X Training Video"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+
+      </div>
 
     </div>
 
   </div>
 
-</section>
 
+  <!-- =========================================
+       FOOTER
+  ========================================== -->
 
+  <footer class="site-footer">
 
-<!-- =========================
-     ABOUT
-========================= -->
+    <div class="footer-inner">
 
-<section id="about" class="section about">
+      <div class="footer-logo">
+        PARKOUR <span>X</span>
+      </div>
 
-  <div>
-
-    <p class="section-kicker">
-      01 — ABOUT
-    </p>
-
-
-    <h2 data-i18n="about.title">
-      Amr Samy
-    </h2>
-
-
-    <p data-i18n="about.text">
-      Amr Samy is a professional parkour athlete and one of the early contributors to the development of parkour in Egypt. He started training in 2005 and officially joined the first Egyptian team on 31/03/2008.
-    </p>
-
-
-    <p data-i18n="about.text2">
-      Today, Parkour X brings together training, education, courses for athletes and coaches, a parkour book, and sportswear for the parkour community.
-    </p>
-
-  </div>
-
-
-  <div class="stat-card">
-
-    <strong>2005</strong>
-
-    <span data-i18n="about.stat1">
-      Training Started
-    </span>
-
-
-    <strong>31/03/2008</strong>
-
-    <span data-i18n="about.stat2">
-      First Team — Official Start
-    </span>
-
-
-    <strong>PARKOUR X</strong>
-
-    <span data-i18n="about.stat3">
-      Academy & Community
-    </span>
-
-  </div>
-
-</section>
-
-
-
-<!-- =========================
-     TRAINING
-========================= -->
-
-<section id="training" class="section dark">
-
-  <p class="section-kicker">
-    02 — TRAINING
-  </p>
-
-
-  <h2 data-i18n="training.title">
-    Build Real Parkour Skills
-  </h2>
-
-
-  <div class="cards three">
-
-
-    <article class="card red-card">
-
-      <span>01</span>
-
-      <h3 data-i18n="training.c1">
-        Professional Training
-      </h3>
-
-      <p data-i18n="training.p1">
-        Structured parkour training for athletes who want to develop movement, control and confidence.
+      <p
+        data-en="Move. Train. Explore."
+        data-ar="اتحرك. اتدرب. استكشف."
+      >
+        Move. Train. Explore.
       </p>
 
-    </article>
-
-
-
-    <article class="card gold-card">
-
-      <span>02</span>
-
-      <h3 data-i18n="training.c2">
-        Athlete & Coach Courses
-      </h3>
-
-      <p data-i18n="training.p2">
-        Online and in-person educational courses designed for athletes and coaches.
-      </p>
-
-    </article>
-
-
-
-    <article class="card black-card">
-
-      <span>03</span>
-
-      <h3 data-i18n="training.c3">
-        Parkour Community
-      </h3>
-
-      <p data-i18n="training.p3">
-        A platform connecting training, knowledge, media and parkour culture.
-      </p>
-
-    </article>
-
-  </div>
-
-</section>
-
-
-
-<!-- =========================
-     ONLINE COURSE
-========================= -->
-
-<section id="course" class="section course">
-
-  <p class="section-kicker">
-    03 — ONLINE COURSE
-  </p>
-
-
-  <div class="course-head">
-
-    <div>
-
-      <h2 data-i18n="course.title">
-        From Beginner to Advanced
-      </h2>
-
-
-      <p data-i18n="course.text">
-        A free video series that builds your foundation step by step and progresses through basic, advanced and aerial movements.
+      <p>
+        © <span id="year"></span> Parkour X Academy Egypt
       </p>
 
     </div>
 
+  </footer>
 
-    <a
-      class="btn primary"
-      href="https://youtube.com/shorts/D-eYb5_uEBs"
-      target="_blank"
-      rel="noopener"
-      data-i18n="course.promo"
-    >
-      WATCH PROMO
-    </a>
 
-  </div>
-
-
-
-  <!-- PROMO -->
-
-  <div class="promo-card">
-
-    <div class="promo-icon">
-      ▶
-    </div>
-
-
-    <div>
-
-      <small>
-        PARKOUR X
-      </small>
-
-
-      <h3 data-i18n="course.promoTitle">
-        Official Course Promo
-      </h3>
-
-
-      <p data-i18n="course.promoText">
-        Start here and discover the Parkour X training journey.
-      </p>
-
-    </div>
-
-
-    <a
-      class="watch"
-      href="https://youtube.com/shorts/D-eYb5_uEBs"
-      target="_blank"
-      rel="noopener"
-    >
-      ▶
-    </a>
-
-  </div>
-
-
-  <!-- LESSONS -->
-
-  <div id="levels"></div>
-
-</section>
-
-
-
-<!-- =========================
-     BOOK
-========================= -->
-
-<section id="book" class="section dark split">
-
-  <div>
-
-    <p class="section-kicker">
-      04 — BOOK
-    </p>
-
-
-    <h2 data-i18n="book.title">
-      Parkour X Book
-    </h2>
-
-
-    <p data-i18n="book.text">
-      A dedicated parkour book project created to document knowledge and help grow parkour education in Egypt and the Arab world.
-    </p>
-
-  </div>
-
-
-  <div class="feature-box">
-
-    <strong>
-      BOOK
-    </strong>
-
-    <span>
-      COMING SOON
-    </span>
-
-  </div>
-
-</section>
-
-
-
-<!-- =========================
-     SPORTSWEAR
-========================= -->
-
-<section id="wear" class="section split">
-
-  <div>
-
-    <p class="section-kicker">
-      05 — SPORTSWEAR
-    </p>
-
-
-    <h2 data-i18n="wear.title">
-      Parkour X Sportswear
-    </h2>
-
-
-    <p data-i18n="wear.text">
-      Sportswear created with parkour athletes and movement in mind. The collection will be presented here as it launches.
-    </p>
-
-  </div>
-
-
-  <div class="feature-box sportswear-box">
-
-    <strong>
-      PARKOUR
-    </strong>
-
-    <span>
-      X
-    </span>
-
-  </div>
-
-</section>
-
-
-
-<!-- =========================
-     CONTACT
-========================= -->
-
-<section id="contact" class="section contact">
-
-  <p class="section-kicker">
-    06 — CONTACT
-  </p>
-
-
-  <h2 data-i18n="contact.title">
-    Train With Parkour X
-  </h2>
-
-
-  <p data-i18n="contact.text">
-    For training, courses, collaborations and bookings, get in touch.
-  </p>
-
-
-
-  <!-- PHONE -->
-
-  <div class="contact-phone">
-
-    <a href="tel:+201115552621">
-
-      <span class="phone-icon">
-        ☎
-      </span>
-
-      <span>
-        01115552621
-      </span>
-
-    </a>
-
-
-    <a
-      href="https://wa.me/201115552621"
-      target="_blank"
-      rel="noopener"
-    >
-
-      <span class="whatsapp-icon">
-        ◉
-      </span>
-
-      <span>
-        WhatsApp
-      </span>
-
-    </a>
-
-  </div>
-
-
-
-  <!-- SOCIAL MEDIA -->
-
-  <div class="social-grid">
-
-
-    <!-- Instagram -->
-
-    <a
-      class="social instagram"
-      href="https://www.instagram.com/parkourxacademy/"
-      target="_blank"
-      rel="noopener"
-      aria-label="Instagram"
-    >
-
-      <span class="social-logo">
-        ◎
-      </span>
-
-      <span>
-        Instagram
-      </span>
-
-      <small>
-        @parkourxacademy
-      </small>
-
-    </a>
-
-
-
-    <!-- YouTube -->
-
-    <a
-      class="social youtube"
-      href="https://www.youtube.com/@parkourxacademy"
-      target="_blank"
-      rel="noopener"
-      aria-label="YouTube"
-    >
-
-      <span class="social-logo">
-        ▶
-      </span>
-
-      <span>
-        YouTube
-      </span>
-
-      <small>
-        @parkourxacademy
-      </small>
-
-    </a>
-
-
-
-    <!-- TikTok -->
-
-    <a
-      class="social tiktok"
-      href="https://www.tiktok.com/@parkourxacademy"
-      target="_blank"
-      rel="noopener"
-      aria-label="TikTok"
-    >
-
-      <span class="social-logo">
-        ♪
-      </span>
-
-      <span>
-        TikTok
-      </span>
-
-      <small>
-        @parkourxacademy
-      </small>
-
-    </a>
-
-
-
-    <!-- Facebook -->
-
-    <a
-      class="social facebook"
-      href="https://www.facebook.com/parkourxacademy"
-      target="_blank"
-      rel="noopener"
-      aria-label="Facebook"
-    >
-
-      <span class="social-logo">
-        f
-      </span>
-
-      <span>
-        Facebook
-      </span>
-
-      <small>
-        /parkourxacademy
-      </small>
-
-    </a>
-
-
-
-    <!-- X -->
-
-    <a
-      class="social x-social"
-      href="https://x.com/parkourxacademy"
-      target="_blank"
-      rel="noopener"
-      aria-label="X"
-    >
-
-      <span class="social-logo">
-        X
-      </span>
-
-      <span>
-        X
-      </span>
-
-      <small>
-        @parkourxacademy
-      </small>
-
-    </a>
-
-
-
-    <!-- LinkedIn -->
-
-    <a
-      class="social linkedin"
-      href="https://www.linkedin.com/company/parkourxacademy/"
-      target="_blank"
-      rel="noopener"
-      aria-label="LinkedIn"
-    >
-
-      <span class="social-logo">
-        in
-      </span>
-
-      <span>
-        LinkedIn
-      </span>
-
-      <small>
-        Parkour X Academy
-      </small>
-
-    </a>
-
-  </div>
-
-
-  <p class="handle">
-    @parkourxacademy
-  </p>
-
-</section>
-
-</main>
-
-
-
-<footer>
-
-  <strong>
-    PARKOUR X
-  </strong>
-
-  <span>
-    TRAIN • MOVE • EXPLORE • REPEAT
-  </span>
-
-  <span>
-    © <span id="year"></span>
-    Parkour X Academy
-  </span>
-
-</footer>
-
-
-<script src="script.js"></script>
+  <script src="script.js"></script>
 
 </body>
 </html>
