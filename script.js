@@ -26,31 +26,31 @@ const lessons = [
 
       {
         en: "Balance",
-        ar: "التوازن",
+        ar: "Balance",
         video: "https://youtube.com/shorts/6aFpoFo23PA"
       },
 
       {
         en: "Roll",
-        ar: "الدحرجة",
+        ar: "Roll",
         video: "https://youtube.com/shorts/M9axAOpLjsc"
       },
 
       {
         en: "Precision",
-        ar: "الدقة",
+        ar: "Precision",
         video: "https://youtube.com/shorts/IOS7qZsFGJ0"
       },
 
       {
         en: "Landing",
-        ar: "الهبوط",
+        ar: "Landing",
         video: "https://youtube.com/shorts/8WPiCnvakbs"
       },
 
       {
         en: "Long Jump",
-        ar: "القفزة الطويلة",
+        ar: "Long Jump",
         video: "https://youtube.com/shorts/mpjLNNi4iUk"
       }
 
@@ -74,7 +74,7 @@ const lessons = [
 
       {
         en: "Crane",
-        ar: "كرين",
+        ar: "Crane",
         video: "https://youtube.com/shorts/lhR_rudTPE4"
       },
 
