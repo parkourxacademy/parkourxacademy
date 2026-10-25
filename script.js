@@ -1,96 +1,255 @@
 
-const trainingLevels = {
+const levels = {
   1: {
-    name: "LEVEL 01 — THE BEGINNER",
+    title: "LEVEL 01 — THE BEGINNER",
     lessons: [
-      ["Parkour Lesson 1", "6aFpoFo23PA"],
-      ["Parkour Lesson 2", "M9axAOpLjsc"],
-      ["Parkour Lesson 3", "8WPiCnvakbs"],
-      ["Parkour Lesson 4", "IOS7qZsFGJ0"],
-      ["Parkour Lesson 5", "mpjLNNi4iUk"]
+      ["Lesson 1", "6aFpoFo23PA"],
+      ["Lesson 2", "M9axAOpLjsc"],
+      ["Lesson 3", "8WPiCnvakbs"],
+      ["Lesson 4", "IOS7qZsFGJ0"],
+      ["Lesson 5", "mpjLNNi4iUk"]
     ]
   },
   2: {
-    name: "LEVEL 02 — THE EXPLORER",
+    title: "LEVEL 02 — THE EXPLORER",
     lessons: [
-      ["Parkour Lesson 1", "lhR_rudTPE4"],
-      ["Parkour Lesson 2", "v9V71PVYjJ0"],
-      ["Parkour Lesson 3", "abQOOWzJSVc"],
-      ["Parkour Lesson 4", "1ND7el_msvM"],
-      ["Parkour Lesson 5", "JLbuT9FU6lI"],
-      ["Parkour Lesson 6", "Tu14vq5gmTA"],
-      ["Parkour Lesson 7", "tX37Ugu_L_o"],
-      ["Parkour Lesson 8", "ktSlnQzloLU"],
-      ["Parkour Lesson 9", "_IATk3dpSfU"],
-      ["Parkour Lesson 10", "PeDeqIttPho"]
+      ["Lesson 1", "lhR_rudTPE4"],
+      ["Lesson 2", "v9V71PVYjJ0"],
+      ["Lesson 3", "abQOOWzJSVc"],
+      ["Lesson 4", "1ND7el_msvM"],
+      ["Lesson 5", "JLbuT9FU6lI"],
+      ["Lesson 6", "Tu14vq5gmTA"],
+      ["Lesson 7", "tX37Ugu_L_o"],
+      ["Lesson 8", "ktSlnQzloLU"],
+      ["Lesson 9", "_IATk3dpSfU"],
+      ["Lesson 10", "PeDeqIttPho"]
     ]
   },
   3: {
-    name: "LEVEL 03 — THE ATHLETE",
+    title: "LEVEL 03 — THE ATHLETE",
     lessons: [
-      ["Parkour Lesson 1", "y-Ins4dcNDk"],
-      ["Parkour Lesson 2", "XjoqFhTUO74"],
-      ["Parkour Lesson 3", "Tc7WZpXNCTo"],
-      ["Parkour Lesson 4", "0SejUtKqTdU"],
-      ["Parkour Lesson 5", "6ZE5YEDIEaU"],
-      ["Parkour Lesson 6", "VWRBXT8dXYc"],
-      ["Parkour Lesson 7", "c15g05If_-w"],
-      ["Parkour Lesson 8", "JOrAPBj1iL0"],
-      ["Parkour Lesson 9", "UanAXX9JgDg"]
+      ["Lesson 1", "y-Ins4dcNDk"],
+      ["Lesson 2", "XjoqFhTUO74"],
+      ["Lesson 3", "Tc7WZpXNCTo"],
+      ["Lesson 4", "0SejUtKqTdU"],
+      ["Lesson 5", "6ZE5YEDIEaU"],
+      ["Lesson 6", "VWRBXT8dXYc"],
+      ["Lesson 7", "c15g05If_-w"],
+      ["Lesson 8", "JOrAPBj1iL0"],
+      ["Lesson 9", "UanAXX9JgDg"]
     ]
   },
   4: {
-    name: "LEVEL 04 — THE ELITE",
+    title: "LEVEL 04 — THE ELITE",
     lessons: [
-      ["Parkour Lesson 1", "B38mbEB0kq4"],
-      ["Parkour Lesson 2", "jW_Y_8zKnBA"],
-      ["Parkour Lesson 3", "G0BJmVJPfDg"]
+      ["Lesson 1", "B38mbEB0kq4"],
+      ["Lesson 2", "jW_Y_8zKnBA"],
+      ["Lesson 3", "G0BJmVJPfDg"]
     ]
   }
 };
 
-const STORAGE_KEY = "parkourx_progress_v2";
-const TOTAL_LESSONS = Object.values(trainingLevels)
-  .reduce((total, level) => total + level.lessons.length, 0);
+const translations = {
+  en: {
+    navHome:"Home", navTraining:"Training", navAbout:"About",
+    navFounder:"Founder", navClothing:"Clothing", navProgress:"Progress",
+    navCommunity:"Community", signIn:"Sign In",
+    heroEyebrow:"THE MOVEMENT IS YOURS",
+    heroTitle:"TRAIN BEYOND<br>YOUR LIMITS.",
+    heroText:"Build strength. Master movement. Challenge yourself. Start your parkour journey with PARKOUR X Academy.",
+    startTraining:"START TRAINING ↗", discover:"DISCOVER OUR ACADEMY",
+    statLevels:"TRAINING LEVELS", statVideos:"TRAINING VIDEOS",
+    statSince:"OUR JOURNEY BEGAN", journey:"YOUR JOURNEY",
+    chooseLevel:"CHOOSE YOUR <em>LEVEL.</em>",
+    trainingIntro:"Learn the basics. Build control. Keep progressing.",
+    level1:"LEVEL 01 · FOUNDATION", level2:"LEVEL 02 · DEVELOPMENT",
+    level3:"LEVEL 03 · PERFORMANCE", level4:"LEVEL 04 · ADVANCED",
+    beginner:"THE BEGINNER", explorer:"THE EXPLORER",
+    athlete:"THE ATHLETE", elite:"THE ELITE",
+    beginnerText:"Build your foundation with essential movements and safe landing techniques.",
+    explorerText:"Improve coordination, precision, balance and movement confidence.",
+    athleteText:"Challenge your skills and develop smoother movement combinations.",
+    eliteText:"Develop advanced skills with preparation and proper progression.",
+    exploreLevel:"EXPLORE LEVEL ↗", close:"CLOSE ✕",
+    aboutKicker:"ABOUT US", aboutTitle:"MORE THAN A SPORT.<br><em>IT'S A LIFESTYLE.</em>",
+    aboutText:"PARKOUR X Academy is built for people who want to move better, become stronger and develop confidence through parkour. We promote safe, structured training for beginners and advanced athletes.",
+    founderKicker:"MEET THE FOUNDER",
+    founderTitle:"BUILT ON PASSION.<br><em>DRIVEN BY MOVEMENT.</em>",
+    founderRole:"FOUNDER · PARKOUR ATHLETE · COACH",
+    founderText:"Amr Samy has trained in parkour since 2005 and helped build the Egyptian parkour scene. PARKOUR X Academy reflects his passion for movement, discipline, athletic development and inspiring the next generation.",
+    meetTeam:"FOLLOW THE JOURNEY ↗",
+    clothingKicker:"PARKOUR X ORIGINALS",
+    clothingTitle:"MOVE IN <em>STYLE.</em>",
+    clothingText:"Street-inspired clothing made for movement, comfort and everyday training.",
+    shopNow:"EXPLORE THE COLLECTION ↗",
+    productNote:"Concept previews — replace with real product photos and ordering details when available.",
+    progressKicker:"TRACK YOUR JOURNEY",
+    progressTitle:"YOUR PROGRESS.<br><em>YOUR STORY.</em>",
+    progressText:"Complete lessons, collect points and build your own training routine.",
+    trainingStats:"YOUR TRAINING STATS", lessonsDone:"LESSONS DONE",
+    xpPoints:"XP POINTS", overallProgress:"OVERALL PROGRESS",
+    resetProgress:"RESET MY PROGRESS",
+    challengeKicker:"TAKE THE CHALLENGE",
+    challengeTitle:"SHOW UP.<br><em>LEVEL UP.</em>",
+    challengeText:"Choose one skill to practise this week. Train consistently, focus on technique and celebrate your progress.",
+    acceptChallenge:"ACCEPT THE CHALLENGE ↗",
+    communityKicker:"BUILT BY MOVEMENT",
+    communityTitle:"ONE COMMUNITY.<br><em>NO LIMITS.</em>",
+    communityText:"Follow the team, share your journey and inspire others to keep moving forward.",
+    joinCommunity:"JOIN OUR COMMUNITY ↗",
+    joinKicker:"JOIN THE MOVEMENT",
+    joinTitle:"YOUR JOURNEY <em>STARTS HERE.</em>",
+    accountNote:"Online accounts need your Supabase project to be configured first.",
+    emailLabel:"EMAIL", passwordLabel:"PASSWORD",
+    createAccount:"CREATE ACCOUNT",
+    markDone:"MARK AS COMPLETED", undoDone:"✓ COMPLETED — UNDO",
+    resetConfirm:"Reset all completed lessons and XP points on this device?",
+    resetDone:"Your progress has been reset.",
+    challengeAccepted:"CHALLENGE ACCEPTED! Choose a lesson, practise safely and mark it complete when you finish.",
+    enterCredentials:"Please enter your email and password.",
+    passwordShort:"Password must be at least 6 characters.",
+    noSupabase:"Online accounts are not configured yet. Add your Supabase URL and publishable key first.",
+    waiting:"Please wait...",
+    signupSent:"Account request submitted. Check your email if confirmation is required.",
+    signedIn:"Signed in successfully.",
+    authError:"Authentication failed."
+  },
+  ar: {
+    navHome:"الرئيسية", navTraining:"التدريب", navAbout:"عن الأكاديمية",
+    navFounder:"المؤسس", navClothing:"الملابس", navProgress:"تقدمي",
+    navCommunity:"المجتمع", signIn:"تسجيل الدخول",
+    heroEyebrow:"الحركة بإيدك",
+    heroTitle:"اتحدى<br>حدودك.",
+    heroText:"ابني قوتك، وطوّر مهاراتك، واتحدى نفسك. ابدأ رحلتك في الباركور مع أكاديمية PARKOUR X.",
+    startTraining:"ابدأ التدريب ↗", discover:"اكتشف الأكاديمية",
+    statLevels:"مستويات التدريب", statVideos:"فيديوهات التدريب",
+    statSince:"بداية رحلتنا", journey:"رحلتك",
+    chooseLevel:"اختار <em>مستواك.</em>",
+    trainingIntro:"اتعلم الأساسيات، وطوّر تحكمك، واستمر في التقدم.",
+    level1:"المستوى 01 · التأسيس", level2:"المستوى 02 · التطوير",
+    level3:"المستوى 03 · الأداء", level4:"المستوى 04 · المتقدم",
+    beginner:"المبتدئ", explorer:"المستكشف",
+    athlete:"الرياضي", elite:"المحترف",
+    beginnerText:"ابدأ بالمهارات الأساسية وتعلّم الهبوط الآمن والحركة الصحيحة.",
+    explorerText:"طوّر التناسق والدقة والتوازن والثقة في الحركة.",
+    athleteText:"اختبر مهاراتك وطوّر قدرتك على دمج الحركات بسلاسة.",
+    eliteText:"اشتغل على المهارات المتقدمة بالتجهيز والتدرج الصحيح.",
+    exploreLevel:"استكشف المستوى ↗", close:"إغلاق ✕",
+    aboutKicker:"عن الأكاديمية",
+    aboutTitle:"أكتر من رياضة.<br><em>ده أسلوب حياة.</em>",
+    aboutText:"أكاديمية PARKOUR X لكل شخص عايز يتحرك بشكل أفضل، ويبقى أقوى، ويكتسب الثقة من خلال الباركور. بنشجع التدريب الآمن والمنظم للمبتدئين والرياضيين المتقدمين.",
+    founderKicker:"اتعرف على المؤسس",
+    founderTitle:"شغف من البداية.<br><em>والحركة هي الطريق.</em>",
+    founderRole:"مؤسس · لاعب باركور · مدرب",
+    founderText:"عمرو سامي بيتدرب على الباركور من سنة 2005، وشارك في بناء مشهد الباركور المصري. أكاديمية PARKOUR X هي انعكاس لشغفه بالحركة والانضباط والتطوير الرياضي وإلهام الجيل الجديد.",
+    meetTeam:"تابع رحلتنا ↗",
+    clothingKicker:"مجموعة PARKOUR X",
+    clothingTitle:"اتحرك <em>بستايل.</em>",
+    clothingText:"ملابس مستوحاة من ثقافة الشارع، مصممة للراحة والحركة والتدريب اليومي.",
+    shopNow:"اكتشف المجموعة ↗",
+    productNote:"دي نماذج تصميم مبدئية — استبدلها بصور المنتجات الحقيقية وبيانات الطلب عند توفرها.",
+    progressKicker:"تابع رحلتك",
+    progressTitle:"تقدمك.<br><em>قصتك.</em>",
+    progressText:"كمّل الدروس، واجمع النقاط، وابني روتين التدريب الخاص بيك.",
+    trainingStats:"إحصائيات تدريبك", lessonsDone:"دروس مكتملة",
+    xpPoints:"نقاط الخبرة", overallProgress:"التقدم الإجمالي",
+    resetProgress:"إعادة ضبط التقدم",
+    challengeKicker:"اتحدى نفسك",
+    challengeTitle:"التزم.<br><em>واتطور.</em>",
+    challengeText:"اختار مهارة تتمرن عليها الأسبوع ده. استمر في التدريب، وركز على الأسلوب الصحيح، واحتفل بتقدمك.",
+    acceptChallenge:"اقبل التحدي ↗",
+    communityKicker:"مجتمع بيجمعنا",
+    communityTitle:"مجتمع واحد.<br><em>بلا حدود.</em>",
+    communityText:"تابع الفريق، وشارك رحلتك، وشجّع غيرك إنه يستمر ويتطور.",
+    joinCommunity:"انضم لمجتمعنا ↗",
+    joinKicker:"انضم لرحلة الحركة",
+    joinTitle:"رحلتك <em>بتبدأ هنا.</em>",
+    accountNote:"لازم نضبط إعدادات Supabase الأول علشان الحسابات الأونلاين تشتغل.",
+    emailLabel:"البريد الإلكتروني", passwordLabel:"كلمة المرور",
+    createAccount:"إنشاء حساب",
+    markDone:"علّم الدرس كمكتمل", undoDone:"✓ مكتمل — تراجع",
+    resetConfirm:"متأكد إنك عايز تمسح الدروس المكتملة والنقاط من الجهاز ده؟",
+    resetDone:"تمت إعادة ضبط التقدم.",
+    challengeAccepted:"قبلت التحدي! اختار درس، واتمرن بأمان، وعلّمه كمكتمل لما تخلص.",
+    enterCredentials:"من فضلك اكتب البريد الإلكتروني وكلمة المرور.",
+    passwordShort:"كلمة المرور لازم تكون 6 أحرف على الأقل.",
+    noSupabase:"الحسابات الأونلاين لسه مش متفعلة. لازم تضيف رابط Supabase ومفتاح النشر الأول.",
+    waiting:"جاري التنفيذ...",
+    signupSent:"تم إرسال طلب إنشاء الحساب. راجع بريدك لو مطلوب تأكيد الحساب.",
+    signedIn:"تم تسجيل الدخول بنجاح.",
+    authError:"تعذر تسجيل الدخول."
+  }
+};
 
-let completedLessons = loadProgress();
-let currentLanguage = "en";
+let language = "en";
+const storageKey = "parkourx_progress_v3";
+const totalLessons = Object.values(levels).reduce((n, level) => n + level.lessons.length, 0);
+
+function t(key) {
+  return translations[language][key] || translations.en[key] || key;
+}
 
 function loadProgress() {
   try {
-    const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
-    return Array.isArray(saved) ? saved : [];
+    const data = JSON.parse(localStorage.getItem(storageKey) || "[]");
+    return Array.isArray(data) ? data : [];
   } catch {
     return [];
   }
 }
 
+let completed = loadProgress();
+
 function saveProgress() {
   try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(completedLessons));
+    localStorage.setItem(storageKey, JSON.stringify(completed));
   } catch (error) {
-    console.warn("Could not save progress locally.", error);
+    console.warn("Local progress could not be saved.", error);
   }
 }
 
-function lessonKey(level, index) {
-  return `${level}-${index}`;
+function applyTranslations() {
+  document.documentElement.lang = language;
+  document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
+  document.body.classList.toggle("arabic", language === "ar");
+
+  document.querySelectorAll("[data-i18n]").forEach(element => {
+    const value = t(element.dataset.i18n);
+    element.innerHTML = value;
+  });
+
+  document.getElementById("languageBtn").textContent =
+    language === "en" ? "عربي" : "English";
+
+  document.querySelectorAll(".level-btn").forEach(button => {
+    button.textContent = t("exploreLevel");
+  });
+
+  renderProgress();
+
+  const openLevel = document.getElementById("lessonArea").dataset.level;
+  if (openLevel && !document.getElementById("lessonArea").hidden) {
+    renderLessons(Number(openLevel), false);
+  }
 }
 
-function renderLessons(levelNumber) {
-  const level = trainingLevels[levelNumber];
+function renderLessons(levelNumber, scroll = true) {
+  const level = levels[levelNumber];
   if (!level) return;
 
   const area = document.getElementById("lessonArea");
-  const grid = document.getElementById("lessonGrid");
-  const title = document.getElementById("lessonTitle");
+  area.dataset.level = String(levelNumber);
+  document.getElementById("lessonTitle").textContent =
+    language === "ar"
+      ? ["", "المستوى 01 — المبتدئ", "المستوى 02 — المستكشف", "المستوى 03 — الرياضي", "المستوى 04 — المحترف"][levelNumber]
+      : level.title;
 
-  title.textContent = level.name;
+  const grid = document.getElementById("lessonGrid");
   grid.replaceChildren();
 
   level.lessons.forEach(([name, videoId], index) => {
-    const key = lessonKey(levelNumber, index);
-    const isCompleted = completedLessons.includes(key);
+    const key = `${levelNumber}-${index}`;
+    const done = completed.includes(key);
 
     const card = document.createElement("article");
     card.className = "lesson-card";
@@ -100,34 +259,34 @@ function renderLessons(levelNumber) {
 
     const iframe = document.createElement("iframe");
     iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}`;
-    iframe.title = name;
+    iframe.title = `${name} - PARKOUR X Academy`;
     iframe.loading = "lazy";
     iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
     iframe.allowFullscreen = true;
-
     frame.appendChild(iframe);
 
     const info = document.createElement("div");
     info.className = "lesson-info";
 
     const heading = document.createElement("h4");
-    heading.textContent = `${String(index + 1).padStart(2, "0")} / ${name}`;
+    heading.textContent = `${String(index + 1).padStart(2, "0")} / ${
+      language === "ar" ? `الدرس ${index + 1}` : name
+    }`;
 
     const button = document.createElement("button");
+    button.className = `complete-btn${done ? " completed" : ""}`;
+    button.textContent = done ? t("undoDone") : t("markDone");
     button.type = "button";
-    button.className = `complete-btn${isCompleted ? " completed" : ""}`;
-    button.textContent = isCompleted ? "✓ COMPLETED — UNDO" : "MARK AS COMPLETED";
 
     button.addEventListener("click", () => {
-      if (completedLessons.includes(key)) {
-        completedLessons = completedLessons.filter(item => item !== key);
+      if (completed.includes(key)) {
+        completed = completed.filter(item => item !== key);
       } else {
-        completedLessons.push(key);
+        completed.push(key);
       }
-
       saveProgress();
       renderProgress();
-      renderLessons(levelNumber);
+      renderLessons(levelNumber, false);
     });
 
     info.append(heading, button);
@@ -136,145 +295,102 @@ function renderLessons(levelNumber) {
   });
 
   area.hidden = false;
-  area.scrollIntoView({ behavior: "smooth", block: "start" });
+  if (scroll) area.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
 function renderProgress() {
-  const completed = completedLessons.length;
-  const percent = Math.round((completed / TOTAL_LESSONS) * 100);
+  const count = completed.length;
+  const percent = Math.round(count / totalLessons * 100);
 
-  document.getElementById("completedCount").textContent = completed;
-  document.getElementById("pointsCount").textContent = completed * 10;
+  document.getElementById("completedCount").textContent = count;
+  document.getElementById("pointsCount").textContent = count * 10;
   document.getElementById("progressPercent").textContent = `${percent}%`;
   document.getElementById("progressFill").style.width = `${percent}%`;
 }
 
 document.querySelectorAll(".level-btn").forEach(button => {
-  button.addEventListener("click", () => {
-    renderLessons(Number(button.dataset.level));
-  });
+  button.addEventListener("click", () => renderLessons(Number(button.dataset.level)));
 });
 
 document.getElementById("closeLessons").addEventListener("click", () => {
   document.getElementById("lessonArea").hidden = true;
-  document.getElementById("training").scrollIntoView({ behavior: "smooth" });
 });
 
-document.getElementById("viewProgressBtn").addEventListener("click", () => {
-  document.getElementById("progress").scrollIntoView({ behavior: "smooth" });
+document.getElementById("languageBtn").addEventListener("click", () => {
+  language = language === "en" ? "ar" : "en";
+  applyTranslations();
 });
 
 document.getElementById("resetProgressBtn").addEventListener("click", () => {
-  const confirmed = window.confirm("Reset all completed lessons and XP points on this device?");
-  if (!confirmed) return;
-
-  completedLessons = [];
+  if (!window.confirm(t("resetConfirm"))) return;
+  completed = [];
   saveProgress();
   renderProgress();
 
   const area = document.getElementById("lessonArea");
-  if (!area.hidden) {
-    const title = document.getElementById("lessonTitle").textContent;
-    const levelNumber = Object.keys(trainingLevels).find(
-      key => trainingLevels[key].name === title
-    );
-    if (levelNumber) renderLessons(Number(levelNumber));
+  if (!area.hidden && area.dataset.level) {
+    renderLessons(Number(area.dataset.level), false);
   }
+
+  document.getElementById("challengeMessage").textContent = t("resetDone");
 });
 
 document.getElementById("challengeBtn").addEventListener("click", () => {
-  const message = document.getElementById("challengeMessage");
-  message.textContent = "CHALLENGE ACCEPTED! Choose a lesson, practise safely and mark it complete when you finish.";
+  document.getElementById("challengeMessage").textContent = t("challengeAccepted");
 });
 
 document.getElementById("year").textContent = new Date().getFullYear();
 
-function setLanguage(language) {
-  currentLanguage = language;
-  document.body.classList.toggle("arabic", language === "ar");
-  document.documentElement.lang = language;
-  document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
-
-  document.querySelectorAll("[data-en][data-ar]").forEach(element => {
-    element.textContent = element.dataset[language];
-  });
-
-  document.getElementById("languageBtn").textContent =
-    language === "en" ? "عربي" : "English";
-
-  document.getElementById("authBtn").textContent =
-    language === "en" ? "Sign In" : "تسجيل الدخول";
-}
-
-document.getElementById("languageBtn").addEventListener("click", () => {
-  setLanguage(currentLanguage === "en" ? "ar" : "en");
-});
-
-const authModal = document.getElementById("authModal");
+const modal = document.getElementById("authModal");
 
 document.getElementById("authBtn").addEventListener("click", () => {
-  authModal.hidden = false;
+  modal.hidden = false;
 });
-
 document.getElementById("closeAuth").addEventListener("click", () => {
-  authModal.hidden = true;
+  modal.hidden = true;
 });
-
-authModal.addEventListener("click", event => {
-  if (event.target === authModal) authModal.hidden = true;
+modal.addEventListener("click", event => {
+  if (event.target === modal) modal.hidden = true;
 });
-
 document.addEventListener("keydown", event => {
-  if (event.key === "Escape") authModal.hidden = true;
+  if (event.key === "Escape") modal.hidden = true;
 });
 
-async function handleAuth(action) {
+async function authenticate(action) {
   const email = document.getElementById("authEmail").value.trim();
   const password = document.getElementById("authPassword").value;
   const message = document.getElementById("authMessage");
 
   if (!email || !password) {
-    message.textContent = "Please enter your email and password.";
+    message.textContent = t("enterCredentials");
     return;
   }
-
   if (password.length < 6) {
-    message.textContent = "Password must be at least 6 characters.";
+    message.textContent = t("passwordShort");
     return;
   }
 
   const client = window.parkourSupabase;
-
   if (!client) {
-    message.textContent =
-      "Online accounts are not configured yet. Add your Supabase URL and publishable key first.";
+    message.textContent = t("noSupabase");
     return;
   }
 
-  message.textContent = "Please wait...";
+  message.textContent = t("waiting");
 
   try {
-    const result = action === "signup"
+    const response = action === "signup"
       ? await client.auth.signUp({ email, password })
       : await client.auth.signInWithPassword({ email, password });
 
-    if (result.error) throw result.error;
-
-    message.textContent = action === "signup"
-      ? "Account request submitted. Check your email if confirmation is required."
-      : "Signed in successfully.";
-
+    if (response.error) throw response.error;
+    message.textContent = action === "signup" ? t("signupSent") : t("signedIn");
   } catch (error) {
-    message.textContent = error.message || "Authentication failed.";
+    message.textContent = error.message || t("authError");
   }
 }
 
-document.getElementById("signInBtn").addEventListener("click", () => {
-  handleAuth("signin");
-});
+document.getElementById("signInBtn").addEventListener("click", () => authenticate("signin"));
+document.getElementById("signUpBtn").addEventListener("click", () => authenticate("signup"));
 
-document.getElementById("signUpBtn").addEventListener("click", () => {
-  handleAuth("signup");
-});
-
-renderProgress();
+applyTranslations();
