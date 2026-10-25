@@ -725,3 +725,26 @@ document.addEventListener(
 
   }
 );
+
+/* =========================================
+   PARKOUR X APP INSTALL SUPPORT
+========================================= */
+
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker
+      .register("/parkourxacademy/service-worker.js")
+      .then((registration) => {
+        console.log(
+          "PARKOUR X Service Worker registered:",
+          registration.scope
+        );
+      })
+      .catch((error) => {
+        console.error(
+          "PARKOUR X Service Worker registration failed:",
+          error
+        );
+      });
+  });
+}
