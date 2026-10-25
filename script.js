@@ -1,750 +1,280 @@
-/* =========================================
-   PARKOUR X ACADEMY
-   SCRIPT
-========================================= */
 
-
-/* =========================================
-   COURSE DATA
-========================================= */
-
-const lessons = [
-
-  /* -----------------------------------------
-     LEVEL 1
-  ----------------------------------------- */
-
-  {
-    level: 1,
-
-    title: {
-      en: "BEGINNERS",
-      ar: "المبتدئين"
-    },
-
-    moves: [
-
-      {
-        en: "Balance",
-        ar: "Balance",
-        video: "https://youtube.com/shorts/6aFpoFo23PA"
-      },
-
-      {
-        en: "Roll",
-        ar: "Roll",
-        video: "https://youtube.com/shorts/M9axAOpLjsc"
-      },
-
-      {
-        en: "Precision",
-        ar: "Precision",
-        video: "https://youtube.com/shorts/8WPiCnvakbs"
-      },
-
-      {
-        en: "Landing",
-        ar: "Landing",
-        video: "https://youtube.com/shorts/IOS7qZsFGJ0"
-      },
-
-      {
-        en: "Long Jump",
-        ar: "Long Jump",
-        video: "https://youtube.com/shorts/mpjLNNi4iUk"
-      }
-
+const trainingLevels = {
+  1: {
+    name: "LEVEL 01 — THE BEGINNER",
+    lessons: [
+      ["Parkour Lesson 1", "6aFpoFo23PA"],
+      ["Parkour Lesson 2", "M9axAOpLjsc"],
+      ["Parkour Lesson 3", "8WPiCnvakbs"],
+      ["Parkour Lesson 4", "IOS7qZsFGJ0"],
+      ["Parkour Lesson 5", "mpjLNNi4iUk"]
     ]
   },
-
-
-  /* -----------------------------------------
-     LEVEL 2
-  ----------------------------------------- */
-
-  {
-    level: 2,
-
-    title: {
-      en: "BASIC MOVES",
-      ar: "الحركات الأساسية"
-    },
-
-    moves: [
-
-      {
-        en: "Crane",
-        ar: "Crane",
-        video: "https://youtube.com/shorts/lhR_rudTPE4"
-      },
-
-      {
-        en: "Safety Vault",
-        ar: "Safety Vault",
-        video: "https://youtube.com/shorts/v9V71PVYjJ0"
-      },
-
-      {
-        en: "Reverse Safety",
-        ar: "Reverse Safety",
-        video: "https://youtube.com/shorts/abQOOWzJSVc"
-      },
-
-      {
-        en: "Speed Vault",
-        ar: "Speed Vault",
-        video: "https://youtube.com/shorts/1ND7el_msvM"
-      },
-
-      {
-        en: "Lazy Vault",
-        ar: "Lazy Vault",
-        video: "https://youtube.com/shorts/JLbuT9FU6lI"
-      },
-
-      {
-        en: "Thief Vault",
-        ar: "Thief Vault",
-        video: "https://youtube.com/shorts/Tu14vq5gmTA"
-      },
-
-      {
-        en: "Monkey Vault",
-        ar: "Monkey Vault",
-        video: "https://youtube.com/shorts/tX37Ugu_L_o"
-      },
-
-      {
-        en: "360 Vault",
-        ar: "360 Vault",
-        video: "https://youtube.com/shorts/ktSlnQzloLU"
-      },
-
-      {
-        en: "Dash Vault",
-        ar: "Dash Vault",
-        video: "https://youtube.com/shorts/_IATk3dpSfU"
-      },
-
-      {
-        en: "Cat Leap",
-        ar: "Cat Leap",
-        video: "https://youtube.com/shorts/PeDeqIttPho"
-      }
-
+  2: {
+    name: "LEVEL 02 — THE EXPLORER",
+    lessons: [
+      ["Parkour Lesson 1", "lhR_rudTPE4"],
+      ["Parkour Lesson 2", "v9V71PVYjJ0"],
+      ["Parkour Lesson 3", "abQOOWzJSVc"],
+      ["Parkour Lesson 4", "1ND7el_msvM"],
+      ["Parkour Lesson 5", "JLbuT9FU6lI"],
+      ["Parkour Lesson 6", "Tu14vq5gmTA"],
+      ["Parkour Lesson 7", "tX37Ugu_L_o"],
+      ["Parkour Lesson 8", "ktSlnQzloLU"],
+      ["Parkour Lesson 9", "_IATk3dpSfU"],
+      ["Parkour Lesson 10", "PeDeqIttPho"]
     ]
   },
-
-
-  /* -----------------------------------------
-     LEVEL 3
-  ----------------------------------------- */
-
-  {
-    level: 3,
-
-    title: {
-      en: "ADVANCED MOVES",
-      ar: "الحركات المتقدمة"
-    },
-
-    moves: [
-
-      {
-        en: "Tic Tac",
-        ar: "Tic Tac",
-        video: "https://youtube.com/shorts/y-Ins4dcNDk"
-      },
-
-      {
-        en: "Wall Run",
-        ar: "Wall Run",
-        video: "https://youtube.com/shorts/XjoqFhTUO74"
-      },
-
-      {
-        en: "Underbar",
-        ar: "Underbar",
-        video: "https://youtube.com/shorts/Tc7WZpXNCTo"
-      },
-
-      {
-        en: "Turn Vault",
-        ar: "Turn Vault",
-        video: "https://youtube.com/shorts/0SejUtKqTdU"
-      },
-
-      {
-        en: "Kong to Dive Roll",
-        ar: "Kong to Dive Roll",
-        video: "https://youtube.com/shorts/6ZE5YEDIEaU"
-      },
-
-      {
-        en: "Kong Precision",
-        ar: "Kong Precision",
-        video: "https://youtube.com/shorts/VWRBXT8dXYc"
-      },
-
-      {
-        en: "Double Kong",
-        ar: "Double Kong",
-        video: "https://youtube.com/shorts/c15g05If_-w"
-      },
-
-      {
-        en: "Palm Spin",
-        ar: "Palm Spin",
-        video: "https://youtube.com/shorts/JOrAPBj1iL0"
-      },
-
-      {
-        en: "Wall Spin",
-        ar: "Wall Spin",
-        video: "https://youtube.com/shorts/UanAXX9JgDg"
-      }
-
+  3: {
+    name: "LEVEL 03 — THE ATHLETE",
+    lessons: [
+      ["Parkour Lesson 1", "y-Ins4dcNDk"],
+      ["Parkour Lesson 2", "XjoqFhTUO74"],
+      ["Parkour Lesson 3", "Tc7WZpXNCTo"],
+      ["Parkour Lesson 4", "0SejUtKqTdU"],
+      ["Parkour Lesson 5", "6ZE5YEDIEaU"],
+      ["Parkour Lesson 6", "VWRBXT8dXYc"],
+      ["Parkour Lesson 7", "c15g05If_-w"],
+      ["Parkour Lesson 8", "JOrAPBj1iL0"],
+      ["Parkour Lesson 9", "UanAXX9JgDg"]
     ]
   },
-
-
-  /* -----------------------------------------
-     LEVEL 4
-  ----------------------------------------- */
-
-  {
-    level: 4,
-
-    title: {
-      en: "AERIAL MOVES",
-      ar: "الحركات الهوائية"
-    },
-
-    moves: [
-
-      {
-        en: "Backflip",
-        ar: "Backflip",
-        video: "https://youtube.com/shorts/B38mbEB0kq4"
-      },
-
-      {
-        en: "Frontflip",
-        ar: "Frontflip",
-        video: "https://youtube.com/shorts/jW_Y_8zKnBA"
-      },
-
-      {
-        en: "Side Flip",
-        ar: "Side Flip",
-        video: "https://youtube.com/shorts/G0BJmVJPfDg"
-      }
-
+  4: {
+    name: "LEVEL 04 — THE ELITE",
+    lessons: [
+      ["Parkour Lesson 1", "B38mbEB0kq4"],
+      ["Parkour Lesson 2", "jW_Y_8zKnBA"],
+      ["Parkour Lesson 3", "G0BJmVJPfDg"]
     ]
   }
+};
 
-];
+const STORAGE_KEY = "parkourx_progress_v2";
+const TOTAL_LESSONS = Object.values(trainingLevels)
+  .reduce((total, level) => total + level.lessons.length, 0);
 
+let completedLessons = loadProgress();
+let currentLanguage = "en";
 
-/* =========================================
-   CURRENT LANGUAGE
-========================================= */
-
-let currentLanguage =
-  localStorage.getItem("parkourXLanguage") || "en";
-
-
-/* =========================================
-   YOUTUBE ID
-========================================= */
-
-function getYouTubeId(url) {
-
-  const match =
-    url.match(/shorts\/([^?&]+)/i);
-
-  return match ? match[1] : "";
+function loadProgress() {
+  try {
+    const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
+    return Array.isArray(saved) ? saved : [];
+  } catch {
+    return [];
+  }
 }
 
-
-/* =========================================
-   GET TEXT
-========================================= */
-
-function getText(textObject) {
-
-  return textObject[currentLanguage] ||
-         textObject.en;
+function saveProgress() {
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(completedLessons));
+  } catch (error) {
+    console.warn("Could not save progress locally.", error);
+  }
 }
 
-
-/* =========================================
-   RENDER COURSE
-========================================= */
-
-function renderLessons() {
-
-  const container =
-    document.getElementById("lessonsContainer");
-
-  if (!container) return;
-
-  container.innerHTML = "";
-
-
-  lessons.forEach(level => {
-
-    const levelSection =
-      document.createElement("div");
-
-    levelSection.className =
-      `course-level level-${level.level}`;
-
-
-    levelSection.innerHTML = `
-
-      <div class="level-heading">
-
-        <span class="level-number">
-
-          ${
-            currentLanguage === "ar"
-              ? `المستوى ${level.level}`
-              : `LEVEL ${level.level}`
-          }
-
-        </span>
-
-        <h3>
-          ${getText(level.title)}
-        </h3>
-
-      </div>
-
-      <div class="lessons-grid"></div>
-
-    `;
-
-
-    const grid =
-      levelSection.querySelector(".lessons-grid");
-
-
-    level.moves.forEach((move, index) => {
-
-      const videoId =
-        getYouTubeId(move.video);
-
-      const title =
-        getText(move);
-
-      const card =
-        document.createElement("div");
-
-      card.className =
-        "lesson-card";
-
-
-      card.innerHTML = `
-
-        <div class="lesson-name">
-
-          <span>
-            ${String(index + 1).padStart(2, "0")}
-          </span>
-
-          <strong>
-            ${title}
-          </strong>
-
-        </div>
-
-
-        <button
-          class="lesson-thumb"
-          type="button"
-          data-video-id="${videoId}"
-          data-title-en="${move.en}"
-          data-title-ar="${move.ar}"
-          aria-label="${move.en}"
-        >
-
-          <img
-            src="https://i.ytimg.com/vi/${videoId}/hqdefault.jpg"
-            alt="${title}"
-            loading="lazy"
-          >
-
-          <span class="video-play">
-            ▶
-          </span>
-
-        </button>
-
-
-        <button
-          class="watch-button"
-          type="button"
-          data-video-id="${videoId}"
-          data-title-en="${move.en}"
-          data-title-ar="${move.ar}"
-        >
-
-          ${
-            currentLanguage === "ar"
-              ? "شاهد الفيديو"
-              : "WATCH VIDEO"
-          }
-
-        </button>
-
-      `;
-
-
-      grid.appendChild(card);
-
-    });
-
-
-    container.appendChild(levelSection);
-
-  });
-
-
-  addVideoListeners();
+function lessonKey(level, index) {
+  return `${level}-${index}`;
 }
 
+function renderLessons(levelNumber) {
+  const level = trainingLevels[levelNumber];
+  if (!level) return;
 
-/* =========================================
-   VIDEO BUTTONS
-========================================= */
+  const area = document.getElementById("lessonArea");
+  const grid = document.getElementById("lessonGrid");
+  const title = document.getElementById("lessonTitle");
 
-function addVideoListeners() {
+  title.textContent = level.name;
+  grid.replaceChildren();
 
-  const buttons =
-    document.querySelectorAll(
-      ".lesson-thumb, .watch-button"
-    );
+  level.lessons.forEach(([name, videoId], index) => {
+    const key = lessonKey(levelNumber, index);
+    const isCompleted = completedLessons.includes(key);
 
+    const card = document.createElement("article");
+    card.className = "lesson-card";
 
-  buttons.forEach(button => {
+    const frame = document.createElement("div");
+    frame.className = "video-frame";
+
+    const iframe = document.createElement("iframe");
+    iframe.src = `https://www.youtube-nocookie.com/embed/${videoId}`;
+    iframe.title = name;
+    iframe.loading = "lazy";
+    iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+    iframe.allowFullscreen = true;
+
+    frame.appendChild(iframe);
+
+    const info = document.createElement("div");
+    info.className = "lesson-info";
+
+    const heading = document.createElement("h4");
+    heading.textContent = `${String(index + 1).padStart(2, "0")} / ${name}`;
+
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = `complete-btn${isCompleted ? " completed" : ""}`;
+    button.textContent = isCompleted ? "✓ COMPLETED — UNDO" : "MARK AS COMPLETED";
 
     button.addEventListener("click", () => {
+      if (completedLessons.includes(key)) {
+        completedLessons = completedLessons.filter(item => item !== key);
+      } else {
+        completedLessons.push(key);
+      }
 
-      const videoId =
-        button.dataset.videoId;
-
-      const title =
-        currentLanguage === "ar"
-          ? button.dataset.titleAr
-          : button.dataset.titleEn;
-
-      openVideo(
-        videoId,
-        title
-      );
-
+      saveProgress();
+      renderProgress();
+      renderLessons(levelNumber);
     });
 
+    info.append(heading, button);
+    card.append(frame, info);
+    grid.appendChild(card);
   });
 
+  area.hidden = false;
+  area.scrollIntoView({ behavior: "smooth", block: "start" });
 }
 
+function renderProgress() {
+  const completed = completedLessons.length;
+  const percent = Math.round((completed / TOTAL_LESSONS) * 100);
 
-/* =========================================
-   OPEN VIDEO
-========================================= */
-
-function openVideo(
-  videoId,
-  title
-) {
-
-  const modal =
-    document.getElementById("videoModal");
-
-  const frame =
-    document.getElementById("videoFrame");
-
-  const modalTitle =
-    document.getElementById("videoModalTitle");
-
-
-  if (!modal || !frame) return;
-
-
-  modalTitle.textContent =
-    title;
-
-
-  frame.src =
-    `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1`;
-
-
-  modal.classList.add("active");
-
-  modal.setAttribute(
-    "aria-hidden",
-    "false"
-  );
-
-  document.body.classList.add(
-    "modal-open"
-  );
-
+  document.getElementById("completedCount").textContent = completed;
+  document.getElementById("pointsCount").textContent = completed * 10;
+  document.getElementById("progressPercent").textContent = `${percent}%`;
+  document.getElementById("progressFill").style.width = `${percent}%`;
 }
 
-
-/* =========================================
-   CLOSE VIDEO
-========================================= */
-
-function closeVideo() {
-
-  const modal =
-    document.getElementById("videoModal");
-
-  const frame =
-    document.getElementById("videoFrame");
-
-
-  if (!modal || !frame) return;
-
-
-  modal.classList.remove("active");
-
-  modal.setAttribute(
-    "aria-hidden",
-    "true"
-  );
-
-
-  document.body.classList.remove(
-    "modal-open"
-  );
-
-
-  frame.src = "";
-}
-
-
-/* =========================================
-   LANGUAGE
-========================================= */
-
-function updateLanguage() {
-
-  const isArabic =
-    currentLanguage === "ar";
-
-
-  document.documentElement.lang =
-    currentLanguage;
-
-  document.documentElement.dir =
-    isArabic
-      ? "rtl"
-      : "ltr";
-
-
-  document
-    .querySelectorAll("[data-en]")
-    .forEach(element => {
-
-      const text =
-        isArabic
-          ? element.dataset.ar
-          : element.dataset.en;
-
-
-      if (text !== undefined) {
-
-        element.textContent =
-          text;
-
-      }
-
-    });
-
-
-  const languageButton =
-    document.getElementById(
-      "languageToggle"
-    );
-
-
-  if (languageButton) {
-
-    languageButton.textContent =
-      isArabic
-        ? "EN"
-        : "AR";
-
-  }
-
-
-  renderLessons();
-
-
-  localStorage.setItem(
-    "parkourXLanguage",
-    currentLanguage
-  );
-
-}
-
-
-/* =========================================
-   LANGUAGE BUTTON
-========================================= */
-
-function initLanguage() {
-
-  const languageButton =
-    document.getElementById(
-      "languageToggle"
-    );
-
-
-  if (!languageButton) return;
-
-
-  languageButton.addEventListener(
-    "click",
-    () => {
-
-      currentLanguage =
-        currentLanguage === "en"
-          ? "ar"
-          : "en";
-
-
-      updateLanguage();
-
-    }
-  );
-
-}
-
-
-/* =========================================
-   CLOSE MODAL
-========================================= */
-
-function initVideoModal() {
-
-  const modal =
-    document.getElementById("videoModal");
-
-  const closeButton =
-    document.getElementById("videoClose");
-
-
-  if (closeButton) {
-
-    closeButton.addEventListener(
-      "click",
-      closeVideo
-    );
-
-  }
-
-
-  if (modal) {
-
-    modal.addEventListener(
-      "click",
-      event => {
-
-        if (
-          event.target === modal
-        ) {
-
-          closeVideo();
-
-        }
-
-      }
-    );
-
-  }
-
-
-  document.addEventListener(
-    "keydown",
-    event => {
-
-      if (
-        event.key === "Escape"
-      ) {
-
-        closeVideo();
-
-      }
-
-    }
-  );
-
-}
-
-
-/* =========================================
-   CURRENT YEAR
-========================================= */
-
-function updateYear() {
-
-  const year =
-    document.getElementById("year");
-
-  if (year) {
-
-    year.textContent =
-      new Date().getFullYear();
-
-  }
-
-}
-
-
-/* =========================================
-   START
-========================================= */
-
-document.addEventListener(
-  "DOMContentLoaded",
-  () => {
-
-    initLanguage();
-
-    initVideoModal();
-
-    updateYear();
-
-    updateLanguage();
-
-  }
-);
-
-/* =========================================
-   PARKOUR X APP INSTALL SUPPORT
-========================================= */
-
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => {
-    navigator.serviceWorker
-      .register("/parkourxacademy/service-worker.js")
-      .then((registration) => {
-        console.log(
-          "PARKOUR X Service Worker registered:",
-          registration.scope
-        );
-      })
-      .catch((error) => {
-        console.error(
-          "PARKOUR X Service Worker registration failed:",
-          error
-        );
-      });
+document.querySelectorAll(".level-btn").forEach(button => {
+  button.addEventListener("click", () => {
+    renderLessons(Number(button.dataset.level));
   });
+});
+
+document.getElementById("closeLessons").addEventListener("click", () => {
+  document.getElementById("lessonArea").hidden = true;
+  document.getElementById("training").scrollIntoView({ behavior: "smooth" });
+});
+
+document.getElementById("viewProgressBtn").addEventListener("click", () => {
+  document.getElementById("progress").scrollIntoView({ behavior: "smooth" });
+});
+
+document.getElementById("resetProgressBtn").addEventListener("click", () => {
+  const confirmed = window.confirm("Reset all completed lessons and XP points on this device?");
+  if (!confirmed) return;
+
+  completedLessons = [];
+  saveProgress();
+  renderProgress();
+
+  const area = document.getElementById("lessonArea");
+  if (!area.hidden) {
+    const title = document.getElementById("lessonTitle").textContent;
+    const levelNumber = Object.keys(trainingLevels).find(
+      key => trainingLevels[key].name === title
+    );
+    if (levelNumber) renderLessons(Number(levelNumber));
+  }
+});
+
+document.getElementById("challengeBtn").addEventListener("click", () => {
+  const message = document.getElementById("challengeMessage");
+  message.textContent = "CHALLENGE ACCEPTED! Choose a lesson, practise safely and mark it complete when you finish.";
+});
+
+document.getElementById("year").textContent = new Date().getFullYear();
+
+function setLanguage(language) {
+  currentLanguage = language;
+  document.body.classList.toggle("arabic", language === "ar");
+  document.documentElement.lang = language;
+  document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
+
+  document.querySelectorAll("[data-en][data-ar]").forEach(element => {
+    element.textContent = element.dataset[language];
+  });
+
+  document.getElementById("languageBtn").textContent =
+    language === "en" ? "عربي" : "English";
+
+  document.getElementById("authBtn").textContent =
+    language === "en" ? "Sign In" : "تسجيل الدخول";
 }
+
+document.getElementById("languageBtn").addEventListener("click", () => {
+  setLanguage(currentLanguage === "en" ? "ar" : "en");
+});
+
+const authModal = document.getElementById("authModal");
+
+document.getElementById("authBtn").addEventListener("click", () => {
+  authModal.hidden = false;
+});
+
+document.getElementById("closeAuth").addEventListener("click", () => {
+  authModal.hidden = true;
+});
+
+authModal.addEventListener("click", event => {
+  if (event.target === authModal) authModal.hidden = true;
+});
+
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape") authModal.hidden = true;
+});
+
+async function handleAuth(action) {
+  const email = document.getElementById("authEmail").value.trim();
+  const password = document.getElementById("authPassword").value;
+  const message = document.getElementById("authMessage");
+
+  if (!email || !password) {
+    message.textContent = "Please enter your email and password.";
+    return;
+  }
+
+  if (password.length < 6) {
+    message.textContent = "Password must be at least 6 characters.";
+    return;
+  }
+
+  const client = window.parkourSupabase;
+
+  if (!client) {
+    message.textContent =
+      "Online accounts are not configured yet. Add your Supabase URL and publishable key first.";
+    return;
+  }
+
+  message.textContent = "Please wait...";
+
+  try {
+    const result = action === "signup"
+      ? await client.auth.signUp({ email, password })
+      : await client.auth.signInWithPassword({ email, password });
+
+    if (result.error) throw result.error;
+
+    message.textContent = action === "signup"
+      ? "Account request submitted. Check your email if confirmation is required."
+      : "Signed in successfully.";
+
+  } catch (error) {
+    message.textContent = error.message || "Authentication failed.";
+  }
+}
+
+document.getElementById("signInBtn").addEventListener("click", () => {
+  handleAuth("signin");
+});
+
+document.getElementById("signUpBtn").addEventListener("click", () => {
+  handleAuth("signup");
+});
+
+renderProgress();
