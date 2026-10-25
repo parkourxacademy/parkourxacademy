@@ -1,0 +1,22 @@
+
+{
+  "id": "/parkourxacademy/",
+  "name": "PARKOUR X Academy",
+  "short_name": "PARKOUR X",
+  "description": "Parkour training, online courses and community.",
+  "lang": "en",
+  "start_url": "/parkourxacademy/",
+  "scope": "/parkourxacademy/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#080a0e",
+  "theme_color": "#080a0e",
+  "icons": [
+    {
+      "src": "/parkourxacademy/images/pkx.JPG",
+      "sizes": "512x512",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ]
+}
