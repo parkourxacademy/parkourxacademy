@@ -1,199 +1,439 @@
 
+
 <!DOCTYPE html>
+
 <html lang="en" dir="ltr">
+
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#111111">
-  <meta name="description" content="PARKOUR X Academy — Egyptian parkour, training, community and clothing.">
-  <title>PARKOUR X Academy</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="theme-color" content="#090909">
+
+  <meta name="description" content="PARKOUR X Academy — Train beyond your limits. Discover parkour training in Egypt.">
+
+  <title>PARKOUR X Academy | Train Beyond Your Limits</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
+
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
-<header class="header">
-  <a class="logo" href="#home"><span class="logo-x">X</span><span>PARKOUR<small>ACADEMY</small></span></a>
-  <nav>
-    <a href="#home" data-i18n="navHome">Home</a>
-    <a href="#training" data-i18n="navTraining">Training</a>
-    <a href="#about" data-i18n="navAbout">About</a>
-    <a href="#founder" data-i18n="navFounder">Founder</a>
-    <a href="#clothing" data-i18n="navClothing">Clothing</a>
-    <a href="#progress" data-i18n="navProgress">Progress</a>
-    <a href="#community" data-i18n="navCommunity">Community</a>
-  </nav>
-  <div class="header-actions">
-    <button id="languageBtn" class="lang-btn" type="button">عربي</button>
-    <button id="authBtn" class="signin-btn" type="button" data-i18n="signIn">Sign In</button>
-  </div>
-</header>
 
-<main>
-  <section class="hero" id="home">
-    <div class="hero-photo"></div>
-    <div class="hero-shade"></div>
-    <div class="hero-content">
-      <div class="eyebrow" data-i18n="heroEyebrow">THE MOVEMENT IS YOURS</div>
-      <h1 data-i18n="heroTitle">TRAIN BEYOND<br><em>YOUR LIMITS.</em></h1>
-      <p data-i18n="heroText">Build strength. Master movement. Challenge yourself. Start your parkour journey with PARKOUR X Academy.</p>
-      <div class="hero-buttons">
-        <a class="btn red" href="#training" data-i18n="startTraining">START TRAINING ↗</a>
-        <a class="btn clear" href="#about" data-i18n="discover">DISCOVER OUR ACADEMY</a>
+  <header class="navbar">
+
+    <a href="#home" class="brand">
+
+      <span class="brand-x">X</span>
+
+      <span>PARKOUR<small>ACADEMY</small></span>
+
+    </a>
+
+    <nav id="navMenu">
+
+      <a href="#home" data-en="Home" data-ar="الرئيسية">Home</a>
+
+      <a href="#training" data-en="Training" data-ar="التدريب">Training</a>
+
+      <a href="#about" data-en="About" data-ar="عن الأكاديمية">About</a>
+
+      <a href="#founder" data-en="Founder" data-ar="المؤسس">Founder</a>
+
+      <a href="#clothing" data-en="Clothing" data-ar="الملابس">Clothing</a>
+
+      <a href="#progress" data-en="Progress" data-ar="تقدمك">Progress</a>
+
+      <a href="#community" data-en="Community" data-ar="المجتمع">Community</a>
+
+    </nav>
+
+    <div class="nav-actions">
+
+      <button id="languageToggle" class="language-btn">عربي</button>
+
+      <a class="sign-in" href="#training" data-en="Start" data-ar="ابدأ">Start</a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+
+    </div>
+
+  </header>
+
+  <main>
+
+    <!-- Exact supplied design image -->
+
+    <section class="design-preview" id="home" aria-label="PARKOUR X Academy visual design">
+
+      <img
+
+        src="images/parkourx-design.png"
+
+        alt="PARKOUR X Academy urban Egyptian design featuring Cairo, the pyramids, parkour training, clothing and community"
+
+      >
+
+      <a class="preview-hotspot hotspot-home" href="#training" aria-label="Start training"></a>
+
+      <a class="preview-hotspot hotspot-levels" href="#training" aria-label="Explore training levels"></a>
+
+      <a class="preview-hotspot hotspot-about" href="#about" aria-label="About the academy"></a>
+
+      <a class="preview-hotspot hotspot-clothing" href="#clothing" aria-label="Explore clothing"></a>
+
+      <a class="preview-hotspot hotspot-progress" href="#progress" aria-label="View progress"></a>
+
+      <a class="preview-hotspot hotspot-community" href="#community" aria-label="Join the community"></a>
+
+    </section>
+
+    <!-- Interactive website sections -->
+
+    <section class="section training-section" id="training">
+
+      <div class="section-heading">
+
+        <p class="eyebrow" data-en="YOUR JOURNEY" data-ar="رحلتك">YOUR JOURNEY</p>
+
+        <h1 data-en="CHOOSE YOUR LEVEL." data-ar="اختار مستواك.">CHOOSE YOUR LEVEL.</h1>
+
+        <p data-en="Build strength. Master movement. Progress at your own pace."
+
+           data-ar="ابني قوتك، أتقن الحركة، واتقدم على حسب مستواك.">
+
+          Build strength. Master movement. Progress at your own pace.
+
+        </p>
+
       </div>
-      <div class="stats">
-        <div><strong>04</strong><span data-i18n="statLevels">TRAINING LEVELS</span></div>
-        <div><strong>27+</strong><span data-i18n="statVideos">TRAINING VIDEOS</span></div>
-        <div><strong>2005</strong><span data-i18n="statSince">OUR JOURNEY BEGAN</span></div>
+
+      <div class="level-grid">
+
+        <article class="level-card">
+
+          <span class="level-tag">LEVEL 01 · FOUNDATION</span>
+
+          <div class="level-number">01</div>
+
+          <h2 data-en="THE BEGINNER" data-ar="المبتدئ">THE BEGINNER</h2>
+
+          <p data-en="Build your foundation with essential movements and safe landing techniques."
+
+             data-ar="اتعلم الأساسيات والحركات المهمة وطريقة الهبوط الآمن.">
+
+            Build your foundation with essential movements and safe landing techniques.
+
+          </p>
+
+          <a href="#videos-1" class="text-link" data-en="START HERE →" data-ar="ابدأ هنا ←">START HERE →</a>
+
+        </article>
+
+        <article class="level-card featured">
+
+          <span class="level-tag">LEVEL 02 · DEVELOPMENT</span>
+
+          <div class="level-number">02</div>
+
+          <h2 data-en="THE EXPLORER" data-ar="المستكشف">THE EXPLORER</h2>
+
+          <p data-en="Improve coordination, precision, balance and movement confidence."
+
+             data-ar="طور التناسق والدقة والتوازن والثقة في الحركة.">
+
+            Improve coordination, precision, balance and movement confidence.
+
+          </p>
+
+          <a href="#videos-2" class="text-link" data-en="KEEP MOVING →" data-ar="كمل التقدم ←">KEEP MOVING →</a>
+
+        </article>
+
+        <article class="level-card">
+
+          <span class="level-tag">LEVEL 03 · PERFORMANCE</span>
+
+          <div class="level-number gold">03</div>
+
+          <h2 data-en="THE ATHLETE" data-ar="الرياضي">THE ATHLETE</h2>
+
+          <p data-en="Challenge your skills and develop stronger movement combinations."
+
+             data-ar="اختبر مهاراتك وطور مجموعات حركية أقوى.">
+
+            Challenge your skills and develop stronger movement combinations.
+
+          </p>
+
+          <a href="#videos-3" class="text-link" data-en="PUSH FURTHER →" data-ar="اتحدى نفسك ←">PUSH FURTHER →</a>
+
+        </article>
+
+        <article class="level-card">
+
+          <span class="level-tag">LEVEL 04 · ADVANCED</span>
+
+          <div class="level-number gold">04</div>
+
+          <h2 data-en="THE ELITE" data-ar="المحترف">THE ELITE</h2>
+
+          <p data-en="Work on advanced skills with patience, preparation and proper progression."
+
+             data-ar="اشتغل على المهارات المتقدمة بالصبر والإعداد والتدرج الصحيح.">
+
+            Work on advanced skills with patience, preparation and proper progression.
+
+          </p>
+
+          <a href="#videos-4" class="text-link" data-en="OWN YOUR SKILLS →" data-ar="أتقن مهاراتك ←">OWN YOUR SKILLS →</a>
+
+        </article>
+
       </div>
-    </div>
-    <div class="urban-tag"><span>EGYPT</span><b>PARKOUR<br>IS A LIFESTYLE</b><i>X</i></div>
-    <div class="brush-mark">PX</div>
-  </section>
 
-  <section class="training section" id="training">
-    <div class="section-title">
-      <div><span class="kicker" data-i18n="journey">YOUR JOURNEY</span>
-      <h2 data-i18n="chooseLevel">CHOOSE YOUR <em>LEVEL.</em></h2>
-      <p data-i18n="trainingIntro">Learn the basics. Build control. Keep progressing.</p></div>
-      <span class="big-number">01—04</span>
-    </div>
+    </section>
 
-    <div class="levels">
-      <article class="level-card l1">
-        <img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=900&q=85" alt="Urban architecture">
-        <div class="level-info"><span class="level-label" data-i18n="level1">LEVEL 01 · FOUNDATION</span><strong>01</strong><h3 data-i18n="beginner">THE BEGINNER</h3><p data-i18n="beginnerText">Build your foundation with essential movements and safe landing techniques.</p><button class="level-btn" data-level="1" data-i18n="exploreLevel">EXPLORE LEVEL ↗</button></div>
-      </article>
-      <article class="level-card l2">
-        <img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=900&q=85" alt="City at dusk">
-        <div class="level-info"><span class="level-label" data-i18n="level2">LEVEL 02 · DEVELOPMENT</span><strong>02</strong><h3 data-i18n="explorer">THE EXPLORER</h3><p data-i18n="explorerText">Improve coordination, precision, balance and movement confidence.</p><button class="level-btn" data-level="2" data-i18n="exploreLevel">EXPLORE LEVEL ↗</button></div>
-      </article>
-      <article class="level-card l3">
-        <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&w=900&q=85" alt="City skyline">
-        <div class="level-info"><span class="level-label" data-i18n="level3">LEVEL 03 · PERFORMANCE</span><strong>03</strong><h3 data-i18n="athlete">THE ATHLETE</h3><p data-i18n="athleteText">Challenge your skills and develop smoother movement combinations.</p><button class="level-btn" data-level="3" data-i18n="exploreLevel">EXPLORE LEVEL ↗</button></div>
-      </article>
-      <article class="level-card l4">
-        <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=900&q=85" alt="Modern urban structure">
-        <div class="level-info"><span class="level-label" data-i18n="level4">LEVEL 04 · ADVANCED</span><strong>04</strong><h3 data-i18n="elite">THE ELITE</h3><p data-i18n="eliteText">Develop advanced skills with preparation and proper progression.</p><button class="level-btn" data-level="4" data-i18n="exploreLevel">EXPLORE LEVEL ↗</button></div>
-      </article>
-    </div>
+    <section class="section about-section" id="about">
 
-    <div class="lesson-area" id="lessonArea" hidden>
-      <div class="lesson-header"><h3 id="lessonTitle"></h3><button id="closeLessons" class="btn clear" data-i18n="close">CLOSE ✕</button></div>
-      <div class="lesson-grid" id="lessonGrid"></div>
-    </div>
-  </section>
+      <div class="about-copy">
 
-  <section class="about section" id="about">
-    <div class="about-photo"></div>
-    <div class="about-copy">
-      <span class="kicker" data-i18n="aboutKicker">ABOUT US</span>
-      <h2 data-i18n="aboutTitle">MORE THAN A SPORT.<br><em>IT'S A LIFESTYLE.</em></h2>
-      <p data-i18n="aboutText">PARKOUR X Academy is built for people who want to move better, become stronger and develop confidence through parkour. We promote safe, structured training for beginners and advanced athletes.</p>
-      <div class="about-tags"><span>FOCUS</span><span>SPEED</span><span>CONTROL</span><span>PROGRESS</span></div>
-    </div>
-  </section>
+        <p class="eyebrow">ABOUT PARKOUR X</p>
 
-  <section class="founder section" id="founder">
-    <div class="founder-copy">
-      <span class="kicker" data-i18n="founderKicker">MEET THE FOUNDER</span>
-      <h2 data-i18n="founderTitle">BUILT ON PASSION.<br><em>DRIVEN BY MOVEMENT.</em></h2>
-      <h3>AMR SAMY</h3>
-      <span class="founder-role" data-i18n="founderRole">FOUNDER · PARKOUR ATHLETE · COACH</span>
-      <p data-i18n="founderText">Amr Samy has trained in parkour since 2005 and helped build the Egyptian parkour scene. PARKOUR X Academy reflects his passion for movement, discipline, athletic development and inspiring the next generation.</p>
-      <a class="btn red" href="https://www.instagram.com/parkourxacademy/" target="_blank" rel="noopener noreferrer" data-i18n="meetTeam">FOLLOW THE JOURNEY ↗</a>
-    </div>
-    <div class="founder-visual">
-      <div class="founder-photo-placeholder">
-        <span>YOUR REAL PHOTO</span>
-        <strong>AMR<br>SAMY <em>X</em></strong>
-        <small>PARKOUR X ACADEMY</small>
+        <h2 data-en="MORE THAN A SPORT. IT'S A LIFESTYLE."
+
+            data-ar="أكتر من رياضة.. دي أسلوب حياة.">
+
+          MORE THAN A SPORT.<br><span>IT'S A LIFESTYLE.</span>
+
+        </h2>
+
+        <p data-en="PARKOUR X Academy is built for people who want to move better, become stronger and develop confidence through parkour."
+
+           data-ar="أكاديمية PARKOUR X لكل شخص عايز يتحرك بشكل أفضل، ويقوي جسمه، ويبني ثقته بنفسه من خلال الباركور.">
+
+          PARKOUR X Academy is built for people who want to move better, become stronger and develop confidence through parkour.
+
+        </p>
+
+        <p data-en="From the streets of Egypt to the global parkour community."
+
+           data-ar="من شوارع مصر إلى مجتمع الباركور حول العالم.">
+
+          From the streets of Egypt to the global parkour community.
+
+        </p>
+
       </div>
-      <div class="founder-caption">FOCUS / SPEED / CONTROL</div>
-    </div>
-  </section>
 
-  <section class="clothing section" id="clothing">
-    <div class="clothing-copy">
-      <span class="kicker" data-i18n="clothingKicker">PARKOUR X ORIGINALS</span>
-      <h2 data-i18n="clothingTitle">MOVE IN <em>STYLE.</em></h2>
-      <p data-i18n="clothingText">Street-inspired clothing made for movement, comfort and everyday training.</p>
-      <a class="btn red" href="https://www.instagram.com/parkourxacademy/" target="_blank" rel="noopener noreferrer" data-i18n="shopNow">EXPLORE THE COLLECTION ↗</a>
-    </div>
-    <div class="clothing-gallery">
-      <div class="product product-hoodie"><span>PX / 01</span><div class="hoodie-art">X<small>PARKOUR</small></div><b>URBAN HOODIE</b></div>
-      <div class="product product-shirt"><span>PX / 02</span><div class="shirt-art">PARKOUR<em>X</em><small>ACADEMY</small></div><b>CLASSIC TEE</b></div>
-      <div class="product product-cap"><span>PX / 03</span><div class="cap-art">PX</div><b>STREET ESSENTIALS</b></div>
-    </div>
-    <p class="product-note" data-i18n="productNote">Concept previews — replace with real product photos and ordering details when available.</p>
-  </section>
+      <div class="egypt-panel">
 
-  <section class="progress section" id="progress">
-    <div class="progress-photo"></div>
-    <div class="progress-copy">
-      <span class="kicker" data-i18n="progressKicker">TRACK YOUR JOURNEY</span>
-      <h2 data-i18n="progressTitle">YOUR PROGRESS.<br><em>YOUR STORY.</em></h2>
-      <p data-i18n="progressText">Complete lessons, collect points and build your own training routine.</p>
+        <span class="egypt-x">X</span>
+
+        <h3>EGYPTIAN PARKOUR CULTURE</h3>
+
+        <p>CAIRO · GIZA · EGYPT</p>
+
+        <p class="arabic-art">الحركة أسلوب حياة</p>
+
+      </div>
+
+    </section>
+
+    <section class="section founder-section" id="founder">
+
+      <div>
+
+        <p class="eyebrow">MEET THE FOUNDER</p>
+
+        <h2>AMR SAMY</h2>
+
+        <h3>FOUNDER · PARKOUR ATHLETE · COACH</h3>
+
+        <p data-en="Training in parkour since 2005, with a mission to help athletes develop movement, confidence and discipline."
+
+           data-ar="أتدرب على الباركور من سنة 2005، وهدفي أساعد اللاعبين يطوروا الحركة والثقة والانضباط.">
+
+          Training in parkour since 2005, with a mission to help athletes develop movement, confidence and discipline.
+
+        </p>
+
+        <a class="button-outline" href="#community" data-en="JOIN THE MOVEMENT →" data-ar="انضم للمجتمع ←">JOIN THE MOVEMENT →</a>
+
+      </div>
+
+      <div class="founder-art">
+
+        <span class="founder-x">X</span>
+
+        <span>PARKOUR<br>NEVER STOPS</span>
+
+      </div>
+
+    </section>
+
+    <section class="section clothing-section" id="clothing">
+
+      <div>
+
+        <p class="eyebrow">PARKOUR X ORIGINALS</p>
+
+        <h2>MOVE IN <span>STYLE.</span></h2>
+
+        <p data-en="Streetwear inspired by movement, freedom and Egyptian urban culture."
+
+           data-ar="ملابس مستوحاة من الحركة والحرية وثقافة الشارع المصري.">
+
+          Streetwear inspired by movement, freedom and Egyptian urban culture.
+
+        </p>
+
+        <a class="button-red" href="#community" data-en="EXPLORE THE COLLECTION →" data-ar="اكتشف المجموعة ←">EXPLORE THE COLLECTION →</a>
+
+      </div>
+
+      <div class="clothing-art">
+
+        <div class="shirt shirt-black">PARKOUR <b>X</b></div>
+
+        <div class="shirt shirt-white">PARKOUR <b>X</b></div>
+
+        <div class="shirt shirt-red">PARKOUR <b>X</b></div>
+
+      </div>
+
+    </section>
+
+    <section class="section progress-section" id="progress">
+
+      <div>
+
+        <p class="eyebrow">TRACK YOUR JOURNEY</p>
+
+        <h2>YOUR PROGRESS.<br><span>YOUR STORY.</span></h2>
+
+        <p data-en="Keep track of the lessons you complete and build your own training routine."
+
+           data-ar="تابع الدروس اللي خلصتها وابني روتين التدريب الخاص بيك.">
+
+          Keep track of the lessons you complete and build your own training routine.
+
+        </p>
+
+      </div>
+
       <div class="progress-card">
-        <div class="progress-card-title" data-i18n="trainingStats">YOUR TRAINING STATS</div>
-        <div class="progress-numbers">
-          <div><strong id="completedCount">0</strong><span data-i18n="lessonsDone">LESSONS DONE</span></div>
-          <div><strong id="pointsCount">0</strong><span data-i18n="xpPoints">XP POINTS</span></div>
+
+        <h3>YOUR TRAINING STATS</h3>
+
+        <div class="stats-row">
+
+          <div><strong id="completedCount">0</strong><small>LESSONS DONE</small></div>
+
+          <div><strong>4</strong><small>LEVELS</small></div>
+
         </div>
-        <div class="progress-row"><span data-i18n="overallProgress">OVERALL PROGRESS</span><strong id="progressPercent">0%</strong></div>
-        <div class="progress-track"><div id="progressFill"></div></div>
-        <button class="text-link" id="resetProgressBtn" data-i18n="resetProgress">RESET MY PROGRESS</button>
+
+        <p>OVERALL PROGRESS <strong id="progressPercent">0%</strong></p>
+
+        <div class="progress-track"><div id="progressBar"></div></div>
+
+        <button class="button-outline" id="resetProgress">RESET MY PROGRESS</button>
+
       </div>
-    </div>
-  </section>
 
-  <section class="challenge section" id="challenges">
-    <div class="challenge-photo"></div>
-    <div class="challenge-copy">
-      <span class="kicker" data-i18n="challengeKicker">TAKE THE CHALLENGE</span>
-      <h2 data-i18n="challengeTitle">SHOW UP.<br><em>LEVEL UP.</em></h2>
-      <p data-i18n="challengeText">Choose one skill to practise this week. Train consistently, focus on technique and celebrate your progress.</p>
-      <button class="btn red" id="challengeBtn" data-i18n="acceptChallenge">ACCEPT THE CHALLENGE ↗</button>
-      <p id="challengeMessage" aria-live="polite"></p>
-    </div>
-  </section>
+      <div class="challenge-card">
 
-  <section class="community section" id="community">
-    <div>
-      <span class="kicker" data-i18n="communityKicker">BUILT BY MOVEMENT</span>
-      <h2 data-i18n="communityTitle">ONE COMMUNITY.<br><em>NO LIMITS.</em></h2>
-      <p data-i18n="communityText">Follow the team, share your journey and inspire others to keep moving forward.</p>
-    </div>
-    <a class="btn red" href="https://www.instagram.com/parkourxacademy/" target="_blank" rel="noopener noreferrer" data-i18n="joinCommunity">JOIN OUR COMMUNITY ↗</a>
-  </section>
-</main>
+        <p class="eyebrow">TAKE THE CHALLENGE</p>
 
-<footer class="footer">
-  <a class="logo" href="#home"><span class="logo-x">X</span><span>PARKOUR<small>ACADEMY</small></span></a>
-  <p>FOCUS. SPEED. CONTROL. PROGRESS.</p>
-  <span>© <span id="year"></span> PARKOUR X ACADEMY</span>
-</footer>
+        <h2>SHOW UP.<br><span>LEVEL UP.</span></h2>
 
-<div class="modal-backdrop" id="authModal" hidden>
-  <div class="auth-modal" role="dialog" aria-modal="true">
-    <button id="closeAuth" class="modal-close" aria-label="Close">✕</button>
-    <span class="kicker" data-i18n="joinKicker">JOIN THE MOVEMENT</span>
-    <h2 data-i18n="joinTitle">YOUR JOURNEY <em>STARTS HERE.</em></h2>
-    <p data-i18n="accountNote">Online accounts need your Supabase project to be configured first.</p>
-    <label for="authEmail" data-i18n="emailLabel">EMAIL</label>
-    <input id="authEmail" type="email" autocomplete="email" placeholder="you@example.com">
-    <label for="authPassword" data-i18n="passwordLabel">PASSWORD</label>
-    <input id="authPassword" type="password" autocomplete="current-password" placeholder="At least 6 characters">
-    <div class="auth-buttons">
-      <button class="btn red" id="signInBtn" data-i18n="signIn">SIGN IN</button>
-      <button class="btn clear" id="signUpBtn" data-i18n="createAccount">CREATE ACCOUNT</button>
+        <p data-en="Choose one skill to practice this week. Train consistently and celebrate your progress."
+
+           data-ar="اختار مهارة تتدرب عليها الأسبوع ده، والتزم بالتدريب واحتفل بتقدمك.">
+
+          Choose one skill to practice this week. Train consistently and celebrate your progress.
+
+        </p>
+
+        <a href="#training" class="button-red" data-en="ACCEPT THE CHALLENGE →" data-ar="اقبل التحدي ←">ACCEPT THE CHALLENGE →</a>
+
+      </div>
+
+    </section>
+
+    <section class="section video-section" id="videos">
+
+      <p class="eyebrow">LEARN · TRAIN · PROGRESS</p>
+
+      <h2>TRAINING <span>VIDEOS</span></h2>
+
+      <p data-en="Choose a level and open a lesson. Always train safely and progress gradually."
+
+         data-ar="اختار مستواك وافتح الدرس. اتدرب بأمان واتقدم بالتدريج.">
+
+        Choose a level and open a lesson. Always train safely and progress gradually.
+
+      </p>
+
+      <div id="videoLevels"></div>
+
+    </section>
+
+    <section class="section community-section" id="community">
+
+      <p class="eyebrow">BUILT BY MOVEMENT</p>
+
+      <h2>ONE COMMUNITY.<br><span>NO LIMITS.</span></h2>
+
+      <p data-en="Follow the journey, share your progress and inspire others to keep moving forward."
+
+         data-ar="تابع رحلتنا وشارك تقدمك وشجع غيرك إنه يكمل.">
+
+        Follow the journey, share your progress and inspire others to keep moving forward.
+
+      </p>
+
+      <a class="button-red" href="https://www.instagram.com/parkourxacademy/" target="_blank" rel="noopener">FOLLOW PARKOUR X →</a>
+
+    </section>
+
+  </main>
+
+  <footer class="footer">
+
+    <a href="#home" class="brand"><span class="brand-x">X</span><span>PARKOUR<small>ACADEMY</small></span></a>
+
+    <p>FOCUS. SPEED. CONTROL. PROGRESS.</p>
+
+    <p>© <span id="year"></span> PARKOUR X ACADEMY</p>
+
+  </footer>
+
+  <div id="videoModal" class="modal" aria-hidden="true">
+
+    <div class="modal-box">
+
+      <button id="closeModal" class="close-modal" aria-label="Close video">✕</button>
+
+      <div class="video-frame">
+
+        <iframe id="videoFrame" src="" title="Parkour lesson" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+      </div>
+
     </div>
-    <p id="authMessage" aria-live="polite"></p>
+
   </div>
-</div>
 
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-<script src="supabase-config.js"></script>
-<script src="script.js"></script>
+  <script src="script.js"></script>
+
 </body>
+
 </html>
