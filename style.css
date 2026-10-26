@@ -1,10 +1,93 @@
 
+/* =========================
+   PARKOUR X ACADEMY IMAGES
+   Images folder paths
+========================= */
+
+/* Main hero background */
+.hero-image {
+  background-image: url("images/hero-bg.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Hero athlete image */
+.athlete-photo {
+  background-image:
+    linear-gradient(0deg, #0008, transparent 55%),
+    url("images/hero-athlete.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Level cards */
+.img-one {
+  background-image: url("images/level-01.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.img-two {
+  background-image: url("images/level-02.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.img-three {
+  background-image: url("images/level-03.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.img-four {
+  background-image: url("images/level-04.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* About section background */
+.story-photo {
+  background-image:
+    linear-gradient(90deg, #f0eee8, transparent 22%),
+    url("images/about-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Community background */
+.community-backdrop {
+  background-image:
+    linear-gradient(90deg, #070808ed, #07080885),
+    url("images/community-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Sportswear section background */
+.sportswear-section {
+  background-image:
+    linear-gradient(90deg, #070808e8, #0708088c),
+    url("images/sportswear-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Book image */
 .book-graphic {
   width: 100%;
   height: 210px;
   background:
-    linear-gradient(0deg, #08090935, #08090910),
-    url("images/parkourx-design.PNG") center / contain no-repeat;
+    linear-gradient(0deg, #08090925, #08090905),
+    url("images/parkourx-design.jpg") center / contain no-repeat;
   border: 0;
   box-shadow: none;
   transform: rotate(-4deg);
@@ -14,7 +97,33 @@
   position: relative;
 }
 
-/* Hide the old book number and label */
+/* Hide the old CSS book lettering */
 .book-graphic > * {
   display: none;
+}
+
+/* Optional alternative design image */
+.parkourx-design {
+  background-image: url("images/parkourx-design.PNG");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* Optional PKX image */
+.pkx-image {
+  background-image: url("images/pkx.JPG");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Book image on mobile */
+@media (max-width: 800px) {
+  .book-graphic {
+    height: 170px;
+    width: 100%;
+    max-width: 230px;
+    margin-inline: auto;
+  }
 }
