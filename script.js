@@ -1,4 +1,3 @@
-
 const courseLevels = [
   {
     level: 1,
@@ -53,18 +52,10 @@ const courseLevels = [
   }
 ];
 
-/* LANGUAGE */
-
 const body = document.body;
 const languageToggle = document.getElementById("languageToggle");
 
-let currentLanguage = "en";
-
-try {
-  currentLanguage = localStorage.getItem("parkourXLanguage") || "en";
-} catch (error) {
-  currentLanguage = "en";
-}
+let currentLanguage = localStorage.getItem("parkourXLanguage") || "en";
 
 function applyLanguage(language) {
   currentLanguage = language;
@@ -74,18 +65,15 @@ function applyLanguage(language) {
   document.documentElement.lang = language;
   document.documentElement.dir = isArabic ? "rtl" : "ltr";
 
+  body.classList.toggle("arabic", isArabic);
+
   document.querySelectorAll("[data-en][data-ar]").forEach(element => {
-    element.textContent =
-      element.dataset[language] || element.dataset.en;
+    element.textContent = element.dataset[language] || element.dataset.en;
   });
 
   languageToggle.textContent = isArabic ? "EN" : "عربي";
 
-  try {
-    localStorage.setItem("parkourXLanguage", language);
-  } catch (error) {
-    // The language switch still works if storage is unavailable.
-  }
+  localStorage.setItem("parkourXLanguage", language);
 
   renderLessons();
 }
@@ -94,15 +82,13 @@ languageToggle.addEventListener("click", () => {
   applyLanguage(currentLanguage === "en" ? "ar" : "en");
 });
 
-
-/* MOBILE NAVIGATION */
+/* MOBILE MENU */
 
 const nav = document.getElementById("mainNav");
 const menuToggle = document.getElementById("menuToggle");
 
 menuToggle.addEventListener("click", () => {
   const opened = nav.classList.toggle("open");
-
   menuToggle.setAttribute("aria-expanded", String(opened));
 });
 
@@ -113,12 +99,11 @@ nav.querySelectorAll("a").forEach(link => {
   });
 });
 
-
-/* YOUTUBE HELPERS */
+/* YOUTUBE VIDEOS */
 
 function getYouTubeId(url) {
   const match = String(url).match(/shorts\/([^?&]+)/i);
-  return match ? match[1] : "";
+  return match ? match[1].replace(/\\$/, "") : "";
 }
 
 function escapeHtml(value) {
@@ -134,9 +119,6 @@ function escapeHtml(value) {
 function escapeAttr(value) {
   return escapeHtml(value);
 }
-
-
-/* RENDER THE 27 LESSONS */
 
 function renderLessons() {
   const container = document.getElementById("lessonsContainer");
@@ -157,16 +139,12 @@ function renderLessons() {
 
     section.innerHTML = `
       <div class="level-heading">
-        <div class="level-chip">
-          ${String(level.level).padStart(2, "0")}
-        </div>
-
+        <div class="level-chip">${String(level.level).padStart(2, "0")}</div>
         <div>
           <span>${levelName}</span>
           <h3>${escapeHtml(level.title)}</h3>
         </div>
       </div>
-
       <div class="lessons-grid"></div>
     `;
 
@@ -183,34 +161,23 @@ function renderLessons() {
       card.className = "lesson-card";
 
       card.innerHTML = `
-        <button
-          class="lesson-thumb"
-          type="button"
-          aria-label="${escapeAttr(title)}"
-        >
+        <button class="lesson-thumb" type="button" aria-label="${escapeHtml(title)}">
           <img
             loading="lazy"
             src="https://img.youtube.com/vi/${videoId}/hqdefault.jpg"
-            alt="${escapeAttr(title)}"
+            alt="${escapeHtml(title)}"
           >
-
           <span class="play-icon">▶</span>
         </button>
-
         <div class="lesson-name">
           <span>${String(index + 1).padStart(2, "0")}</span>
           <strong>${escapeHtml(title)}</strong>
         </div>
-
-        <a
-          class="lesson-watch"
-          href="${escapeAttr(move.video)}"
-          target="_blank"
-          rel="noopener"
-        >
-          ${currentLanguage === "ar"
-            ? "شاهد الدرس ↗"
-            : "WATCH LESSON ↗"}
+        <a class="lesson-watch"
+           href="${escapeAttr(move.video)}"
+           target="_blank"
+           rel="noopener">
+          ${currentLanguage === "ar" ? "شاهد الدرس ↗" : "WATCH LESSON ↗"}
         </a>
       `;
 
@@ -225,15 +192,12 @@ function renderLessons() {
   });
 
   document.getElementById("lessonTotal").textContent =
-    currentLanguage === "ar"
-      ? `${total} درسًا`
-      : `${total} lessons`;
+    currentLanguage === "ar" ? `${total} درسًا` : `${total} lessons`;
 
   document.getElementById("videoCount").textContent = `${total}+`;
 }
 
-
-/* VIDEO MODAL */
+/* VIDEO POPUP */
 
 const modal = document.getElementById("videoModal");
 const frame = document.getElementById("videoFrame");
@@ -276,13 +240,10 @@ document.addEventListener("keydown", event => {
   }
 });
 
-
 /* FOOTER YEAR */
 
-document.getElementById("year").textContent =
-  new Date().getFullYear();
+document.getElementById("year").textContent = new Date().getFullYear();
 
-
-/* START WEBSITE */
+/* INITIALIZE */
 
 applyLanguage(currentLanguage);
