@@ -1,129 +1,1663 @@
+* {
+  box-sizing: border-box;
+}
 
-/* =========================
-   PARKOUR X ACADEMY IMAGES
-   Images folder paths
-========================= */
+:root {
+  --red: #f20b2f;
+  --gold: #e5a43b;
+  --ink: #080909;
+  --panel: #111313;
+  --paper: #f0eee8;
+  --muted: #bdbdb7;
+  --line: #3b3c3c;
+  --max: 1440px;
+}
 
-/* Main hero background */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  margin: 0;
+  background: var(--ink);
+  color: #fff;
+  font-family: Inter, Arial, sans-serif;
+  line-height: 1.55;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+.wrap {
+  width: min(100% - 44px, var(--max));
+  margin-inline: auto;
+}
+
+.display {
+  font-family: "Barlow Condensed", Impact, sans-serif;
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+  line-height: .88;
+  letter-spacing: -.025em;
+}
+
+.red,
+.red-text {
+  color: var(--red);
+}
+
+.gold,
+.gold-text {
+  color: var(--gold);
+}
+
+.eyebrow {
+  display: block;
+  font-size: .72rem;
+  font-weight: 800;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 17px;
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  font-size: .7rem;
+  font-weight: 800;
+  letter-spacing: .045em;
+  text-transform: uppercase;
+  transition: .2s;
+}
+
+.btn:hover {
+  background: #fff;
+  color: #111;
+}
+
+.btn-red {
+  background: var(--red);
+  border-color: var(--red);
+}
+
+.btn-outline-red {
+  border-color: var(--red);
+  color: inherit;
+}
+
+/* HEADER */
+
+.site-header {
+  height: 68px;
+  position: absolute;
+  inset: 0 0 auto;
+  z-index: 20;
+  background: #090a0ad9;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #ffffff20;
+}
+
+.header-inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 180px;
+}
+
+.brand-x {
+  font-family: "Barlow Condensed", sans-serif;
+  color: var(--red);
+  font-size: 3.2rem;
+  font-weight: 900;
+  line-height: .7;
+  transform: rotate(-9deg);
+}
+
+.brand-words {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.28rem;
+  font-weight: 900;
+  line-height: .8;
+  letter-spacing: .04em;
+}
+
+.brand-words small {
+  display: block;
+  color: var(--gold);
+  font-size: .62rem;
+  letter-spacing: .32em;
+  margin-top: 8px;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(10px, 1.8vw, 26px);
+}
+
+.main-nav a {
+  font-size: .68rem;
+  font-weight: 700;
+  color: #e5e5e2;
+  white-space: nowrap;
+}
+
+.main-nav a:hover {
+  color: var(--red);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.language-toggle {
+  border: 1px solid #666;
+  border-radius: 25px;
+  background: transparent;
+  color: white;
+  padding: 6px 11px;
+  font-size: .68rem;
+}
+
+.header-cta {
+  padding: 9px 13px;
+}
+
+.menu-toggle {
+  display: none;
+  border: 1px solid #555;
+  background: transparent;
+  color: white;
+  padding: 7px 10px;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 640px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background: #151819;
+}
+
 .hero-image {
+  position: absolute;
+  inset: 0;
   background-image: url("images/hero-bg.png");
   background-position: center;
   background-size: cover;
-  background-repeat: no-repeat;
+  filter: saturate(.7);
 }
 
-/* Hero athlete image */
+.hero-shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      #050606f5 0%,
+      #050606c9 30%,
+      #05060632 68%,
+      #05060625
+    ),
+    linear-gradient(0deg, #080909 0%, transparent 30%);
+}
+
+.hero-scratch {
+  position: absolute;
+  inset: 0;
+  opacity: .18;
+  background: repeating-linear-gradient(
+    115deg,
+    transparent 0 95px,
+    #fff3 96px 97px
+  );
+}
+
+.hero-layout {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 28px;
+  align-items: center;
+  padding-top: 80px;
+}
+
+.hero-copy {
+  max-width: 560px;
+}
+
+.hero-eyebrow {
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 800;
+  letter-spacing: .2em;
+  font-size: .9rem;
+  transform: rotate(-4deg);
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  font-size: clamp(4rem, 7.8vw, 7.8rem);
+  margin: 0 0 23px;
+  text-shadow: 4px 4px 0 #000;
+}
+
+.hero h1 span,
+.hero h1 strong {
+  display: block;
+}
+
+.hero h1 strong {
+  color: var(--red);
+}
+
+.hero-copy > p {
+  max-width: 340px;
+  font-size: .84rem;
+  color: #e2e2de;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 24px 0 32px;
+}
+
+.hero-stats {
+  display: flex;
+  border-top: 1px solid #ffffff55;
+  padding-top: 17px;
+  max-width: 450px;
+}
+
+.hero-stats > div {
+  flex: 1;
+  padding: 0 15px;
+  border-right: 1px solid #ffffff40;
+}
+
+.hero-stats > div:first-child {
+  padding-left: 0;
+}
+
+.hero-stats > div:last-child {
+  border: 0;
+}
+
+.hero-stats b {
+  display: block;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.hero-stats span {
+  display: block;
+  color: #d0d0cc;
+  font-size: .55rem;
+  letter-spacing: .08em;
+  font-weight: 700;
+}
+
+.hero-art {
+  position: relative;
+  min-height: 405px;
+}
+
 .athlete-photo {
-  background-image:
+  position: absolute;
+  inset: 0;
+  background:
     linear-gradient(0deg, #0008, transparent 55%),
-    url("images/hero-athlete.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+    url("images/hero-athlete.jpg") center / cover no-repeat;
+  clip-path: polygon(
+    14% 0,
+    100% 5%,
+    100% 100%,
+    0 100%,
+    0 20%
+  );
+  filter: contrast(1.1) saturate(.75);
 }
 
-/* Level cards */
+.egypt-badge {
+  position: absolute;
+  right: 0;
+  bottom: 25px;
+  border: 2px solid var(--gold);
+  padding: 13px 14px;
+  color: var(--gold);
+  background: #080909c9;
+  transform: rotate(-7deg);
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.22rem;
+  line-height: 1.03;
+  text-align: center;
+}
+
+.egypt-badge span,
+.egypt-badge i {
+  display: block;
+  font-style: normal;
+  font-size: 1.7rem;
+}
+
+.egypt-badge i {
+  color: var(--red);
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.hero-caption {
+  position: absolute;
+  bottom: 0;
+  left: 8px;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: .75rem;
+  letter-spacing: .2em;
+}
+
+/* TRAINING LEVELS */
+
+.levels-section {
+  padding: 28px 0 38px;
+  background:
+    linear-gradient(#080909e8, #080909ed),
+    url("images/hero-bg.png") center / cover fixed;
+}
+
+.levels-layout {
+  display: grid;
+  grid-template-columns: 205px 1fr;
+  gap: 26px;
+  align-items: stretch;
+}
+
+.section-intro {
+  padding: 17px 0;
+}
+
+.section-intro h2 {
+  font-size: 3.1rem;
+  margin: 10px 0 0;
+}
+
+.section-intro h2.red {
+  font-size: 3.8rem;
+}
+
+.section-intro p {
+  font-size: .78rem;
+  color: #ccc;
+  margin: 16px 0 20px;
+}
+
+.level-cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.level-card {
+  border: 1px solid #777;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #0e1010;
+  transition: transform .2s, border-color .2s;
+}
+
+.level-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--red);
+}
+
+.level-card.red-edge {
+  border-color: #a91a31;
+}
+
+.level-card.gold-edge {
+  border-color: #8d6b38;
+}
+
+.level-img {
+  height: 130px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.level-img:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(0deg, #0b0c0c, transparent 80%);
+}
+
 .img-one {
   background-image: url("images/level-01.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .img-two {
   background-image: url("images/level-02.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .img-three {
   background-image: url("images/level-03.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
 .img-four {
   background-image: url("images/level-04.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 
-/* About section background */
+.level-info {
+  padding: 0 13px 14px;
+}
+
+.level-tag {
+  font-size: .53rem;
+  color: #ddd;
+  font-weight: 700;
+}
+
+.level-number {
+  display: block;
+  font-family: "Barlow Condensed", sans-serif;
+  color: var(--red);
+  font-size: 3.2rem;
+  font-style: italic;
+  font-weight: 900;
+  line-height: 1.03;
+}
+
+.level-info h3 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-style: italic;
+  font-size: 1.2rem;
+  margin: 0 0 7px;
+}
+
+.level-info p {
+  font-size: .65rem;
+  color: #c7c7c3;
+  min-height: 68px;
+  margin: 0 0 14px;
+}
+
+.card-link {
+  display: block;
+  font-size: .51rem;
+  font-weight: 800;
+  color: var(--gold);
+}
+
+/* ABOUT */
+
+.story-paper {
+  position: relative;
+  background: var(--paper);
+  color: #111;
+  overflow: hidden;
+}
+
+.story-paper:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: .12;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.7' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.4'/%3E%3C/svg%3E");
+}
+
+.story-layout {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 360px;
+}
+
+.story-copy {
+  padding: 46px 35px 42px 0;
+}
+
+.story-copy h2 {
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  margin: 9px 0;
+}
+
+.story-copy p {
+  font-size: .76rem;
+  max-width: 520px;
+  color: #343434;
+}
+
+.story-copy .story-lead {
+  font-size: 1.1rem;
+  color: #111;
+  margin-top: 18px;
+}
+
+.story-visual {
+  position: relative;
+  min-height: 350px;
+  display: flex;
+  align-items: stretch;
+}
+
 .story-photo {
-  background-image:
-    linear-gradient(90deg, #f0eee8, transparent 22%),
-    url("images/about-bg.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-/* Community background */
-.community-backdrop {
-  background-image:
-    linear-gradient(90deg, #070808ed, #07080885),
-    url("images/community-bg.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-/* Sportswear section background */
-.sportswear-section {
-  background-image:
-    linear-gradient(90deg, #070808e8, #0708088c),
-    url("images/sportswear-bg.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-/* Book image */
-.book-graphic {
-  width: 100%;
-  height: 210px;
+  flex: 1;
   background:
-    linear-gradient(0deg, #08090925, #08090905),
-    url("images/parkourx-design.jpg") center / contain no-repeat;
+    linear-gradient(90deg, var(--paper), transparent 22%),
+    url("images/about-bg.jpg") center / cover;
+}
+
+.story-stats {
+  position: absolute;
+  bottom: 20px;
+  left: 15px;
+  right: 15px;
+  display: flex;
+  background: #090a0adf;
+  color: white;
+  padding: 13px 10px;
+}
+
+.story-stats div {
+  flex: 1;
+  padding: 0 9px;
+  border-right: 1px solid #ffffff35;
+}
+
+.story-stats div:last-child {
   border: 0;
-  box-shadow: none;
-  transform: rotate(-4deg);
+}
+
+.story-stats b {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.65rem;
+  display: block;
+}
+
+.story-stats span {
+  font-size: .48rem;
+  color: #ddd;
+  display: block;
+}
+
+.paint-x {
+  position: absolute;
+  right: 5px;
+  top: 15px;
+  color: var(--red);
+  font-size: 6rem;
+  font-weight: 900;
+  font-family: "Barlow Condensed", sans-serif;
+  transform: rotate(-13deg);
+  opacity: .8;
+}
+
+/* COURSE */
+
+.course-section {
+  padding: 45px 0 50px;
+  background: #0b0c0c url("images/hero-bg.png") center / cover fixed;
+}
+
+.course-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 25px;
+  border-bottom: 1px solid #444;
+  padding-bottom: 20px;
+}
+
+.course-heading h2 {
+  font-size: clamp(2.8rem, 5vw, 4.7rem);
+  margin: 8px 0 0;
+}
+
+.course-heading-note {
+  max-width: 350px;
+  border-left: 2px solid var(--red);
+  padding-left: 18px;
+}
+
+.course-heading-note b {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.25rem;
+}
+
+.course-heading-note p,
+.course-toolbar p {
+  font-size: .75rem;
+  color: #c9c9c4;
+  margin: 4px 0;
+}
+
+.course-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  padding: 16px 0;
+}
+
+.course-toolbar span {
+  font-size: .65rem;
+  color: var(--gold);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.course-level {
+  margin: 15px 0 26px;
+}
+
+.level-heading {
   display: flex;
   align-items: center;
+  gap: 13px;
+  margin-bottom: 12px;
+}
+
+.level-chip {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  background: var(--red);
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 900;
+  font-style: italic;
+}
+
+.course-level:nth-child(3) .level-chip,
+.course-level:nth-child(4) .level-chip {
+  background: var(--gold);
+  color: #111;
+}
+
+.level-heading h3 {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.7rem;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.level-heading span {
+  font-size: .62rem;
+  color: #aaa;
+  display: block;
+}
+
+.lessons-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.lesson-card {
+  background: #101212;
+  border: 1px solid #353737;
+  min-width: 0;
+}
+
+.lesson-thumb {
+  width: 100%;
+  border: 0;
+  display: block;
+  position: relative;
+  aspect-ratio: 16 / 10;
+  background: #222;
+  overflow: hidden;
+  padding: 0;
+}
+
+.lesson-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: saturate(.75);
+  transition: transform .25s;
+}
+
+.lesson-thumb:hover img {
+  transform: scale(1.06);
+}
+
+.play-icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--red);
+  color: #fff;
+}
+
+.lesson-name {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  padding: 10px;
+}
+
+.lesson-name span {
+  color: var(--gold);
+  font-size: .65rem;
+  font-weight: 800;
+}
+
+.lesson-name strong {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: .82rem;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.lesson-watch {
+  display: block;
+  padding: 0 10px 12px;
+  color: var(--gold);
+  font-size: .58rem;
+  font-weight: 800;
+}
+
+.loading {
+  color: #ccc;
+}
+
+/* BOOK */
+
+.coming-section {
+  padding: 40px 0;
+  background: #111313;
+  border-top: 1px solid #2e3030;
+  border-bottom: 1px solid #2e3030;
+  position: relative;
+  overflow: hidden;
+}
+
+.coming-grid {
+  display: grid;
+  grid-template-columns: 190px 1fr 100px;
+  align-items: center;
+  gap: 30px;
+}
+
+.book-graphic {
+  height: 170px;
+  background: linear-gradient(135deg, #242525, #060707);
+  border-left: 8px solid var(--red);
+  box-shadow: 12px 13px 0 #000;
+  transform: rotate(-5deg);
+  display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  color: var(--red);
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 5rem;
+  font-weight: 900;
+}
+
+.book-graphic small {
+  font-size: .7rem;
+  letter-spacing: .15em;
+  text-align: center;
+  color: white;
+}
+
+.coming-grid h2,
+.sportswear-layout h2 {
+  font-size: clamp(2.5rem, 4vw, 4rem);
+  margin: 8px 0;
+}
+
+.coming-grid p,
+.sportswear-layout p {
+  color: #ccc;
+  font-size: .8rem;
+  max-width: 500px;
+}
+
+.coming-soon {
+  display: inline-block;
+  border: 1px solid var(--gold);
+  padding: 6px 10px;
+  color: var(--gold);
+  font-size: .6rem;
+  font-weight: 800;
+  letter-spacing: .15em;
+}
+
+.coming-stamp {
+  font-family: "Barlow Condensed", sans-serif;
+  color: var(--red);
+  font-size: 7rem;
+  font-weight: 900;
+  transform: rotate(-15deg);
+  opacity: .7;
+}
+
+/* SPORTSWEAR */
+
+.sportswear-section {
+  padding: 42px 0;
+  background: #070808 url("images/sportswear-bg.jpg") center / cover no-repeat;
+  overflow: hidden;
+}
+
+.sportswear-layout {
+  display: grid;
+  grid-template-columns: 230px 1fr 235px;
+  gap: 22px;
+  align-items: center;
+}
+
+.sportswear-layout h2 {
+  font-size: 3rem;
+}
+
+.gear-display {
+  min-height: 210px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  gap: 10px;
   position: relative;
 }
 
-/* Hide the old CSS book lettering */
-.book-graphic > * {
+.gear-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 24%;
+  height: 170px;
+  clip-path: polygon(
+    28% 0, 42% 5%, 58% 5%, 72% 0,
+    92% 16%, 100% 42%, 82% 52%,
+    77% 32%, 77% 100%, 23% 100%,
+    23% 32%, 18% 52%, 0 42%, 8% 16%
+  );
+  background: linear-gradient(125deg, #343535, #080909);
+  filter: drop-shadow(0 15px 9px #000);
+}
+
+.gear-item span {
+  color: var(--red);
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 900;
+  font-size: 2.5rem;
+}
+
+.gear-item small {
+  font-size: .42rem;
+  font-weight: 900;
+  letter-spacing: .1em;
+}
+
+.gear-item.tee {
+  height: 155px;
+  background: linear-gradient(125deg, #fff, #b8b8b8);
+  color: #111;
+}
+
+.gear-item.tee small {
+  color: #111;
+}
+
+.gear-item.bag {
+  height: 140px;
+  width: 20%;
+  clip-path: polygon(20% 8%, 80% 8%, 100% 100%, 0 100%);
+  background: linear-gradient(120deg, #333, #080808);
+}
+
+.gear-paint {
+  position: absolute;
+  z-index: 0;
+  left: 15%;
+  top: -5px;
+  color: var(--red);
+  font-size: 9rem;
+  font-weight: 900;
+  transform: rotate(-14deg);
+  opacity: .2;
+}
+
+.gear-benefits {
+  border-left: 1px solid #444;
+  padding-left: 18px;
+}
+
+.gear-benefits > div {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.gear-benefits b {
+  font-size: 1.8rem;
+  color: var(--gold);
+}
+
+.gear-benefits strong,
+.gear-benefits small {
+  display: block;
+}
+
+.gear-benefits strong {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1rem;
+}
+
+.gear-benefits small {
+  font-size: .67rem;
+  color: #bbb;
+}
+
+/* COMMUNITY */
+
+.community-section {
+  position: relative;
+  min-height: 220px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.community-backdrop {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, #070808ed, #07080885),
+    url("images/community-bg.jpg") center / cover;
+}
+
+.community-layout {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr .9fr 1fr;
+  gap: 25px;
+  align-items: center;
+  padding-block: 34px;
+}
+
+.community-layout h2 {
+  font-size: clamp(2.4rem, 4vw, 3.5rem);
+  margin: 7px 0;
+}
+
+.community-layout p {
+  font-size: .75rem;
+  color: #ddd;
+}
+
+.social-area {
+  text-align: center;
+}
+
+.social-links {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.social-links a {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #777;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: .68rem;
+  font-weight: 800;
+}
+
+.social-links a:hover {
+  background: var(--red);
+  border-color: var(--red);
+}
+
+.social-area > span {
+  font-size: .6rem;
+  letter-spacing: .13em;
+  font-weight: 800;
+}
+
+/* FOOTER */
+
+.site-footer {
+  background: #050606;
+  border-top: 1px solid #303232;
+  padding: 23px 0;
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 22px;
+}
+
+.footer-inner nav {
+  display: flex;
+  gap: 17px;
+  flex-wrap: wrap;
+}
+
+.footer-inner nav a {
+  font-size: .62rem;
+  color: #ccc;
+}
+
+.footer-tagline {
+  text-align: right;
+  font-size: .55rem;
+  color: #ddd;
+  letter-spacing: .08em;
+}
+
+.footer-tagline small {
+  display: block;
+  color: #888;
+  margin-top: 7px;
+  letter-spacing: 0;
+}
+
+/* VIDEO MODAL */
+
+.video-modal {
+  position: fixed;
+  z-index: 100;
+  inset: 0;
+  background: #000d;
   display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
 
-/* Optional alternative design image */
-.parkourx-design {
-  background-image: url("images/parkourx-design.PNG");
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
+.video-modal.open {
+  display: flex;
 }
 
-/* Optional PKX image */
-.pkx-image {
-  background-image: url("images/pkx.JPG");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+.modal-panel {
+  width: min(900px, 100%);
+  background: #101212;
+  border: 1px solid #444;
+  padding: 20px;
+  position: relative;
 }
 
-/* Book image on mobile */
-@media (max-width: 800px) {
-  .book-graphic {
-    height: 170px;
-    width: 100%;
-    max-width: 230px;
-    margin-inline: auto;
+.modal-close {
+  position: absolute;
+  right: 12px;
+  top: 7px;
+  background: none;
+  border: 0;
+  color: #fff;
+  font-size: 2rem;
+}
+
+.modal-title {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  margin: 0 45px 15px 0;
+}
+
+.video-frame {
+  aspect-ratio: 16 / 9;
+  background: #000;
+}
+
+.video-frame iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.youtube-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--gold);
+  font-size: .75rem;
+  font-weight: 800;
+}
+
+/* ARABIC / RTL */
+
+html[dir="rtl"] body {
+  font-family: Cairo, Arial, sans-serif;
+}
+
+html[dir="rtl"] .hero-copy,
+html[dir="rtl"] .story-copy,
+html[dir="rtl"] .course-heading,
+html[dir="rtl"] .course-toolbar,
+html[dir="rtl"] .level-heading,
+html[dir="rtl"] .lesson-name,
+html[dir="rtl"] .coming-grid,
+html[dir="rtl"] .sportswear-layout,
+html[dir="rtl"] .community-layout {
+  text-align: right;
+}
+
+html[dir="rtl"] .story-copy {
+  padding: 46px 0 42px 35px;
+}
+
+html[dir="rtl"] .course-heading-note {
+  border-left: 0;
+  border-right: 2px solid var(--red);
+  padding-left: 0;
+  padding-right: 18px;
+}
+
+html[dir="rtl"] .gear-benefits {
+  border-left: 0;
+  border-right: 1px solid #444;
+  padding-left: 0;
+  padding-right: 18px;
+}
+
+html[dir="rtl"] .footer-tagline {
+  text-align: left;
+}
+
+html[dir="rtl"] .footer-inner nav {
+  flex-direction: row-reverse;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+  .main-nav {
+    gap: 10px;
   }
+
+  .main-nav a {
+    font-size: .61rem;
+  }
+
+  .brand {
+    min-width: 140px;
+  }
+
+  .levels-layout {
+    grid-template-columns: 170px 1fr;
+  }
+
+  .level-cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .level-card {
+    display: grid;
+    grid-template-columns: 40% 1fr;
+  }
+
+  .level-img {
+    height: 100%;
+    min-height: 190px;
+  }
+
+  .level-info p {
+    min-height: 0;
+  }
+
+  .lessons-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .sportswear-layout {
+    grid-template-columns: 190px 1fr;
+  }
+
+  .gear-benefits {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-left: 0;
+    border-top: 1px solid #444;
+    padding: 12px 0 0;
+  }
+
+  .coming-grid {
+    grid-template-columns: 150px 1fr 70px;
+  }
+}
+
+@media (max-width: 800px) {
+  .wrap {
+    width: min(100% - 30px, var(--max));
+  }
+
+  .site-header {
+    height: 62px;
+  }
+
+  .header-inner {
+    gap: 10px;
+  }
+
+  .brand {
+    min-width: 0;
+  }
+
+  .brand-x {
+    font-size: 2.8rem;
+  }
+
+  .brand-words {
+    font-size: 1.05rem;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 62px;
+    left: 0;
+    right: 0;
+    background: #080909;
+    padding: 18px 22px;
+    flex-direction: column;
+    align-items: flex-start;
+    border-bottom: 1px solid #333;
+  }
+
+  .main-nav.open {
+    display: flex;
+  }
+
+  .main-nav a {
+    font-size: .8rem;
+    padding: 5px 0;
+  }
+
+  .header-actions {
+    gap: 6px;
+  }
+
+  .header-cta {
+    display: none;
+  }
+
+  .hero {
+    min-height: 730px;
+    align-items: flex-start;
+  }
+
+  .hero-layout {
+    grid-template-columns: 1fr;
+    padding-top: 108px;
+    gap: 5px;
+  }
+
+  .hero h1 {
+    font-size: clamp(4rem, 15vw, 6rem);
+  }
+
+  .hero-art {
+    min-height: 220px;
+  }
+
+  .athlete-photo {
+    clip-path: polygon(
+      7% 0, 100% 5%, 100% 100%, 0 100%, 0 20%
+    );
+  }
+
+  .egypt-badge {
+    font-size: .9rem;
+    bottom: 15px;
+  }
+
+  .hero-stats {
+    max-width: none;
+  }
+
+  .hero-stats b {
+    font-size: 1.7rem;
+  }
+
+  .hero-stats span {
+    font-size: .48rem;
+  }
+
+  .levels-section,
+  .course-section {
+    background-attachment: scroll;
+  }
+
+  .levels-layout {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .section-intro {
+    padding: 0;
+  }
+
+  .section-intro h2 {
+    font-size: 2.7rem;
+  }
+
+  .section-intro h2.red {
+    font-size: 3.2rem;
+  }
+
+  .level-cards {
+    gap: 10px;
+  }
+
+  .level-card {
+    display: block;
+  }
+
+  .level-img {
+    height: 100px;
+    min-height: 0;
+  }
+
+  .level-info {
+    padding: 0 10px 12px;
+  }
+
+  .level-number {
+    font-size: 2.7rem;
+  }
+
+  .level-info h3 {
+    font-size: 1.05rem;
+  }
+
+  .level-info p {
+    font-size: .62rem;
+    min-height: 72px;
+  }
+
+  .card-link {
+    font-size: .46rem;
+  }
+
+  .story-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .story-copy {
+    padding: 34px 0 25px;
+  }
+
+  .story-copy h2 {
+    font-size: clamp(2.5rem, 11vw, 3.5rem);
+  }
+
+  .story-visual {
+    min-height: 230px;
+  }
+
+  .story-stats {
+    bottom: 10px;
+  }
+
+  .course-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .course-heading h2 {
+    font-size: 3rem;
+  }
+
+  .course-heading-note {
+    max-width: none;
+  }
+
+  .lessons-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+  }
+
+  .lesson-name strong {
+    font-size: .68rem;
+  }
+
+  .coming-grid {
+    grid-template-columns: 105px 1fr;
+    gap: 20px;
+  }
+
+  .book-graphic {
+    height: 140px;
+    font-size: 3.7rem;
+  }
+
+  .coming-stamp {
+    display: none;
+  }
+
+  .sportswear-layout {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .gear-display {
+    min-height: 170px;
+  }
+
+  .gear-item {
+    height: 145px;
+  }
+
+  .gear-item.tee {
+    height: 130px;
+  }
+
+  .gear-item.bag {
+    height: 110px;
+  }
+
+  .gear-benefits {
+    grid-template-columns: 1fr;
+  }
+
+  .community-layout {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding-block: 28px;
+  }
+
+  .social-area {
+    text-align: left;
+  }
+
+  .social-links {
+    justify-content: flex-start;
+  }
+
+  .footer-inner {
+    flex-wrap: wrap;
+  }
+
+  .footer-inner nav {
+    order: 3;
+    width: 100%;
+  }
+
+  .footer-tagline {
+    text-align: left;
+  }
+
+  html[dir="rtl"] .story-copy {
+    padding: 34px 0 25px;
+  }
+
+  html[dir="rtl"] .gear-benefits {
+    padding-right: 0;
+  }
+
+  html[dir="rtl"] .social-area {
+    text-align: right;
+  }
+
+  html[dir="rtl"] .social-links {
+    justify-content: flex-end;
+  }
+}
+
+@media (max-width: 430px) {
+  .language-toggle {
+    padding: 6px 8px;
+  }
+
+  .hero-actions .btn {
+    padding: 10px 12px;
+    font-size: .61rem;
+  }
+
+  .level-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .level-card {
+    display: grid;
+    grid-template-columns: 38% 1fr;
+  }
+
+  .level-img {
+    height: 100%;
+    min-height: 205px;
+  }
+
+  .level-info p {
+    min-height: 0;
+  }
+
+  .level-info h3 {
+    font-size: 1.15rem;
+  }
+
+  .course-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .lessons-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lesson-name {
+    padding: 9px;
+  }
+
+  .lesson-name strong {
+    font-size: .62rem;
+  }
+
+  .lesson-watch {
+    padding: 0 9px 10px;
+  }
+
+  .coming-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .book-graphic {
+    width: 120px;
+    height: 135px;
+  }
+
+  .sportswear-layout h2 {
+    font-size: 2.7rem;
+  }
+
+  .footer-inner nav {
+    gap: 12px;
+  }
+}
+
+/* EXTRA IMAGE ASSETS */
+
+.parkourx-design-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.parkourx-design-background {
+  background-image: url("images/parkourx-design.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.parkourx-design-png {
+  background-image: url("images/parkourx-design.PNG");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.pkx-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.pkx-background {
+  background-image: url("images/pkx.JPG");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
