@@ -783,7 +783,7 @@ section {
   background-color: #f0eee8;
   background-image:
     linear-gradient(rgba(244, 241, 232, 0.95), rgba(244, 241, 232, 0.95)),
-    url("images/about-bg.png");
+    url("images/about-bg.PNG");
   background-position: center;
   background-size: cover;
 }
@@ -886,7 +886,7 @@ section {
 
 .clothing-products {
   min-height: 280px;
-  background-image: url("images/sportswear-bg.png");
+  background-image: url("images/sportswear-bg.PNG");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -1123,7 +1123,7 @@ html[dir="rtl"] .hero {
       rgba(3, 5, 9, 0.24) 68%,
       rgba(3, 5, 9, 0.15) 100%
     ),
-    url("images/hero-bg.png");
+    url("images/hero-bg.Png");
 }
 
 html[dir="rtl"] .hero-content {
@@ -1279,7 +1279,7 @@ html[dir="rtl"] .video-modal h3 {
         rgba(3, 5, 9, 0.78) 48%,
         #050607 100%
       ),
-      url("images/hero-bg.png");
+      url("images/hero-bg.PNG");
     background-position: 55% center;
   }
 
@@ -1334,7 +1334,7 @@ html[dir="rtl"] .video-modal h3 {
         rgba(3, 5, 9, 0.78) 48%,
         #050607 100%
       ),
-      url("images/hero-bg.png");
+      url("images/hero-bg.PNG");
   }
 
   .levels-section,
